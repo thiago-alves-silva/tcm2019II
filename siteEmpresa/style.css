@@ -19,6 +19,10 @@
      width: 5vw;
      display: block;
      margin: auto;
+     transition: all .3s;
+ }
+ header img:hover{
+     transform: scale(1.2);
  }
  #boas-vindas {
      width: 80vw;
@@ -46,7 +50,7 @@
      font-size: 1.2vw;
      text-decoration: none;
      padding: 1vw;
-     transition: all .15s;
+     transition: all .3s;
      display: block;
      margin: auto;
      border-radius: 1vw;
@@ -55,7 +59,7 @@
      background-color: #ed145b;
  }
  .btn-conheca:hover {
-    transform: scale(1.2);
+    transform: scale(1.15);
  }
  #titulo::after{
      content: ' |';
