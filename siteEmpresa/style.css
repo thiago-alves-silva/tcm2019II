@@ -1,0 +1,71 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Rubik&display=swap');
+ * {
+     margin: 0;
+     padding: 0;
+ }
+ body {
+     background: url('img/background2.jpg');
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-attachment: fixed;
+     background-position: center;
+ }
+ header {
+     padding: 2vw;
+ }
+ header img {
+     width: 5vw;
+     display: block;
+     margin: auto;
+ }
+ #boas-vindas {
+     width: 80vw;
+     margin: auto;
+     box-sizing: border-box;
+     text-align: center;
+     margin-top:16vh;
+ }
+#boas-vindas p {
+    font-family: 'IBM Plex Mono', monospace;
+    width: 60vw;
+    font-size: 1.5vw;
+    margin: 1.5vw auto 3vw auto;
+    color: #b0b2b3
+ }
+ #boas-vindas h1 {
+    font-size: 3vw;
+    margin-top: 2vw;
+    font-family: 'Rubik', sans-serif;
+    color: #ffffff
+ }
+ .btn-conheca {
+     width: 12vw;
+     font-family: monospace;
+     font-size: 1.2vw;
+     text-decoration: none;
+     padding: 1vw;
+     transition: all .15s;
+     display: block;
+     margin: auto;
+     border-radius: 1vw;
+     color: #ffffff;
+     box-shadow: 0vw 0vw .4vw #ed145b;
+     background-color: #ed145b;
+ }
+ .btn-conheca:hover {
+    transform: scale(1.2);
+ }
+ #titulo::after{
+     content: ' |';
+     animation: pisca .7s infinite
+ }
+ @keyframes pisca{
+     0%,100% {
+         opacity: 0;
+     }
+     50% {
+         opacity: 1;
+     }
+ }
