@@ -17,6 +17,28 @@
         <p>A System Crown é uma das mais requisitadas empresas quando o assunto é desenvolvimento de sistemas para o seu negócio. Isso tudo é graças a nossa enorme comunidade de desenvolvedores que temos orgulho de hospedar em nossa companhia.</p>
         <a href="#" class='btn-conheca'>Conheça a Empresa</a>
     </div>
-    <script src="script.js"></script>
+    <input type="checkbox" id="menu-check">
+    <label for="menu-check">&#9776</label>
+    <div id="menu">
+        <nav>
+            <ul>
+                <li><a href="#">Serviços</a></li>
+                <li><a href="#">Empresa</a></li>
+                <li><a href="#">Contato</a></li>
+                <li><a href="#">Suporte</a></li>
+            </ul>
+        </nav>
+    </div>
+    <script>
+        writter()
+        setInterval('writter()', 10000)
+        function writter() {
+        let txt = document.getElementById('titulo').innerHTML.split("");
+        document.getElementById('titulo').innerHTML = ''
+        txt.forEach((e, i) => {
+            setTimeout(() => document.getElementById('titulo').innerHTML += e, 100*i)
+        })
+        }
+    </script>
 </body>
 </html>

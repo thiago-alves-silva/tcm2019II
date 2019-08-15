@@ -1,0 +1,21 @@
+• Nome da empresa: System Crown
+• Endereço: Rua Belchior de Azevedo, 157 - Vila Leopoldina, São Paulo - SP
+• Telefone: +55 (11) 95760-4835
+• E-mail: systemcrown0@gmail.com
+• CNPJ: 08.398.327/0001-75 (gerado no 4Devs)
+• Slogan: Você não precisa ser um rei para usar uma coroa.
+• Missão: Temos como tarefa ser uma empresa sólida, competitiva e inovadora. Que contribua para a sociedade com soluçoes técnológicas e atenda as exigências do cliente.
+• Visão: Quando se pensar em desenvolvimento de software queremos venha na mente 'System Crown'. Nossa visao é se tornar a melhor na área de desenvolvimento em TI.
+• Valores: Valorizar os altos padrões da ética; O relacionamento transparente com os clientes; Executar tarefas com responsabilidade e comprometimento;
+	• Cargos da equipe:
+	 - Beatriz Moreira: Analista Front-end
+	 - Giovana Carnio: Analista de Sistema
+	 - Julio Duvique: Analista de Banco de Dados
+	 - Renata Garcia: Analista de Infraestrutura
+	 - Samuel Saito: Analista de Desenvolvimento Mobile
+	 - Thiago Alves: Analista Back-end
+• Tema do projeto: Sistema para Clínica de Estética
+• Link do Github: https://github.com/thiago6627/tcm2019II
+• Link do Drive Virtual: https://drive.google.com/drive/folders/1k6Mmk60RfDf6afGi5qDEGoeiUNJNno_Q?usp=sharing
+• Link do LinkedIn: https://www.linkedin.com/in/system-crown-7413b1191/
+• Trello: https://trello.com/systemcrown/activity
