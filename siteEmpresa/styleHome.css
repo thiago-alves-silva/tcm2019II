@@ -33,6 +33,9 @@
     line-height: 1.9vw;
     font-size: 1.4vw;
  }
+ div#servicos {
+    background-color: bisque
+ }
  div#servicos h1 {
     font-family: Rubik;
     font-size: 4vw;
@@ -46,7 +49,6 @@
      display: flex;
      flex-wrap: wrap;
      justify-content: center;
-     background-color: bisque
  }
  div#itens div {
      width: 50vw;
