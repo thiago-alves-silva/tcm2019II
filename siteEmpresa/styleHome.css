@@ -10,22 +10,68 @@
  * {
      margin: 0;
      padding: 0;
+     overflow-x: hidden;
  }
  div#apresentacao{
-    /* background: url('img/computerprogramming.png');
-    background-repeat: no-repeat;
-    background-position: 53vw;
-    background-size: 25vw; */
     background-color: #151819;
     width: 100vw;
     height: 100vh;
-    position: relative;
+    display: flex;
+    align-items: center;
  }
  div#texto-apresentacao{
     width: 35vw;
-    line-height: 4vw;
     font-family: Rubik;
     color: white;
-    position: absolute;
-    margin: 10vw;
+    margin-left: 10vw;
+ }
+ div#texto-apresentacao h1{
+    line-height: 4vw;
+ }
+ div#texto-apresentacao p{
+    font-family: IBM Plex Mono;
+    line-height: 1.9vw;
+    font-size: 1.4vw;
+ }
+ div#servicos h1 {
+    font-family: Rubik;
+    font-size: 4vw;
+    width: 50vw;
+    text-align: center;
+    margin: 5vw auto;
+ }
+ div#itens {
+     width: 100vw;
+     max-height: auto;
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+     background-color: bisque
+ }
+ div#itens div {
+     width: 50vw;
+     display: flex;
+     flex-wrap: wrap;
+     align-items: center;
+     justify-content: center;
+     margin: 2.5vw;
+     flex-basis: 25vw;
+ }
+ div#itens div h1 {
+    font-family: Rubik;
+    width: 100%;
+    text-align: center;
+    margin: 1.5vw;
+    color: #151819;
+    font-size: 2.2vw;
+    text-shadow: 1px 1px black;
+ }
+ div#itens div p {
+    font-family: IBM Plex Mono;
+    text-align: center;
+    display: none;
+ }
+ div#itens div img {
+     display: block;
+     width: 6vw;
  }
