@@ -28,7 +28,8 @@
  }
  div#texto-apresentacao{
     width: 35vw;
-    height: 30vw;
+    max-height: auto;
+    overflow: hidden;
     font-family: Rubik;
     color: white;
     margin-left: 10vw;
@@ -43,6 +44,7 @@
     font-family: Samsung;
     line-height: 1.9vw;
     font-size: 1.4vw;
+    margin-bottom: 3vw;
  }
  div#servicos {
     padding-bottom: 3vw;
@@ -73,9 +75,10 @@
      flex-basis: 26vw;
      transition: transform .5s, box-shadow .5s;
      cursor: default;
+     border-radius: .5vw;
  }
  div#itens div:hover {
-   box-shadow: .04vw .4vw 1vw rgba(0,0,0,0.5);
+   box-shadow: .04vw .65vw 1vw rgba(0,0,0,0.3);
    transform: translate3d(0, -.5vw, 0)
  }
  div#itens div h1 {
@@ -120,4 +123,75 @@
 [data-animation].animate {
    transform: translate3d(0, 0, 0);
    opacity: 1;
+}
+div#contato {
+   background-color: #090a0d;
+   width: 100vw;
+}
+div#info-contato {
+   width: auto;
+   margin: 5vw;
+   font-family: Rubik;
+   color: white;
+}
+div#info-contato h1 {
+   font-size: 2.5vw;
+   width: 100%;
+   text-align: center;
+   margin-bottom: 2.5vw;
+}
+div#form {
+   width: 100%;
+   display: flex;
+   flex-wrap: wrap;
+}
+div#form input, textarea {
+   width: 60%;
+   margin: 2vh auto;
+   padding-left: 1vw;
+   box-sizing: border-box;
+   height: 6vh;
+   border: .15vw solid #cacaca;
+   border-radius: .5vw;
+   font-size: 1vw;
+   outline: none;
+   transition: .5s
+}
+div#form textarea {
+   padding-top: 1vw;
+   height: 20vw;
+}
+div#form input:focus {
+   border-color: #ed145b;
+}
+div#telefone {
+   flex-basis: 60%;
+   display: flex;
+   margin: auto;
+}
+div#telefone #ddd {
+   width: 20%
+}
+div#telefone #numero {
+   margin-left: 2vw;
+   width: 100%
+}
+div#info-contato div#abs-contato {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   margin-top: 2vw;
+}
+div#info-contato div#abs-contato div{
+   margin: 0 2.5vw;
+   display: flex;
+   align-items: center;
+}
+div#info-contato div#abs-contato p {
+   margin-left: 1vw;
+   font-size: 1vw;
+   display: inline-block;
+}
+div#info-contato div#abs-contato img {
+   width: 2.2vw;
 }
