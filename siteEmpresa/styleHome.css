@@ -150,7 +150,7 @@ div#form input, textarea {
    margin: 2vh auto;
    padding-left: 1vw;
    box-sizing: border-box;
-   height: 6vh;
+   height: 3.5vw;
    border: .15vw solid #cacaca;
    border-radius: .5vw;
    font-size: 1vw;
@@ -159,10 +159,21 @@ div#form input, textarea {
 }
 div#form textarea {
    padding-top: 1vw;
-   height: 20vw;
+   height: 15vw;
+   resize: vertical;
+   min-height: 10vw;
 }
-div#form input:focus {
+div#form input:focus, textarea:focus {
    border-color: #ed145b;
+}
+div#form input[type='submit']{
+   background-color: #ed145b;
+   border: none;
+   cursor: pointer;
+   font-weight: bold
+}
+div#form input[type='submit']:hover {
+   background-color: #be114b
 }
 div#telefone {
    flex-basis: 60%;
@@ -191,6 +202,7 @@ div#info-contato div#abs-contato p {
    margin-left: 1vw;
    font-size: 1vw;
    display: inline-block;
+   text-align: center
 }
 div#info-contato div#abs-contato img {
    width: 2.2vw;
