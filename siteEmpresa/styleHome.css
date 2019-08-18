@@ -7,10 +7,17 @@
     font-family: IBM Plex Mono;
     src: url('fonts/IBMPlexMono-Regular.ttf')
 }
+@font-face {
+   font-family: Samsung;
+   src: url('fonts/SamsungSharpSansRegular-Regular.ttf')
+}
  * {
      margin: 0;
      padding: 0;
      overflow-x: hidden;
+ }
+ span {
+    color: #ed145b
  }
  div#apresentacao{
     background-color: #151819;
@@ -21,22 +28,26 @@
  }
  div#texto-apresentacao{
     width: 35vw;
+    height: 30vw;
     font-family: Rubik;
     color: white;
     margin-left: 10vw;
+    padding-right: 3vw;
  }
- div#texto-apresentacao h1{
-    line-height: 4vw;
+ div#texto-apresentacao > h1{
+    font-size: 2.5vw;
+    line-height: 3.5vw;
+    margin-top: 3vw;
  }
  div#texto-apresentacao p{
-    font-family: IBM Plex Mono;
+    font-family: Samsung;
     line-height: 1.9vw;
     font-size: 1.4vw;
  }
  div#servicos {
-    background-color: bisque
+    padding-bottom: 3vw;
  }
- div#servicos h1 {
+ div#servicos > h1 {
     font-family: Rubik;
     font-size: 4vw;
     width: 50vw;
@@ -45,35 +56,68 @@
  }
  div#itens {
      width: 100vw;
-     max-height: auto;
      display: flex;
      flex-wrap: wrap;
      justify-content: center;
+     padding: 0 5vw;
+     box-sizing: border-box;
+     padding-bottom: .4vw;
  }
- div#itens div {
-     width: 50vw;
+ div#itens > div {
      display: flex;
      flex-wrap: wrap;
      align-items: center;
      justify-content: center;
-     margin: 2.5vw;
-     flex-basis: 25vw;
+     margin: .5vw 1vw;
+     padding: 2.5vw 0;
+     flex-basis: 26vw;
+     transition: transform .5s, box-shadow .5s;
+     cursor: default;
+ }
+ div#itens div:hover {
+   box-shadow: .04vw .4vw 1vw rgba(0,0,0,0.5);
+   transform: translate3d(0, -.5vw, 0)
  }
  div#itens div h1 {
     font-family: Rubik;
-    width: 100%;
     text-align: center;
-    margin: 1.5vw;
     color: #151819;
     font-size: 2.2vw;
-    text-shadow: 1px 1px black;
+    text-shadow: .06vw .06vw black;
+    margin: 1vw;
+    width: 100%;
  }
  div#itens div p {
+    font-size: 1.1vw;
     font-family: IBM Plex Mono;
-    text-align: center;
-    display: none;
+    padding: 0 3vw;
  }
  div#itens div img {
-     display: block;
      width: 6vw;
  }
+ [data-animation]{
+   opacity: 0;
+   transition: transform 1s, opacity 1s;
+ }
+ [data-animation="left"]{
+   transform: translate3d(-4vw, 0, 0);
+   text-align: right;
+}
+ [data-animation="right"]{
+   transform: translate3d(4vw, 0, 0);
+   text-align: left;
+}
+ [data-animation="center"]{
+   transform: translate3d(0, 2vw, 0);
+   text-align: center;
+}
+ [data-animation="top"]{
+   transform: translate3d(0, 4vw, 0)
+}
+ [data-animation="bottom"]{
+   transform: translate3d(0, -4vw, 0)
+}
+[data-animation].animate {
+   transform: translate3d(0, 0, 0);
+   opacity: 1;
+}
