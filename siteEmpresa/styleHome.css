@@ -146,7 +146,7 @@ div#form {
    flex-wrap: wrap;
 }
 div#form input, textarea {
-   width: 60%;
+   width: 55%;
    margin: 2vh auto;
    padding-left: 1vw;
    box-sizing: border-box;
@@ -155,7 +155,7 @@ div#form input, textarea {
    border-radius: .5vw;
    font-size: 1vw;
    outline: none;
-   transition: .5s
+   transition: .5s;
 }
 div#form textarea {
    padding-top: 1vw;
@@ -176,7 +176,7 @@ div#form input[type='submit']:hover {
    background-color: #be114b
 }
 div#telefone {
-   flex-basis: 60%;
+   flex-basis: 55%;
    display: flex;
    margin: auto;
 }
@@ -206,4 +206,35 @@ div#info-contato div#abs-contato p {
 }
 div#info-contato div#abs-contato img {
    width: 2.2vw;
+}
+div#suporte{
+   padding-bottom: 4vw;
+}
+div#suporte > h1 {
+   margin: 4vw 0 1.5vw 0;
+   text-align: center;
+   font-family: Rubik;
+   font-size: 3vw;
+}
+div.pergunta {
+   width: 60vw;
+   max-height: 1.5vw;
+   margin: 1.5vw auto;
+   padding: 1.5vw;
+   color: #4C4C4C;
+   border-bottom: .15vw solid #cacaca;
+   font-size: .7vw;
+   font-family: Samsung;
+   overflow: hidden;
+   transition: .5s;
+   cursor: pointer;
+}
+div.pergunta:hover > h1 {
+   color: #ed145b
+}
+div.pergunta p {
+   margin-top: 1vw;
+   font-size: 1vw;
+   line-height: 1.8vw;
+   display: none;
 }

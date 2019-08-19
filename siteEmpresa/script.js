@@ -1,3 +1,11 @@
+document.querySelectorAll('.pergunta').forEach((e)=>{
+    e.addEventListener('click', () => {
+        e.childNodes[3].style.display = 'block'
+        e.childNodes[1].style.color = '#ed145b'
+        e.style.maxHeight = '12vw'
+    })
+})
+
 const items = document.querySelectorAll('[data-animation]')
 function animeScroll() {
     const windowTop = window.pageYOffset + ((window.innerHeight * 3) / 4);
