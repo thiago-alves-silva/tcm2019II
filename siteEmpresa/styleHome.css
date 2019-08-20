@@ -156,7 +156,7 @@ div#form input, textarea {
    border-radius: .5vw;
    font-size: 1vw;
    outline: none;
-   transition: .5s;
+   transition: border-color .3s, background-color .5s;
 }
 div#form textarea {
    padding-top: 1vw;
@@ -166,6 +166,9 @@ div#form textarea {
 }
 div#form input:focus, textarea:focus {
    border-color: #ed145b;
+}
+div#form input:hover, textarea:hover {
+   background-color: #cacaca
 }
 div#form input[type='submit']{
    background-color: #ed145b;
@@ -228,9 +231,18 @@ div.pergunta {
    font-size: .7vw;
    font-family: Samsung;
    overflow: hidden;
-   transition: all .5s;
+   transition: max-height .5s;
    cursor: pointer;
+   position: relative;
 }
+div.pergunta h1 span {
+   font-size: 2.5vw;
+   position: absolute;
+   top:1vw;   
+   right: 1vw;
+   transition: all .4s
+}
+.rotate {transform: rotate(45deg)}
 div.pergunta:hover > h1 {
    color: #ed145b
 }
@@ -246,4 +258,15 @@ div#footer {
    width: 100vw;
    height: 30vh;
    background-color: #151819;
+   color: #cacaca;
+   font-family: Rubik;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-around;
+   align-items: center;
+   font-size: 1vw;
+}
+div#footer img {
+   width: 6.5vw;
+   pointer-events: none;
 }
