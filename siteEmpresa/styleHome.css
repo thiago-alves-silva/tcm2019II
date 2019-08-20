@@ -97,6 +97,7 @@
  }
  div#itens div img {
      width: 6vw;
+     pointer-events: none;
  }
  [data-animation]{
    opacity: 0;
@@ -206,6 +207,7 @@ div#info-contato div#abs-contato p {
 }
 div#info-contato div#abs-contato img {
    width: 2.2vw;
+   pointer-events: none;
 }
 div#suporte{
    padding-bottom: 4vw;
@@ -226,15 +228,17 @@ div.pergunta {
    font-size: .7vw;
    font-family: Samsung;
    overflow: hidden;
-   transition: .5s;
+   transition: all .5s;
    cursor: pointer;
 }
 div.pergunta:hover > h1 {
    color: #ed145b
 }
 div.pergunta p {
-   margin-top: 1vw;
+   margin-top: 1.5vw;
    font-size: 1vw;
    line-height: 1.8vw;
-   display: none;
+   transition: .3s
 }
+.color {color: #ed145b !important}
+.maxHeight{max-height: 12vw !important}
