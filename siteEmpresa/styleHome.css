@@ -242,3 +242,8 @@ div.pergunta p {
 }
 .color {color: #ed145b !important}
 .maxHeight{max-height: 12vw !important}
+div#footer {
+   width: 100vw;
+   height: 30vh;
+   background-color: #151819;
+}
