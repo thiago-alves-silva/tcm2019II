@@ -201,6 +201,7 @@ div#info-contato div#abs-contato div{
    margin: 0 2.5vw;
    display: flex;
    align-items: center;
+   padding-bottom: 3vw;
 }
 div#info-contato div#abs-contato p {
    margin-left: 1vw;
@@ -211,6 +212,15 @@ div#info-contato div#abs-contato p {
 div#info-contato div#abs-contato img {
    width: 2.2vw;
    pointer-events: none;
+   transition: transform .5s, opacity .4s;
+}
+[data-icon_contato]{
+   transform: translateY(3vw);
+   opacity: 0;
+}
+[data-icon_contato].animate2 {
+   transform: translateY(0);
+   opacity: 1;
 }
 div#suporte{
    padding-bottom: 4vw;
