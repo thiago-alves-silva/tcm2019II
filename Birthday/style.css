@@ -1,0 +1,17 @@
+@charset "utf-8";
+
+#main {
+    margin: auto;
+    font-family: Consolas;
+    width: 30vw;
+    max-height: auto;
+    padding: 2vw;
+    background-color: cadetblue;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+input{
+    margin:.5vw auto;
+}
