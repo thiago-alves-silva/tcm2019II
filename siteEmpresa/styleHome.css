@@ -92,7 +92,8 @@
  }
  div#itens div p {
     font-size: 1.1vw;
-    font-family: IBM Plex Mono;
+    font-family: Samsung;
+    line-height: 1.5vw;
     padding: 0 3vw;
  }
  div#itens div img {
