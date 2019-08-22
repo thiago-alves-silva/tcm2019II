@@ -125,6 +125,35 @@
    transform: translate3d(0, 0, 0);
    opacity: 1;
 }
+div#empresa {
+   color: white;
+   font-family: Rubik;
+   background-color: #151819;
+   height: 1000px;
+}
+div#img-emp{
+   position: relative;
+   width: 100vw;
+   height: 30vw;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background: url('img/img-empresa2.jpg');
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-attachment: fixed
+}
+div#img-emp h1{
+   z-index: 1;
+}
+div#img-emp::before{
+   content: '';
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0,0,0,0.5);
+}
 div#contato {
    background-color: #090a0d;
    width: 100vw;
