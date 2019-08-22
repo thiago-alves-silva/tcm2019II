@@ -25,6 +25,11 @@
     height: 100vh;
     display: flex;
     align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+ }
+ div#apresentacao img {
+   width: 35vw;
  }
  div#texto-apresentacao{
     width: 35vw;
@@ -32,8 +37,6 @@
     overflow: hidden;
     font-family: Rubik;
     color: white;
-    margin-left: 10vw;
-    padding-right: 3vw;
  }
  div#texto-apresentacao > h1{
     font-size: 2.5vw;
@@ -92,7 +95,8 @@
  }
  div#itens div p {
     font-size: 1.1vw;
-    font-family: IBM Plex Mono;
+    font-family: Samsung;
+    line-height: 1.5vw;
     padding: 0 3vw;
  }
  div#itens div img {
@@ -124,6 +128,35 @@
 [data-animation].animate {
    transform: translate3d(0, 0, 0);
    opacity: 1;
+}
+div#empresa {
+   color: white;
+   font-family: Rubik;
+   background-color: #151819;
+   height: 1000px;
+}
+div#img-emp{
+   position: relative;
+   width: 100vw;
+   height: 30vw;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background: url('img/img-empresa2.jpg');
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-attachment: fixed
+}
+div#img-emp h1{
+   z-index: 1;
+}
+div#img-emp::before{
+   content: '';
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0,0,0,0.5);
 }
 div#contato {
    background-color: #090a0d;
