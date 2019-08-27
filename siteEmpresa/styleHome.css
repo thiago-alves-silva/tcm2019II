@@ -16,6 +16,57 @@
      padding: 0;
      overflow-x: hidden;
  }
+ header {
+    width: 100vw;
+    position: absolute;
+ }
+ div#cabecalho {
+    width: 60vw;
+    max-height: auto;
+    margin: auto;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom: .05vw solid white;
+    padding-top: .5vw;
+    box-sizing: border-box
+ }
+ div#cabecalho img {
+    width: 3.5vw;
+ }
+ div#cabecalho h1 {
+    color: white;
+    font-family: Samsung;
+    font-size: 2vw;
+    margin-top: .8vw;
+    pointer-events: none;
+ }
+ div#cabecalho label[for='menu-check']{
+   color:#959799;
+   padding: auto 1vw;
+   font-size: 2.5vw;
+   cursor: pointer;
+   top: 0;
+   margin: .5vw 0 0 1.2vw;
+   transition: background-color .3s;
+   transform: scale(1);
+   z-index: 1;
+}
+div#cabecalho input[type='checkbox']{
+   display: none;
+}
+div#cabecalho input[type='checkbox']:checked ~ label{ background-color: white; }
+div#menu-drop {
+   width: 10vw;
+   top: 4.4vw;
+   right: 0;
+   margin-right: 25.1vw;
+   position: absolute;
+   color: white;
+   background-color: white;
+   transition: transform .3s;
+}
  span {
     color: #ed145b
  }
@@ -27,6 +78,7 @@
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
+    padding-top: 5vh;
  }
  div#apresentacao img {
    width: 40vw;
@@ -310,6 +362,6 @@ div#footer {
    font-size: 1vw;
 }
 div#footer img {
-   width: 6.5vw;
+   width: 5vw;
    pointer-events: none;
 }
