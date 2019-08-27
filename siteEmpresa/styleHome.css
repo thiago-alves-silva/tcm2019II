@@ -48,7 +48,6 @@
    font-size: 2.5vw;
    cursor: pointer;
    top: 0;
-   margin: .5vw 0 0 1.2vw;
    transition: background-color .3s;
    transform: scale(1);
    z-index: 1;
