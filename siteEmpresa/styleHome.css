@@ -16,21 +16,28 @@
      padding: 0;
      overflow-x: hidden;
  }
+
  header {
     width: 100vw;
     position: absolute;
  }
+ .active-btnMenu{padding-bottom: 10vw;}
  div#cabecalho {
-    width: 60vw;
+    height: 100vh;
+    width: 6vw;
     max-height: auto;
-    margin: auto;
+    background-color: #ed145b;
     box-sizing: border-box;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    justify-content: space-around;
-    border-bottom: .05vw solid white;
-    padding-top: .5vw;
-    box-sizing: border-box
+    align-content: space-between;
+    justify-content: center;
+    padding: .5vw;
+    padding-bottom: 0;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1;
  }
  div#cabecalho img {
     width: 3.5vw;
@@ -39,10 +46,11 @@
     color: white;
     font-family: Samsung;
     font-size: 2vw;
-    margin-top: .8vw;
     pointer-events: none;
+    text-align: center;
+    writing-mode: vertical-lr;
  }
- div#cabecalho label[for='menu-check']{
+label[for='menu-check']{
    color:#959799;
    padding: auto 1vw;
    font-size: 2.5vw;
@@ -51,33 +59,37 @@
    transition: background-color .3s;
    transform: scale(1);
    z-index: 1;
+   padding: .5vw 1vw .5vw 1vw;
 }
-div#cabecalho input[type='checkbox']{
-   display: none;
+input[type='checkbox']{
+   display: none  ;
 }
-div#cabecalho input[type='checkbox']:checked ~ label{ background-color: white; }
+input[type='checkbox']:checked ~ label{ background-color: white; }
+input[type='checkbox']:checked ~ div#menu-drop {opacity: 0;}
 div#menu-drop {
-   width: 10vw;
-   top: 4.4vw;
-   right: 0;
-   margin-right: 25.1vw;
+   width: 7vw;
+   top: 3vw;
+   right: 25.8vw;
+   font-size: 1vw;
    position: absolute;
    color: white;
    background-color: white;
    transition: transform .3s;
+   z-index: 1;
 }
+
+
  span {
     color: #ed145b
  }
  div#apresentacao{
     background-color: #151819;
     width: 100vw;
-    height: 100vh;
+    height: 49.3vw;
     display: flex;
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
-    padding-top: 5vh;
  }
  div#apresentacao img {
    width: 40vw;
@@ -88,6 +100,7 @@ div#menu-drop {
     overflow: hidden;
     font-family: Rubik;
     color: white;
+    margin-left: 5vw;
  }
  div#texto-apresentacao > h1{
     font-size: 2.5vw;
@@ -102,6 +115,7 @@ div#menu-drop {
  }
  div#servicos {
     padding-bottom: 3vw;
+    overflow: hidden;
  }
  div#servicos > h1 {
     font-family: Rubik;

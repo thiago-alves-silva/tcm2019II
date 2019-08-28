@@ -1,4 +1,8 @@
 document.querySelectorAll('.pergunta').forEach(e => e.childNodes[1].innerHTML += "<span>+</span>")
+function menuDrop() {
+    document.querySelector('header').classList.toggle('active-btnMenu')
+}
+document.querySelector('label').addEventListener('click',() =>  menuDrop())
 
 document.querySelectorAll('.pergunta').forEach(e => {
     e.addEventListener('click', () => {
