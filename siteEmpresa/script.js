@@ -33,3 +33,12 @@ function animeScroll2(){
     }
 }
 window.addEventListener('scroll', () => animeScroll2())
+
+writter()
+function writter() {
+let txt = document.getElementById('titulo').innerHTML.split("");
+document.getElementById('titulo').innerHTML = ''
+txt.forEach((e, i) => {
+    setTimeout(() => document.getElementById('titulo').innerHTML += e, 125*i)
+})
+}
