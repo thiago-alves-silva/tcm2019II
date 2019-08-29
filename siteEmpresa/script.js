@@ -1,8 +1,9 @@
 document.querySelectorAll('.pergunta').forEach(e => e.childNodes[1].innerHTML += "<span>+</span>")
-function menuDrop() {
-    document.querySelector('header').classList.toggle('active-btnMenu')
-}
-document.querySelector('label').addEventListener('click',() =>  menuDrop())
+
+function menuDrop() { document.querySelector('label').classList.toggle('btn-down') }
+document.querySelector('label').addEventListener('mousedown',() =>  menuDrop())
+function menuDrop() { document.querySelector('label').classList.toggle('btn-down') }
+document.querySelector('label').addEventListener('mouseup',() =>  menuDrop())
 
 document.querySelectorAll('.pergunta').forEach(e => {
     e.addEventListener('click', () => {
