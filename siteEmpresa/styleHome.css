@@ -254,7 +254,7 @@ div#equipe > div {
    flex-wrap: wrap;
    flex-basis: 35vw;
    padding-bottom: 1vw;
-   margin: 5vw auto;
+   margin: 3vw auto;
    border-bottom: .1vw solid white;
 }
 div#equipe div > div.imgs {
