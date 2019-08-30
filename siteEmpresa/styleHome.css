@@ -280,9 +280,11 @@ div#equipe div > div > h1 {
    transition: transform 1s, opacity .5s;
    opacity: 0;
    padding-right: 4vw;
+   font-size: 2vw;
 }
 div#equipe p {
    margin-left: 2.5vw;
+   font-size: 1vw;
 }
 [data-equipe]{
    transform: translate3d(4vw, 0, 0);
