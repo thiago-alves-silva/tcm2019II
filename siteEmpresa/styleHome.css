@@ -16,7 +16,6 @@
      padding: 0;
      overflow-x: hidden;
  }
-
  header {
     width: 100vw;
     position: absolute;
@@ -55,14 +54,14 @@
     font-size: 2.5vw;
     pointer-events: none;
     writing-mode: vertical-rl;
-    transform: rotate(180deg)
+    transform: rotate(180deg);
  }
 label[for='menu-check']{
-   color:#151819;
+   color: white;
    font-size: 2.2vw;
    cursor: pointer;
    top: 0;
-   transition: background-color .5s, transform .1s, box-shadow .3s;
+   transition: transform .1s;
    z-index: 1;
    display: flex;
    align-items: center;
@@ -91,8 +90,6 @@ div#menu-drop {
    transition: transform .3s;
    z-index: 1;
 }
-
-
  span {
     color: #ed145b
  }
@@ -106,7 +103,9 @@ div#menu-drop {
     flex-wrap: wrap;
  }
  div#apresentacao img {
-   width: 40vw;
+   width: 45vw;
+   margin-right: 2vw;
+   pointer-events: none;
  }
  div#texto-apresentacao{
     width: 35vw;
@@ -212,7 +211,7 @@ div#empresa {
    color: white;
    font-family: Rubik;
    background-color: #151819;
-   height: 1000px;
+   padding-bottom: 3vw
 }
 div#img-emp{
    position: relative;
@@ -236,6 +235,61 @@ div#img-emp::before{
    width: 100%;
    height: 100%;
    background-color: rgba(0,0,0,0.5);
+}
+div#equipe{
+   width: 75vw;
+   margin: auto;
+}
+div#equipe > h1 {
+   font-size: 3.5vw;
+   color: white;
+   margin: 5vw auto;
+   text-align: center;
+}
+div#equipe > div {
+   display: flex;
+   align-items: center;
+   flex-wrap: wrap;
+   margin: 5vw auto;
+   border-bottom: .1vw solid white;
+}
+div#equipe div > div.imgs {
+   width: 6vw;
+   height: 6vw;
+   border-radius: 50%;
+   overflow: hidden;
+}
+div#equipe img {
+   width: 6vw;
+   border-radius: 50%;
+   transition: transform .3s
+}
+div#equipe img.hover {
+   width: 6vw;
+   background-color:rgba(0,0,0,0.5);
+   padding: 1.5vw;
+   box-sizing: border-box;
+   border-radius: 50%;
+   opacity: 0;
+   transition: opacity .5s;
+   position: absolute;
+}
+div#equipe div > div > h1 {
+   color: #4C4C4C;
+   margin-left: 2.5vw;
+   transition: transform 1s, opacity .5s;
+   opacity: 0;
+   padding-right: 4vw;
+}
+div#equipe p {
+   margin-left: 2.5vw;
+}
+[data-equipe]{
+   transform: translate3d(4vw, 0, 0);
+}
+[data-equipe].animate3 {
+   transform: translate3d(0, 0, 0);
+   opacity: 1 !important;
 }
 div#contato {
    background-color: #090a0d;
