@@ -37,7 +37,7 @@ window.addEventListener('scroll', () => animeScroll2())
 function animeScroll3() {
     const windowTop = window.pageYOffset + ((window.innerHeight * 3) / 4);
     document.querySelectorAll('[data-equipe]').forEach((e, i) => {
-        if(windowTop > e.offsetTop) setInterval(() => e.classList.add('animate3'), 100*i)
+        if(windowTop > e.offsetTop) setInterval(() => e.classList.add('animate3'), 50*i)
     })
 }
 animeScroll3()
@@ -51,6 +51,14 @@ function equipeImg(){
         e.addEventListener('mouseover', () => {
             imgs[i].style.transform = 'scale(1.3)'
             imgsHover[i].style.opacity = '1'
+            if(i==0) imgsHover[i].style.border = '.1vw solid yellow'
+            if(i==1) imgsHover[i].style.border = '.1vw solid #ed145b'
+            if(i==2) imgsHover[i].style.border = '.1vw solid #308be8'
+            if(i==3) imgsHover[i].style.border = '.1vw solid #ed145b'
+            if(i==4) imgsHover[i].style.border = '.1vw solid #f14f21'
+            if(i==5) imgsHover[i].style.border = '.1vw solid #67cc7e'
+            if(i==6) imgsHover[i].style.border = '.1vw solid #a875de'
+            
         })
         e.addEventListener('mouseout', () => {
             imgs[i].style.transform = 'scale(1)'

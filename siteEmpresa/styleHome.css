@@ -239,6 +239,8 @@ div#img-emp::before{
 div#equipe{
    width: 75vw;
    margin: auto;
+   display: flex;
+   flex-wrap: wrap;
 }
 div#equipe > h1 {
    font-size: 3.5vw;
@@ -250,6 +252,8 @@ div#equipe > div {
    display: flex;
    align-items: center;
    flex-wrap: wrap;
+   flex-basis: 35vw;
+   padding-bottom: 1vw;
    margin: 5vw auto;
    border-bottom: .1vw solid white;
 }
@@ -258,11 +262,13 @@ div#equipe div > div.imgs {
    height: 6vw;
    border-radius: 50%;
    overflow: hidden;
+   box-sizing: border-box;
 }
 div#equipe img {
    width: 6vw;
    border-radius: 50%;
-   transition: transform .3s
+   transition: transform .3s;
+   box-sizing: border-box;
 }
 div#equipe img.hover {
    width: 6vw;
