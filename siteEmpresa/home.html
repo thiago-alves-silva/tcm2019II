@@ -215,13 +215,26 @@
         </div>
     </div>
     <div id="comentarios">
+        <h1>DEIXE O SEU COMENTÁRIO</h1>
         <div id="formcomment">
-            <h1>DEIXE O SEU COMENTÁRIO</h1>
-            <form>
+            <form id="comentario" action="">
                 <p>Nome</p>
                 <input type="text">
+                <p>Turma</p>
+                <select id="turma">
+                    <option value=""></option>
+                    <option value="">1º DS</option>
+                    <option value="3info">3º Info</option>
+                    <option value="3log">3º Log</option>
+                    <option value="3ameca">3ºA Meca</option>
+                    <option value="3bmeca">3ºB Meca</option>
+                    <option value="m1ds">Modular 1º DS</option>
+                    <option value="m2ds">Modular 2º DS</option>
+                    <option value="m3ds">Modular 3º DS</option>
+                </select>
                 <p>Comentário</p>
                 <textarea id="comentario" cols="30" rows="10"></textarea>
+                <input type="submit" value="Adicionar comentário">
             </form>
         </div>
         <div id="comments">

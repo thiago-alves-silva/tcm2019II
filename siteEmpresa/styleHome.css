@@ -446,32 +446,69 @@ div#comentarios {
    width: 100%;
    overflow: auto;
 }
+div#comentarios h1 {
+   color: white;
+   text-align: center;
+   font-family: Rubik;
+   font-size: 3vw;
+   margin: 2vw
+}
+div#formcomment{
+   font-family: Rubik;
+   display: flex;
+   justify-content: center;
+   width: 50vw;
+   color: white;
+   margin: auto;
+   background-color: #4C4C4C
+}
+form#comentario input, textarea, select {
+   width: 55%;
+   margin: 2vh auto;
+   padding-left: 1vw;
+   box-sizing: border-box;
+   height: 3vw;
+   border: .15vw solid #cacaca;
+   border-radius: .5vw;
+   font-size: 1vw;
+   outline: none;
+   transition: border-color .3s, background-color .5s;
+}
+form#comentario p {
+   display: inline;
+}
+form#comentario select {
+   height: 2vw;
+   padding-left: .5vw;
+}
+form#comentario textarea {
+   padding-top: 1vw;
+   height: 15vw;
+   resize: vertical;
+   min-height: 10vw;
+}
+form#comentario input:focus, textarea:focus, select:focus {
+   border-color: #ed145b;
+}
+form#comentario input:hover, textarea:hover, select:hover {
+   background-color: #cacaca
+}
+form#comentario input[type='submit']{
+   background-color: #ed145b;
+   border: none;
+   cursor: pointer;
+   font-weight: bold;
+   padding-left: 0vw;
+}
+form#comentario input[type='submit']:hover {
+   background-color: #be114b
+}
 div#comments {
    display: flex;
    background-color: aqua; 
    height: 100%;
    width: 100%;
    position: relative;
-}
-div#formcomment{
-   width: 60vw;
-   display: flex;
-   justify-content: center;
-   flex-wrap: wrap;
-   color: white;
-   margin: auto;
-   background-color: #4C4C4C
-}
-div#formcomment h1 {
-   background-color: #ed145b;
-   width: 100%;
-   text-align: center;
-   font-family: Rubik;
-   font-size: 3vw;
-   margin: 2vw
-}
-div#formcomment input {
-   height: 2vw;;
 }
 div.roll {
    width: 10vw;
