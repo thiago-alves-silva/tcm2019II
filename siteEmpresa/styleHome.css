@@ -510,16 +510,11 @@ form#comentario input[type='button']:hover {
    background-color: #be114b
 }
 div#comments {
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: space-around;
-   border: 1px solid aqua;
+   /* border: 1px solid aqua; */
    width: 50%;
    height: 36vw;
 }
 div.roll {
-   /* width: 40%; */
-   width: 100%;
    background-color: #1d2122;
    margin: 2vw;
    font-size: .8vw;
@@ -528,6 +523,8 @@ div.roll {
    padding: 1vw;
    border-radius: .4vw;
    position: relative;
+   transition: transform 1s, opacity .5s;
+   opacity: 0;
 }
 div.roll > h1 {color:#ed145b}
 div.roll > h2 {
@@ -546,7 +543,13 @@ div.roll > p#horaComment {
    bottom: 1vw;
    right: 1.5vw;
 }
-
+[data-comment="left"]{
+   transform: translate3d(-4vw, 0, 0);
+}
+[data-comment].animate4 {
+   transform: translate3d(0, 0, 0);
+   opacity: 1 !important;
+}
 div#footer {
    width: 100%;
    height: 30vh;

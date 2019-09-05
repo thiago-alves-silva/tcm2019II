@@ -219,37 +219,44 @@
         <div id="formcomment">
             <form id="comentario" action="">
                 <p>Nome</p>
-                <input type="text">
+                <input type="text" id="insertNomeComment">
                 <p>Turma</p>
-                <select id="turma">
-                    <option value="1ds">1º DS</option>
-                    <option value="2ds">2º Info</option>
-                    <option value="3info">3º Info</option>
-                    <option value="3log">3º Log</option>
-                    <option value="3ameca">3ºA Meca</option>
-                    <option value="3bmeca">3ºB Meca</option>
+                <select id="turmaComment">
+                    <option value="1ds">Professor(a)</option>
+                    <option value="1amedio" selected>1ºA Médio</option>
+                    <option value="1bmedio">1ºB Médio</option>
+                    <option value="2amedio">2ºA Médio</option>
+                    <option value="2bmedio">2ºB Médio</option>
+                    <option value="3amedio">3ºA Médio</option>
+                    <option value="3bmedio">3ºB Médio</option>
+                    <option value="1ds">Etim 1º DS</option>
+                    <option value="2ds">Etim 2º Info</option>
+                    <option value="3info">Etim 3º Info</option>
+                    <option value="1log">Etim 1º Log</option>
+                    <option value="2log">Etim 2º Log</option>
+                    <option value="3log">Etim 3º Log</option>
+                    <option value="1ameca">Etim 1ºA Meca</option>
+                    <option value="1bmeca">Etim 1ºB Meca</option>
+                    <option value="2ameca">Etim 2ºA Meca</option>
+                    <option value="2bmeca">Etim 2ºB Meca</option>
+                    <option value="3ameca">Etim 3ºA Meca</option>
+                    <option value="3bmeca">Etim 3ºB Meca</option>
                     <option value="m1ds">Modular 1º DS</option>
                     <option value="m2ds">Modular 2º DS</option>
                     <option value="m3ds">Modular 3º DS</option>
+                    <option value="m1ds">Modular 1º ADM</option>
+                    <option value="m2ds">Modular 2º ADM</option>
+                    <option value="m3ds">Modular 3º ADM</option>
+                    <option value="m1ds">Modular 1º Meca</option>
+                    <option value="m2ds">Modular 2º Meca</option>
+                    <option value="m3ds">Modular 3º Meca</option>
                 </select>
                 <p>Comentário</p>
                 <textarea id="txtcomentario" placeholder="Máx. 250 caracteres" maxlength="250"></textarea>
-                <input type="button" value="Adicionar comentário">
+                <input type="button" value="Adicionar comentário" onclick="cadastro()" id="btnComment">
             </form>
             <div id="comments">
-                <div class="roll">
-                    <h1 id="nomeComment">Fulano da Silva</h1>
-                    <h2 id="turmaComment">Modular 2º DS</h2>
-                    <p id="msgComment">Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos.</p>
-                    <p id="horaComment">23:18</p>
-                </div>
-                <div class="roll">
-                    <h1 id="nomeComment">Fulano da Silva</h1>
-                    <h2 id="turmaComment">Modular 2º DS</h2>
-                    <p id="msgComment">Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século </p>
-                    <p id="horaComment">23:18</p>
-                </div>
-                <div class="roll">
+                <div class="roll" data-comment="left">
                     <h1 id="nomeComment">Fulano da Silva</h1>
                     <h2 id="turmaComment">Modular 2º DS</h2>
                     <p id="msgComment">Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos.</p>
@@ -257,7 +264,6 @@
                 </div>
             </div>
         </div>
-        
     </div>
     <footer>
         <div id="footer">
@@ -268,4 +274,6 @@
     </footer>
 </body>
 <script src="script.js"></script>
+<script src="scriptComentarios.js"></script>
+<script src="scriptData.js"></script>
 </html>
