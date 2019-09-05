@@ -222,8 +222,8 @@
                 <input type="text">
                 <p>Turma</p>
                 <select id="turma">
-                    <option value=""></option>
-                    <option value="">1º DS</option>
+                    <option value="1ds">1º DS</option>
+                    <option value="2ds">2º Info</option>
                     <option value="3info">3º Info</option>
                     <option value="3log">3º Log</option>
                     <option value="3ameca">3ºA Meca</option>
@@ -233,13 +233,31 @@
                     <option value="m3ds">Modular 3º DS</option>
                 </select>
                 <p>Comentário</p>
-                <textarea id="comentario" cols="30" rows="10"></textarea>
+                <textarea id="txtcomentario" placeholder="Máx. 250 caracteres" maxlength="250"></textarea>
                 <input type="submit" value="Adicionar comentário">
             </form>
+            <div id="comments">
+                <div class="roll">
+                    <h1 id="nomeComment">Fulano da Silva</h1>
+                    <h2 id="turmaComment">Modular 2º DS</h2>
+                    <p id="msgComment">Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos.</p>
+                    <p id="horaComment">23:18</p>
+                </div>
+                <div class="roll">
+                    <h1 id="nomeComment">Fulano da Silva</h1>
+                    <h2 id="turmaComment">Modular 2º DS</h2>
+                    <p id="msgComment">Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século </p>
+                    <p id="horaComment">23:18</p>
+                </div>
+                <div class="roll">
+                    <h1 id="nomeComment">Fulano da Silva</h1>
+                    <h2 id="turmaComment">Modular 2º DS</h2>
+                    <p id="msgComment">Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos.</p>
+                    <p id="horaComment">23:18</p>
+                </div>
+            </div>
         </div>
-        <div id="comments">
-            <div class="roll"></div>
-        </div>
+        
     </div>
     <footer>
         <div id="footer">
