@@ -499,14 +499,14 @@ form#comentario input:focus, textarea:focus, select:focus {
 form#comentario input:hover, textarea:hover, select:hover {
    background-color: #cacaca
 }
-form#comentario input[type='submit']{
+form#comentario input[type='button']{
    background-color: #ed145b;
    border: none;
    cursor: pointer;
    font-weight: bold;
    padding-left: 0vw;
 }
-form#comentario input[type='submit']:hover {
+form#comentario input[type='button']:hover {
    background-color: #be114b
 }
 div#comments {
