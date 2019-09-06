@@ -35,12 +35,3 @@ function equipeImg(){
     })
 }
 equipeImg()
-
-writter()
-function writter() {
-let txt = document.getElementById('titulo').innerHTML.split("");
-document.getElementById('titulo').innerHTML = ''
-txt.forEach((e, i) => {
-    setTimeout(() => document.getElementById('titulo').innerHTML += e, 125*i)
-})
-}

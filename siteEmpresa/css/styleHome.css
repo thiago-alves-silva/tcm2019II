@@ -16,6 +16,15 @@
      padding: 0;
      overflow-x: hidden;
  }
+*::-webkit-scrollbar {
+   width: .5vw;
+   background-color: #a80b40;
+}
+*::-webkit-scrollbar-thumb {
+   background-color: #ed145b;
+   border-radius: .5vw;
+   
+}
  header {
     width: 100%;
     position: absolute;
@@ -302,7 +311,7 @@ div#equipe p {
 }
 div#contato {
    background-color: #090a0d;
-   width: 100vw;
+   width: 100%;
 }
 div#info-contato {
    width: auto;
@@ -461,7 +470,6 @@ div#formcomment{
    justify-content: space-around;
    width: 100%;
    color: white;
-   /* background-color: #4C4C4C */
 }
 form#comentario input, textarea, select {
    width: 100%;
@@ -514,7 +522,12 @@ p.erro {
 }
 div#comments {
    width: 45vw;
-   height: 36vw;
+   height: 33vw;
+}
+div#comments::-webkit-scrollbar {
+   background-color: rgba(0,0,0,0);
+   width: .2vw;
+   border-radius: .3vw;
 }
 div.roll {
    width: 20vw;
@@ -527,7 +540,8 @@ div.roll {
    padding: 1vw;
    border-radius: .4vw;
    position: relative;
-   transition: transform 1s, opacity .5s;
+   transition: transform 1s, background-color .3s;
+   cursor: default;
    opacity: 0;
 }
 div.roll > h1 {color:#ed145b}
@@ -561,6 +575,9 @@ div.roll:hover > img {
 }
 div.roll > img:hover {
    cursor: pointer;
+}
+div.roll:hover {
+   background-color: #2b3031;
 }
 [data-comment="left"]{
    transform: translate3d(-4vw, 0, 0);
