@@ -217,11 +217,12 @@
     <div id="comentarios">
         <h1>DEIXE O SEU COMENTÁRIO</h1>
         <div id="formcomment">
-            <form id="comentario" action="">
+            <form id="comentario">
                 <p>Nome</p>
-                <input type="text" id="insertNomeComment">
+                <input type="text" id="insertNomeComment" style="margin-bottom: .1vw">
+                <p class="erro" id="erroNome">Insira um nome</p>
                 <p>Turma</p>
-                <select id="turmaComment">
+                <select id="turmaComment" style="margin-bottom: 0">
                     <option value="1ds">Professor(a)</option>
                     <option value="1amedio" selected>1ºA Médio</option>
                     <option value="1bmedio">1ºB Médio</option>
@@ -251,16 +252,34 @@
                     <option value="m2ds">Modular 2º Meca</option>
                     <option value="m3ds">Modular 3º Meca</option>
                 </select>
+                <p class="erro" id="erroTurma">Selecione sua turma</p>
                 <p>Comentário</p>
-                <textarea id="txtcomentario" placeholder="Máx. 250 caracteres" maxlength="250"></textarea>
+                <textarea id="txtcomentario" placeholder="Máx. 250 caracteres" maxlength="250" style="margin-bottom: 0"></textarea>
+                <p class="erro" id="erroComment">Insira um comentário</p>
+                <p id="contadorCaracter" style="margin: 0">Caracteres restantes: 250</p>
                 <input type="button" value="Adicionar comentário" onclick="cadastro()" id="btnComment">
             </form>
             <div id="comments">
                 <div class="roll" data-comment="left">
                     <h1 id="nomeComment">Fulano da Silva</h1>
-                    <h2 id="turmaComment">Modular 2º DS</h2>
-                    <p id="msgComment">Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos.</p>
+                    <h2 id="turmaComment">Modular 1º DS</h2>
+                    <p id="msgComment">Muito bom!</p>
                     <p id="horaComment">23:18</p>
+                    <img class="lixeira" src="img/lixeira.png">
+                </div>
+                <div class="roll" data-comment="left">
+                    <h1 id="nomeComment">Sicrano de Souza</h1>
+                    <h2 id="turmaComment">Modular 2º DS</h2>
+                    <p id="msgComment">Ótima apresentação, parabéns!!!</p>
+                    <p id="horaComment">23:18</p>
+                    <img class="lixeira" src="img/lixeira.png">
+                </div>
+                <div class="roll" data-comment="left">
+                    <h1 id="nomeComment">Beltrano Gomes</h1>
+                    <h2 id="turmaComment">Modular 3º DS</h2>
+                    <p id="msgComment">Site excelente. Nunca vi nada igual!</p>
+                    <p id="horaComment">23:18</p>
+                    <img class="lixeira" src="img/lixeira.png">
                 </div>
             </div>
         </div>
