@@ -29,14 +29,12 @@
      transition: all .3s;
  }
  header img:hover{
-     transform: scale(1.2);
+     transform: scale(1.15);
  }
  #boas-vindas {
      margin: auto;
-     box-sizing: border-box;
      text-align: center;
      margin-top:16vh;
-
  }
 #boas-vindas p {
     font-family: IBM Plex Mono;
@@ -49,7 +47,7 @@
     font-size: 2.5em;
     margin-top: 2vw;
     font-family: 'Rubik';
-    color: #ffffff
+    color: white
  }
  .btn-conheca {
      width: 20em;
@@ -62,7 +60,7 @@
      margin: auto;
      border-radius: 2vh;
      color: #ffffff;
-     box-shadow: 0vw 0vw .8vh #ed145b;
+     box-shadow: 0vw 0vw 1vh #ed145b;
      background-color: #ed145b;
  }
  .btn-conheca:hover {
