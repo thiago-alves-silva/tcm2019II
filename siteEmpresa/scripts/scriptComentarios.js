@@ -20,7 +20,7 @@ function cadastro() {
         if (nomeComment.value) document.getElementById('erroNome').style = ''
         if(turmaComment.selectedIndex !== -1) document.getElementById('erroTurma').style = ''
         let p = document.getElementById('erroComment')
-        p.style = "visibility: visible; margin-bottom: .1vw"
+        p.style = "visibility: visible; margin-bottom: .1vw;"
     } else {
         let user = newUser()
         users.push(user)
@@ -50,14 +50,15 @@ function cadastro() {
             div.appendChild(p)
             div.appendChild(pHora)
             div.appendChild(img)
-            //comments.appendChild(div)
             comments.insertAdjacentElement('afterbegin', div)
-            i++
             deleteComment()
             document.getElementById('erroNome').style = ''
             document.getElementById('erroTurma').style = ''
-            document.getElementById('erroComment').style = ''
+            document.getElementById('erroComment').style = 'display:none'
             document.querySelector('form#comentario').reset()
+            turmaComment.selectedIndex = -1
+            document.getElementById('comments').scrollTo(0,0)
+            i++
         }
     }
 
@@ -80,8 +81,9 @@ function deleteComment() {
     delComments.forEach((e) => {
         let div = e.parentNode
         e.addEventListener('click', () => {
-            let senha = prompt('Digite a senha para deletar este comentário.')
+            const senha = prompt('Digite a senha para deletar este comentário.')
             if (+senha === 123) div.parentNode.removeChild(div)
+            else if(!senha){}
             else alert('Senha incorreta!')
         })
     })

@@ -111,6 +111,14 @@ div#menu-drop {
     justify-content: space-around;
     flex-wrap: wrap;
  }
+ div#apresentacao p#developed{
+   position: absolute;
+   color:rgba(255,255,255,.3);
+   top:.3vw;
+   right: .4vw;
+   font-family: Consolas;
+   pointer-events: none;
+ }
  div#apresentacao img {
    width: 45vw;
    margin-right: 2vw;
@@ -344,9 +352,9 @@ div#form input, textarea {
 }
 div#form textarea {
    padding-top: 1vw;
-   height: 15vw;
-   resize: vertical;
-   min-height: 10vw;
+   min-height: 15vw;
+   max-height: 25vw;
+   resize: none;
    width: 55%;
 }
 div#form input:focus, textarea:focus {
@@ -523,15 +531,19 @@ p.erro {
 div#comments {
    width: 45vw;
    height: 33vw;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-wrap: wrap;
+   scroll-behavior: smooth
 }
 div#comments::-webkit-scrollbar {
    background-color: rgba(0,0,0,0);
    width: .2vw;
-   border-radius: .3vw;
 }
 div.roll {
    width: 20vw;
-   float: left;
+   /* float: left; */
    background-color: #1d2122;
    margin: .8vw;
    font-size: .6vw;
@@ -539,14 +551,14 @@ div.roll {
    box-sizing: border-box;
    padding: 1vw;
    border-radius: .4vw;
-   position: relative;
+   /* position: relative; */
    transition: transform 1s, background-color .3s;
    cursor: default;
    opacity: 0;
 }
 div.roll > h1 {color:#ed145b}
 div.roll > h2 {
-   font-size: 1.2vw;
+   font-size: 1vw;
    font-style: italic;
 }
 div.roll > p#msgComment {
@@ -559,7 +571,7 @@ div.roll > p#horaComment {
    font-size: .8vw;
    text-align: right;
    position: absolute;
-   bottom: 1vw;
+   bottom: .6vw;
    right: 1.5vw;
 }
 div.roll > img {

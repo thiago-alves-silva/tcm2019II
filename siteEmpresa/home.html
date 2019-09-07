@@ -26,6 +26,7 @@
         </div>
     </header>
     <div id="apresentacao">
+        <p id="developed">developed by THIAGO. A</p>
         <div id="texto-apresentacao">
             <h1 data-animation="bottom">Desenvolvimento front-end, back-end, mobile, modelagem de dados e <span>muito
                     mais</span>.</h1>
@@ -161,7 +162,7 @@
                         <input type="text" id="numero" maxlength="9" placeholder="Telefone">
                     </div>
                     <input type="text" id="assunto" placeholder="Assunto">
-                    <textarea id="texto" cols="30" rows="10" placeholder="Sua mensagem" required></textarea>
+                    <textarea id="texto" cols="30" rows="10" placeholder="Sua mensagem" required maxlength="1000"></textarea>
                     <input type="submit" value="ENVIAR">
                 </div>
             </form>
@@ -255,7 +256,7 @@
                 <p class="erro" id="erroTurma">Selecione sua turma</p>
                 <p>Comentário</p>
                 <textarea id="txtcomentario" placeholder="Máx. 250 caracteres" maxlength="250" style="margin-bottom: 0"></textarea>
-                <p class="erro" id="erroComment">Insira um comentário</p>
+                <p class="erro" id="erroComment" style="display: none">Insira um comentário</p>
                 <p id="contadorCaracter" style="margin: 0">Caracteres restantes: 250</p>
                 <input type="button" value="Adicionar comentário" onclick="cadastro()" id="btnComment">
             </form>
@@ -292,6 +293,13 @@
                     <h1 id="nomeComment">Sicrano de Souza</h1>
                     <h2 id="turmaComment">Modular 2º DS</h2>
                     <p id="msgComment">Ótima apresentação, parabéns!!!</p>
+                    <p id="horaComment">23:18</p>
+                    <img class="lixeira" src="img/lixeira.png">
+                </div>
+                <div class="roll" data-comment="left">
+                    <h1 id="nomeComment">Beltrano Gomes</h1>
+                    <h2 id="turmaComment">Modular 3º DS</h2>
+                    <p id="msgComment">Site excelente. Nunca vi nada igual!</p>
                     <p id="horaComment">23:18</p>
                     <img class="lixeira" src="img/lixeira.png">
                 </div>
