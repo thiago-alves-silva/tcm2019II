@@ -11,19 +11,19 @@
      margin: 0;
      padding: 0;
  }
+ *::-webkit-scrollbar{display: none}
  body {
-     /* background: url('img/background.jpg');
+     background: url('../img/background.jpg');
      background-repeat: no-repeat;
      background-size: cover;
      background-attachment: fixed;
-     background-position: center; */
-     background-color: #090a0d
+     background-position: center;
  }
  header {
-     padding: 2vw;
+     padding: 4vh;
  }
  header img {
-     width: 5vw;
+     width: 8vh;
      display: block;
      margin: auto;
      transition: all .3s;
@@ -32,41 +32,41 @@
      transform: scale(1.2);
  }
  #boas-vindas {
-     width: 80vw;
      margin: auto;
      box-sizing: border-box;
      text-align: center;
      margin-top:16vh;
+
  }
 #boas-vindas p {
     font-family: IBM Plex Mono;
-    width: 60vw;
-    font-size: 1.5vw;
+    width: 110vh;
+    font-size: 1.2em;
     margin: 1.5vw auto 3vw auto;
-    color: #b0b2b3
+    color: #b0b2b3;
  }
  #boas-vindas h1 {
-    font-size: 3vw;
+    font-size: 2.5em;
     margin-top: 2vw;
     font-family: 'Rubik';
     color: #ffffff
  }
  .btn-conheca {
-     width: 12vw;
+     width: 20em;
      font-family: monospace;
-     font-size: 1.2vw;
+     font-size: 1.2em;
      text-decoration: none;
-     padding: 1vw;
+     padding: 2vh;
      transition: all .3s;
      display: block;
      margin: auto;
-     border-radius: 1vw;
+     border-radius: 2vh;
      color: #ffffff;
-     box-shadow: 0vw 0vw .4vw #ed145b;
+     box-shadow: 0vw 0vw .8vh #ed145b;
      background-color: #ed145b;
  }
  .btn-conheca:hover {
-    transform: scale(1.15);
+    transform: scale(1.05);
  }
  #titulo::after{
      content: ' |';
@@ -82,11 +82,11 @@
  }
  label[for='menu-check']{
      color:white;
-     font-size: 3vw;
+     font-size: 2.5em;
      cursor: pointer;
      position: absolute;
      top: 0;
-     margin: .5vw 0 0 1.2vw;
+     margin: 1vh 0 0 2.4vh;
      transition: all .3s;
      transform: scale(1);
      z-index: 1;
@@ -105,31 +105,31 @@
  div#menu{
      position: absolute;
      top:0;
-     width: 20vw;
+     width: 40vh;
      height: 100vh;
      background-color: rgba(0,0,0,0.6);
-     transform: translate3d(-20vw,0,0);
+     transform: translate3d(-40vh,0,0);
      transition: all 0.3s
  }
  div#menu li a{
     font-family: 'Rubik', sans-serif;
-    font-size: 1.3vw;
+    font-size: 1.3em;
     text-decoration: none;
     color: white;
     display: block;
-    padding: 1.5vw;
+    padding: 3vh;
     transition: all .3s
  }
  @media screen and (min-width:1050px) {
      div#menu li:hover a::after {
      content: ">";
      position: absolute;
-     right: 1.5vw;
+     right: 3vh;
     }
  }
  div#menu li:hover a{
      background-color: #ed145b;
  }
  div#menu ul {
-     margin-top: 5vw;
+     margin-top: 10vh;
  }

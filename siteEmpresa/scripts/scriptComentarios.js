@@ -78,12 +78,13 @@ function cadastro() {
 deleteComment()
 function deleteComment() {
     let delComments = document.querySelectorAll('.lixeira')
+    let senha;
     delComments.forEach((e) => {
         let div = e.parentNode
         e.addEventListener('click', () => {
-            const senha = prompt('Digite a senha para deletar este comentário.')
-            if (+senha === 123) div.parentNode.removeChild(div)
-            else if(!senha){}
+            senha  = prompt('Digite a senha para deletar este comentário.')
+            if(!senha){}
+            else if (+senha === 123) div.parentNode.removeChild(div)
             else alert('Senha incorreta!')
         })
     })

@@ -253,6 +253,8 @@ div#img-emp::before{
    height: 100%;
    background-color: rgba(0,0,0,0.5);
 }
+
+
 div#equipe{
    width: 75vw;
    margin: auto;
@@ -266,13 +268,14 @@ div#equipe > h1 {
    text-align: center;
 }
 div#equipe > div {
+   position: relative;
    display: flex;
    align-items: center;
    flex-wrap: wrap;
    flex-basis: 35vw;
    padding-bottom: 1vw;
    margin: 3vw auto;
-   border-bottom: .1vw solid white;
+   overflow: hidden;
 }
 div#equipe div > div.imgs {
    width: 6vw;
@@ -294,29 +297,24 @@ div#equipe img.hover {
    box-sizing: border-box;
    border-radius: 50%;
    opacity: 0;
-   transition: opacity .5s;
+   transition: opacity 1s, transform .5s;
    position: absolute;
 }
 div#equipe div > div > h1 {
    color: #4C4C4C;
    margin-left: 2.5vw;
-   transition: transform 1s, opacity .5s;
-   opacity: 0;
-   padding-right: 4vw;
-   font-size: 2vw;
+   padding-right: 8vw;
+   font-size: 1.8vw;
    cursor: default;
+   opacity: 0;
+   transition: opacity .5s
 }
 div#equipe p {
    margin-left: 2.5vw;
    font-size: 1vw;
 }
-[data-equipe]{
-   transform: translate3d(4vw, 0, 0);
-}
-[data-equipe].animate3 {
-   transform: translate3d(0, 0, 0);
-   opacity: 1 !important;
-}
+.translateEquipe {transform: translateX(6.5vw) !important; transition: transform .5s}
+
 div#contato {
    background-color: #090a0d;
    width: 100%;

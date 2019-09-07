@@ -19,15 +19,6 @@ function animeScroll2(){
 }
 window.addEventListener('scroll', () => animeScroll2())
 
-function animeScroll3() {
-    const windowTop = window.pageYOffset + ((window.innerHeight * 3) / 4);
-    document.querySelectorAll('[data-equipe]').forEach((e, i) => {
-        if(windowTop > e.offsetTop) setInterval(() => e.classList.add('animate3'), 50*i)
-    })
-}
-animeScroll3()
-window.addEventListener('scroll', () => animeScroll3())
-
 function animeScroll4() {
     document.querySelectorAll('[data-comment]').forEach((e, i) => {
         setInterval(() => e.classList.add('animate4'), 50*i)
