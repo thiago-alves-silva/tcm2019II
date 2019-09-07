@@ -22,7 +22,6 @@ function animateEquipe() {
         if(i==5) imgHoverFunc.style.border += '.1vw solid #67cc7e'
         if(i==6) imgHoverFunc.style.border += '.1vw solid #a875de'
         }
-        
     })
 }
 window.addEventListener('scroll', debounce(() => animateEquipe(), 100));

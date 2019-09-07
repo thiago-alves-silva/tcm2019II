@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>System Crown - Desenvolvimento de Software</title>
     <link rel="shortcut icon" href="img/icon/icon.png" type="image/x-icon">
@@ -17,14 +17,14 @@
             <h1 id="titulo">SYSTEM CROWN</h1>
             <input type="checkbox" id="menu-check">
             <label for="menu-check">&#9776</label>
-            <div id="menu-drop">
-                    <ul>
-                        <a href=""><li>TESTE 1</li></a>
-                        <a href=""><li>TESTE 2</li></a>
-                    </ul>
-            </div>
         </div>
     </header>
+    <div id="menu-drop">
+        <ul>
+            <a href=""><li>TESTE 1</li></a>
+            <a href=""><li>TESTE 2</li></a>
+        </ul>
+    </div>
     <div id="apresentacao">
         <p id="developed">developed by THIAGO. A</p>
         <div id="texto-apresentacao">
@@ -38,7 +38,7 @@
         <img src="img/imagem_site.png" data-animation="right">
     </div>
     <div id="servicos">
-        <h1>TUDO QUE OFERECEMOS PARA SUA EMPRESA</h1>
+        <h1 class="titulo">TUDO QUE OFERECEMOS<br/> PARA SUA EMPRESA</h1>
         <div id="itens">
             <div>
                 <img src="img/icon1.png">
@@ -92,12 +92,12 @@
         </div>
 
         <div id="equipe">
-            <h1>CONHEÇA A NOSSA EQUIPE</h1>
+            <h1 class="titulo">CONHEÇA A NOSSA EQUIPE</h1>
             <div>
                 <div class='imgs'><img class='equipe' src="img/icon/equipe/person2.jpg"></div>
                 <img class="hover" src="img/icon/equipe/icon_frontend.png">
                 <div>
-                    <h1>Desen. Front-end</h1>
+                    <h1>DESEN. FRONT-END</h1>
                     <p>Beatriz Moreira</p>
                 </div>
             </div>
@@ -105,7 +105,7 @@
                 <div class='imgs'><img class='equipe' src="img/icon/equipe/person2.jpg"></div>
                 <img class="hover" src="img/icon/equipe/icon_analista.png">
                 <div>
-                    <h1>Analista de Sistemas</h1>
+                    <h1>ANALISTA DE SISTEMAS</h1>
                     <p>Giovana Carnio</p>
                 </div>
             </div>
@@ -113,7 +113,7 @@
                 <div class='imgs'><img class='equipe' src="img/icon/equipe/person.jpg"></div>
                 <img class="hover" src="img/icon/equipe/icon_bd.png">
                 <div>
-                    <h1>Banco de Dados</h1>
+                    <h1>BANCO DE DADOS</h1>
                     <p>Julio Duvique Andriollo</p>
                 </div>
             </div>
@@ -121,7 +121,7 @@
                 <div class='imgs'><img class='equipe' src="img/icon/equipe/person.jpg"></div>
                 <img class="hover" src="img/icon/equipe/icon_analista.png">
                 <div>
-                    <h1>Analista de Sistemas</h1>
+                    <h1>ANALISTA DE SISTEMAS</h1>
                     <p>Matheus Rodrigues</p>
                 </div>
             </div>
@@ -129,7 +129,7 @@
                 <div class='imgs'><img class='equipe' src="img/icon/equipe/person2.jpg"></div>
                 <img class="hover" src="img/icon/equipe/icon_infra.png">
                 <div>
-                    <h1>Infraestrutura</h1>
+                    <h1>INFRAESTRUTURA</h1>
                     <p>Renata Garcia</p>
                 </div>
             </div>
@@ -137,7 +137,7 @@
                 <div class='imgs'><img class='equipe' src="img/icon/equipe/person.jpg"></div>
                 <img class="hover" src="img/icon/equipe/icon_android.png">
                 <div>
-                    <h1>Desen. Mobile</h1>
+                    <h1>DESEN. MOBILE</h1>
                     <p>Samuel Yoshiteru Saito</p>
                 </div>
             </div>
@@ -145,26 +145,26 @@
                 <div class='imgs'><img class='equipe' src="img/icon/equipe/person.jpg"></div>
                 <img class="hover" src="img/icon/equipe/icon_backend.png">
                 <div>
-                    <h1>Desen. Back-end</h1>
+                    <h1>DESEN. BACK-END</h1>
                     <p>Thiago Alves da Silva</p>
                 </div>
             </div>
         </div>
     </div>
     <div id="contato">
+        <h1 class="titulo" style="color: white">CONTATO</h1>
         <div id="info-contato">
-            <h1>Contato</h1>
-            <form action="" method="post">
+            <form onsubmit="document.querySelector('form#formContato').reset(); alert('Mensagem enviada com sucesso! Retornaremos em até 24h.'); return false;" id="formContato">
                 <div id="form">
-                    <input type="text" id="nome" placeholder="Nome (obrigatório)" required>
-                    <input type="email" id="email" placeholder="E-mail (obrigatório)" required>
+                    <input class="input" type="text" id="nome" placeholder="Nome (obrigatório)" required>
+                    <input class="input" type="email" id="email" placeholder="E-mail (obrigatório)" required>
                     <div id="telefone">
-                        <input type="text" id="ddd" maxlength="3" placeholder="DDD">
-                        <input type="text" id="numero" maxlength="9" placeholder="Telefone">
+                        <input class="input" type="text" id="ddd" maxlength="3" placeholder="DDD">
+                        <input class="input" type="text" id="numero" maxlength="9" placeholder="Telefone">
                     </div>
-                    <input type="text" id="assunto" placeholder="Assunto">
-                    <textarea id="texto" cols="30" rows="10" placeholder="Sua mensagem" required maxlength="1000"></textarea>
-                    <input type="submit" value="ENVIAR">
+                    <input class="input" type="text" id="assunto" placeholder="Assunto">
+                    <textarea class="input" id="texto" cols="30" rows="10" placeholder="Sua mensagem" required maxlength="1000"></textarea>
+                    <input class="input" type="submit" value="ENVIAR">
                 </div>
             </form>
             <div id="abs-contato">
@@ -184,47 +184,47 @@
         </div>
     </div>
     <div id="suporte">
-        <h1>PERGUNTAS FREQUENTES</h1>
+        <h1 class="titulo">PERGUNTAS FREQUENTES</h1>
         <div id="perguntas">
             <div class="pergunta">
-                <h1 class="quest">A System Crown atua no Reclame Aqui?</h1>
-                <p class="answer">A System Crow disponibiliza diversos canais de atendimento ao consumidor (e-mail, telefone e redes sociais),  além de investir continuamente para aprimorar a evolução dos mesmos, visando proporcionar uma experiência diferenciada aos seus consumidores.</br>A companhia entende que o contato direto é a maneira mais eficiente, ágil e transparente para alcançar soluções juntamente aos seus clientes.</p>
+                <h1>A System Crown atua no Reclame Aqui?</h1>
+                <p>A System Crow disponibiliza diversos canais de atendimento ao consumidor (e-mail, telefone e redes sociais),  além de investir continuamente para aprimorar a evolução dos mesmos, visando proporcionar uma experiência diferenciada aos seus consumidores.</br>A companhia entende que o contato direto é a maneira mais eficiente, ágil e transparente para alcançar soluções juntamente aos seus clientes.</p>
             </div>
             <div class="pergunta">
-                <h1 class="quest">A System Crown envia arquivos anexo por e-mail?</h1>
-                <p class="answer">A System Crown apenas envia anexos para o e-mail dos clientes em datas programadas e com conteúdos pré-definidos relacionados ao projeto (relatórios para acompanhamento). Fora desta condiçao apenas quando solicitado pelo cliente o envio de boletos, relatórios, segunda via, etc.</p>
+                <h1>A System Crown envia arquivos anexo por e-mail?</h1>
+                <p>A System Crown apenas envia anexos para o e-mail dos clientes em datas programadas e com conteúdos pré-definidos relacionados ao projeto (relatórios para acompanhamento). Fora desta condiçao apenas quando solicitado pelo cliente o envio de boletos, relatórios, segunda via, etc.</p>
             </div>
             <div class="pergunta">
-                <h1 class="quest">A System Crown possui loja física?</h1>
-                <p class="answer">A System Crown nasceu para ser digital, por isso trabalhamos com o sistema online e nao possuímos loja física.</br>Você solicita os serviços em nossa central online e recebe seu pedido no endereço de e-mail que escolher no final do prazo de entrega do projeto.</p>
+                <h1>A System Crown possui loja física?</h1>
+                <p>A System Crown nasceu para ser digital, por isso trabalhamos com o sistema online e nao possuímos loja física.</br>Você solicita os serviços em nossa central online e recebe seu pedido no endereço de e-mail que escolher no final do prazo de entrega do projeto.</p>
             </div>
             <div class="pergunta">
-                <h1 class="quest">Como acompanhar o andamento do meu serviço contratado?</h1>
-                <p class="answer">Nossa equipe mantém os clientes informados sobre o andamento dos serviços contratados a cada 7 dias. Caso o cliente necessite de um relatório antecipado ou com mais informaçoes, basta solicitar em nossa página de contato</p>
+                <h1>Como acompanhar o andamento do meu serviço contratado?</h1>
+                <p>Nossa equipe mantém os clientes informados sobre o andamento dos serviços contratados a cada 7 dias. Caso o cliente necessite de um relatório antecipado ou com mais informaçoes, basta solicitar em nossa página de contato</p>
             </div>
             <div class="pergunta">
-                <h1 class="quest">Como entrar em contato com a System Crown?</h1>
-                <p class="answer">Para nos contatar basta nos enviar uma mensagem acessando nossa página de contato, onde serão encontrados canais de comunicaçao como e-mail, telefone e nossa central direta.</br>Para sua comodidade, a nossa Central de Relacionamento funciona das 08h as 20h40 de segunda à sábado, exceto domingos e feriados.</p>
+                <h1>Como entrar em contato com a System Crown?</h1>
+                <p>Para nos contatar basta nos enviar uma mensagem acessando nossa página de contato, onde serão encontrados canais de comunicaçao como e-mail, telefone e nossa central direta.</br>Para sua comodidade, a nossa Central de Relacionamento funciona das 08h as 20h40 de segunda à sábado, exceto domingos e feriados.</p>
             </div>
             <div class="pergunta">
-                <h1 class="quest">É possível mudar a data de entrega agendada do meu serviço?</h1>
-                <p class="answer">Caso o cliente necessite alterar a data de entrega do serviço contratado é necessário que ele entre em contato com a nossa equipe que estará verificando disponibilidades para novas datas de entrega.</p>
+                <h1>É possível mudar a data de entrega agendada do meu serviço?</h1>
+                <p>Caso o cliente necessite alterar a data de entrega do serviço contratado é necessário que ele entre em contato com a nossa equipe que estará verificando disponibilidades para novas datas de entrega.</p>
             </div>
             <div class="pergunta">
-                <h1 class="quest">Se não tiver ninguém no local para a visita técnica, o que acontece?</h1>
-                <p class="answer">Em caso de ausência do cliente na visita técnica para manutençao de dispositivos, a System Crown estará entrando em contato para reagendar a visita com um acréscimo de 10% no valor do serviço. Caso o cliente deseje cancelar a visita será estornado 90% do valor pago.</p>
+                <h1>Se não tiver ninguém no local para a visita técnica, o que acontece?</h1>
+                <p>Em caso de ausência do cliente na visita técnica para manutençao de dispositivos, a System Crown estará entrando em contato para reagendar a visita com um acréscimo de 10% no valor do serviço. Caso o cliente deseje cancelar a visita será estornado 90% do valor pago.</p>
             </div>
         </div>
     </div>
     <div id="comentarios">
-        <h1>DEIXE O SEU COMENTÁRIO</h1>
+        <h1 class="titulo" style="color: white">DEIXE O SEU COMENTÁRIO</h1>
         <div id="formcomment">
             <form id="comentario">
                 <p>Nome</p>
-                <input type="text" id="insertNomeComment" style="margin-bottom: .1vw">
+                <input class="input" type="text" id="insertNomeComment" style="margin-bottom: .1vw">
                 <p class="erro" id="erroNome">Insira um nome</p>
                 <p>Turma</p>
-                <select id="turmaComment" style="margin-bottom: 0">
+                <select class="input" id="turmaComment" style="margin-bottom: 0">
                     <option value="1ds">Professor(a)</option>
                     <option value="1amedio" selected>1ºA Médio</option>
                     <option value="1bmedio">1ºB Médio</option>
@@ -256,10 +256,10 @@
                 </select>
                 <p class="erro" id="erroTurma">Selecione sua turma</p>
                 <p>Comentário</p>
-                <textarea id="txtcomentario" placeholder="Máx. 250 caracteres" maxlength="250" style="margin-bottom: 0"></textarea>
+                <textarea class="input" id="txtcomentario" placeholder="Máx. 250 caracteres" maxlength="250" style="margin-bottom: 0"></textarea>
                 <p class="erro" id="erroComment" style="display: none">Insira um comentário</p>
                 <p id="contadorCaracter" style="margin: 0">Caracteres restantes: 250</p>
-                <input type="button" value="Adicionar comentário" onclick="cadastro()" id="btnComment">
+                <input class="input" type="button" value="Adicionar comentário" onclick="cadastro()" id="btnComment">
             </form>
             <div id="comments">
                 <div class="roll" data-comment="left">

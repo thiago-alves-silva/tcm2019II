@@ -14,7 +14,9 @@
  * {
      margin: 0;
      padding: 0;
+     font-family: Rubik;
      overflow-x: hidden;
+     scroll-behavior: smooth
  }
 *::-webkit-scrollbar {
    width: .5vw;
@@ -25,40 +27,37 @@
    border-radius: .5vw;
    
 }
+span {
+   color: #ed145b
+}
+.titulo {
+   cursor: default;
+   font-size: 4vw;
+   text-align: center;
+   margin: 5vw auto;
+}
  header {
-    width: 100%;
     position: absolute;
  }
  div#cabecalho {
+    color: white;
     height: 100vh;
     width: 5vw;
-    max-height: auto;
     background-color: #ed145b;
-    box-sizing: border-box;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     align-content: space-between;
+    box-sizing: border-box;
     justify-content: center;
     padding: .5vw;
-    padding-bottom: 0;
-    box-sizing: border-box;
     position: relative;
-    z-index: 1;
-    padding-bottom: .5vw;
-    overflow: hidden;
  }
  div#cabecalho img {
     width: 3.5vw;
     border-radius: 50%;
-    transition: transform .3s, box-shadow .3s;
- }
- div#cabecalho img:hover {
-    transform: translateY(-.3vw);
-    box-shadow: .0vw .2vw .2vw rgba(0,0,0,0.3);
  }
  div#cabecalho h1 {
-    color: white;
     font-family: Samsung;
     font-size: 2.5vw;
     pointer-events: none;
@@ -66,15 +65,9 @@
     transform: rotate(180deg);
  }
 label[for='menu-check']{
-   color: white;
    font-size: 2.2vw;
    cursor: pointer;
-   top: 0;
    transition: transform .1s;
-   z-index: 1;
-   display: flex;
-   align-items: center;
-   justify-content: center;
    padding: .2vw .85vw .5vw .85vw;
    border-radius: 50%;
    transform: translateY(-.3vw);
@@ -87,21 +80,13 @@ label[for='menu-check']{
 input[type='checkbox']{
    display: none;
 }
-input[type='checkbox']:checked ~ div#menu-drop {opacity: 0;}
+/* input[type='checkbox']:checked ~ div#menu-drop {opacity: 1;} */
 div#menu-drop {
-   width: 7vw;
-   top: 3vw;
-   right: 25.8vw;
+   width: 10vw;
    font-size: 1vw;
    position: absolute;
-   color: white;
    background-color: white;
-   transition: transform .3s;
-   z-index: 1;
 }
- span {
-    color: #ed145b
- }
  div#apresentacao{
     background-color: #151819;
     width: 100%;
@@ -110,19 +95,17 @@ div#menu-drop {
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
+    pointer-events: none;
  }
  div#apresentacao p#developed{
    position: absolute;
    color:rgba(255,255,255,.3);
    top:.3vw;
-   right: .4vw;
+   right: .5vw;
    font-family: Consolas;
-   pointer-events: none;
  }
  div#apresentacao img {
    width: 45vw;
-   margin-right: 2vw;
-   pointer-events: none;
  }
  div#texto-apresentacao{
     width: 35vw;
@@ -131,6 +114,7 @@ div#menu-drop {
     font-family: Rubik;
     color: white;
     margin-left: 5vw;
+    pointer-events: visiblePainted
  }
  div#texto-apresentacao > h1{
     font-size: 2.5vw;
@@ -145,30 +129,20 @@ div#menu-drop {
  }
  div#servicos {
     padding-bottom: 3vw;
-    overflow: hidden;
  }
- div#servicos > h1 {
-    font-family: Rubik;
-    font-size: 4vw;
-    width: 50vw;
-    text-align: center;
-    margin: 5vw auto;
- }
+
  div#itens {
      width: 100vw;
      display: flex;
      flex-wrap: wrap;
      justify-content: center;
-     padding: 0 5vw;
-     box-sizing: border-box;
      padding-bottom: .4vw;
  }
  div#itens > div {
      display: flex;
      flex-wrap: wrap;
-     align-items: center;
      justify-content: center;
-     margin: .5vw 1vw;
+     margin: .5vw;
      padding: 2.5vw 0;
      flex-basis: 26vw;
      transition: transform .5s, box-shadow .5s;
@@ -180,7 +154,6 @@ div#menu-drop {
    transform: translate3d(0, -.5vw, 0)
  }
  div#itens div h1 {
-    font-family: Rubik;
     text-align: center;
     color: #151819;
     font-size: 2.2vw;
@@ -189,7 +162,7 @@ div#menu-drop {
     width: 100%;
  }
  div#itens div p {
-    font-size: 1.1vw;
+    font-size: 1vw;
     font-family: Samsung;
     line-height: 1.5vw;
     padding: 0 3vw;
@@ -214,21 +187,13 @@ div#menu-drop {
    transform: translate3d(0, 2vw, 0);
    text-align: center;
 }
- [data-animation="top"]{
-   transform: translate3d(0, 4vw, 0)
-}
- [data-animation="bottom"]{
-   transform: translate3d(0, -4vw, 0)
-}
 [data-animation].animate {
    transform: translate3d(0, 0, 0);
    opacity: 1;
 }
 div#empresa {
    color: white;
-   font-family: Rubik;
    background-color: #151819;
-   padding-bottom: 3vw
 }
 div#img-emp{
    position: relative;
@@ -253,47 +218,30 @@ div#img-emp::before{
    height: 100%;
    background-color: rgba(0,0,0,0.5);
 }
-
-
 div#equipe{
    width: 75vw;
    margin: auto;
    display: flex;
    flex-wrap: wrap;
 }
-div#equipe > h1 {
-   font-size: 3.5vw;
-   color: white;
-   margin: 5vw auto;
-   text-align: center;
-}
 div#equipe > div {
-   position: relative;
    display: flex;
    align-items: center;
-   flex-wrap: wrap;
    flex-basis: 35vw;
-   padding-bottom: 1vw;
-   margin: 3vw auto;
-   overflow: hidden;
+   margin: 2.5vw auto;
 }
 div#equipe div > div.imgs {
    width: 6vw;
-   height: 6vw;
    border-radius: 50%;
-   overflow: hidden;
-   box-sizing: border-box;
 }
 div#equipe img {
    width: 6vw;
    border-radius: 50%;
-   transition: transform .3s;
-   box-sizing: border-box;
 }
 div#equipe img.hover {
    width: 6vw;
    background-color:rgba(0,0,0,0.5);
-   padding: 1.5vw;
+   padding: 1.2vw;
    box-sizing: border-box;
    border-radius: 50%;
    opacity: 0;
@@ -303,8 +251,8 @@ div#equipe img.hover {
 div#equipe div > div > h1 {
    color: #4C4C4C;
    margin-left: 2.5vw;
-   padding-right: 8vw;
-   font-size: 1.8vw;
+   padding-right: 7vw;
+   font-size: 1.5vw;
    cursor: default;
    opacity: 0;
    transition: opacity .5s
@@ -312,8 +260,9 @@ div#equipe div > div > h1 {
 div#equipe p {
    margin-left: 2.5vw;
    font-size: 1vw;
+   cursor: default
 }
-.translateEquipe {transform: translateX(6.5vw) !important; transition: transform .5s}
+.translateEquipe {transform: translateX(6.5vw); transition: transform .5s}
 
 div#contato {
    background-color: #090a0d;
@@ -322,23 +271,15 @@ div#contato {
 div#info-contato {
    width: auto;
    margin: 5vw;
-   font-family: Rubik;
    color: white;
 }
-div#info-contato h1 {
-   font-size: 2.5vw;
-   width: 100%;
-   text-align: center;
-   margin-bottom: 2.5vw;
-}
 div#form {
-   width: 100%;
    display: flex;
    flex-wrap: wrap;
 }
-div#form input, textarea {
-   width: 55%;
-   margin: 2vh auto;
+.input {
+   width: 55% !important;
+   margin: 1vw auto;
    padding-left: 1vw;
    box-sizing: border-box;
    height: 3.5vw;
@@ -346,28 +287,27 @@ div#form input, textarea {
    border-radius: .5vw;
    font-size: 1vw;
    outline: none;
-   transition: border-color .3s, background-color .5s;
+   transition: border-color .3s, background-color .3s;
 }
-div#form textarea {
+textarea.input {
    padding-top: 1vw;
    min-height: 15vw;
    max-height: 25vw;
    resize: none;
-   width: 55%;
 }
-div#form input:focus, textarea:focus {
+.input:focus {
    border-color: #ed145b;
 }
-div#form input:hover, textarea:hover {
-   background-color: #cacaca
+.input:hover {
+   background-color: #dddddd
 }
-div#form input[type='submit']{
+input[type='submit'].input{
    background-color: #ed145b;
    border: none;
    cursor: pointer;
    font-weight: bold
 }
-div#form input[type='submit']:hover {
+input[type='submit'].input:hover {
    background-color: #be114b
 }
 div#telefone {
@@ -376,17 +316,17 @@ div#telefone {
    margin: auto;
 }
 div#telefone #ddd {
-   width: 20%
+   width: 20% !important
 }
 div#telefone #numero {
    margin-left: 2vw;
-   width: 100%
+   width: 76% !important
 }
 div#info-contato div#abs-contato {
    display: flex;
    flex-wrap: wrap;
    justify-content: center;
-   margin-top: 2vw;
+   margin-top: 1.5vw;
 }
 div#info-contato div#abs-contato div{
    margin: 0 2.5vw;
@@ -397,7 +337,6 @@ div#info-contato div#abs-contato div{
 div#info-contato div#abs-contato p {
    margin-left: 1vw;
    font-size: 1vw;
-   display: inline-block;
    text-align: center
 }
 div#info-contato div#abs-contato img {
@@ -414,27 +353,24 @@ div#info-contato div#abs-contato img {
    opacity: 1;
 }
 div#suporte{
-   padding-bottom: 4vw;
-}
-div#suporte > h1 {
-   margin: 4vw 0 1.5vw 0;
-   text-align: center;
-   font-family: Rubik;
-   font-size: 3vw;
+   padding-bottom: 3vw;
 }
 div.pergunta {
    width: 60vw;
    max-height: 1.5vw;
-   margin: 1.5vw auto;
+   margin: 0 auto 1.5vw auto;
    padding: 1.5vw;
    color: #4C4C4C;
    border-bottom: .15vw solid #cacaca;
    font-size: .7vw;
-   font-family: Samsung;
    overflow: hidden;
    transition: max-height .5s;
    cursor: pointer;
    position: relative;
+}
+div.pergunta > h1 {font-family: Samsung;}
+div.pergunta:hover > h1 {
+   color: #ed145b
 }
 div.pergunta h1 span {
    font-size: 2.5vw;
@@ -444,73 +380,36 @@ div.pergunta h1 span {
    transition: all .4s
 }
 .rotate {transform: rotate(45deg)}
-div.pergunta:hover > h1 {
-   color: #ed145b
-}
 div.pergunta p {
    margin-top: 1.5vw;
    font-size: 1vw;
    line-height: 1.8vw;
-   transition: .3s
 }
 .color {color: #ed145b !important}
 .maxHeight{max-height: 12vw !important}
 
 div#comentarios {
    background-color: #151819;
-   height: auto;
    width: 100%;
-   overflow: auto;
-}
-div#comentarios > h1 {
-   color: white;
-   text-align: center;
-   font-family: Rubik;
-   font-size: 3vw;
-   margin: 2vw;
 }
 div#formcomment{
-   font-family: Rubik;
    display: flex;
    flex-wrap: wrap;
    justify-content: space-around;
    width: 100%;
    color: white;
 }
-form#comentario input, textarea, select {
-   width: 100%;
-   margin: 2vh auto;
-   padding-left: 1vw;
-   box-sizing: border-box;
-   height: 3vw;
-   border: .15vw solid #cacaca;
-   border-radius: .5vw;
-   font-size: 1vw;
-   outline: none;
-   transition: border-color .3s, background-color .5s;
-}
 form#comentario {
    width: 35vw;
 }
+form#comentario input, form#comentario textarea, form#comentario select {width: 100% !important}
+form#comentario input, form#comentario select {
+   height: 2.5vw !important;
+}
 form#comentario p {
    display: inline-block;
-   width: 100%;
    margin-bottom: -1vw;
-}
-form#comentario select {
-   height: 2vw;
-   padding-left: .5vw;
-}
-form#comentario textarea {
-   padding-top: 1vw;
-   height: 8vw;
-   resize: none
-}
-form#comentario input:focus, textarea:focus, select:focus {
-   border-color: #ed145b;
-}
-form#comentario input:hover, textarea:hover, select:hover {
-   background-color: #cacaca
+   width: 100%;
 }
 form#comentario input[type='button']{
    background-color: #ed145b;
@@ -533,7 +432,6 @@ div#comments {
    align-items: center;
    justify-content: center;
    flex-wrap: wrap;
-   scroll-behavior: smooth
 }
 div#comments::-webkit-scrollbar {
    background-color: rgba(0,0,0,0);
@@ -541,7 +439,6 @@ div#comments::-webkit-scrollbar {
 }
 div.roll {
    width: 20vw;
-   /* float: left; */
    background-color: #1d2122;
    margin: .8vw;
    font-size: .6vw;
@@ -549,7 +446,6 @@ div.roll {
    box-sizing: border-box;
    padding: 1vw;
    border-radius: .4vw;
-   /* position: relative; */
    transition: transform 1s, background-color .3s;
    cursor: default;
    opacity: 0;
@@ -601,7 +497,6 @@ div#footer {
    height: 30vh;
    background-color: #151819;
    color: #cacaca;
-   font-family: Rubik;
    display: flex;
    flex-wrap: wrap;
    justify-content: space-around;
