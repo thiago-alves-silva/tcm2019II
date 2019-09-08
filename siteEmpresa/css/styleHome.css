@@ -25,7 +25,6 @@
 }
 span {
    color: #ed145b;
-   font-family: Rubik !important;
 }
 .titulo {
    cursor: default;
@@ -353,7 +352,7 @@ div.pergunta {
    cursor: pointer;
    position: relative;
 }
-div.pergunta > h1, span {font-family: Samsung;}
+div.pergunta h1, div.pergunta span {font-family: Samsung;}
 div.pergunta:hover > h1 {
    color: #ed145b
 }
