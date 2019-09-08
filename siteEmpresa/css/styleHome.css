@@ -179,6 +179,12 @@ div#menu-drop {
    transform: translate3d(4vw, 0, 0);
    text-align: left;
 }
+ [data-animation="top"]{
+   transform: translate3d(0, 4vw, 0);
+}
+ [data-animation="bottom"]{
+   transform: translate3d(0, -4vw, 0);
+}
  [data-animation="center"]{
    transform: translate3d(0, 2vw, 0);
    text-align: center;
@@ -364,7 +370,7 @@ div.pergunta {
    cursor: pointer;
    position: relative;
 }
-div.pergunta > h1 {font-family: Samsung;}
+div.pergunta > h1, span {font-family: Samsung;}
 div.pergunta:hover > h1 {
    color: #ed145b
 }
