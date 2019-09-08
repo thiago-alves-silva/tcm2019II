@@ -78,56 +78,38 @@
          opacity: 1;
      }
  }
- label[for='menu-check']{
-     color:white;
-     font-size: 2.5em;
-     cursor: pointer;
-     position: absolute;
-     top: 0;
-     margin: 1vh 0 0 2.4vh;
-     transition: all .3s;
-     transform: scale(1);
-     z-index: 1;
- }
- input[type='checkbox']{
-     display: none;
- }
- input[type='checkbox']:checked ~ label{
-     transform: rotate(-180deg);
-     color: #ed145b;
-     animation: none;
- }
- input[type='checkbox']:checked ~ div#menu {
-     transform: translate3d(0,0,0);
- }
  div#menu{
      position: absolute;
      top:0;
-     width: 40vh;
+     width: 10vh;
      height: 100vh;
+     display: flex;
+     align-items: center;
      background-color: rgba(0,0,0,0.6);
-     transform: translate3d(-40vh,0,0);
-     transition: all 0.3s
+     transform: translateX(-10vh);
+     transition: transform 1s;
  }
- div#menu li a{
-    font-family: 'Rubik', sans-serif;
-    font-size: 1.3em;
-    text-decoration: none;
-    color: white;
-    display: block;
-    padding: 3vh;
-    transition: all .3s
+ .translate {transform: translateX(0) !important}
+ div#icons {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
  }
- @media screen and (min-width:1050px) {
-     div#menu li:hover a::after {
-     content: ">";
-     position: absolute;
-     right: 3vh;
-    }
+ div#icons > div.img {
+     width: 70%;
+     display: flex;
+     justify-content: center;
+     margin: 1vh 0;
+     cursor: pointer;
+     position: relative;
+     padding: .5vh 0;
+     border-radius: 50%;
+     transition: background-color .3s
  }
- div#menu li:hover a{
-     background-color: #ed145b;
+ div#icons > div.img img {
+     width: 55%;
+     padding: 1vh;
  }
- div#menu ul {
-     margin-top: 10vh;
- }
+div#icons div.img:hover{
+    background-color: rgba(255, 255, 255, .4)
+}

@@ -17,17 +17,27 @@
         <p>A System Crown é uma das mais requisitadas empresas quando o assunto é desenvolvimento de sistemas para o seu negócio. Isso tudo é graças a nossa enorme comunidade de desenvolvedores que temos orgulho de hospedar em nossa companhia.</p>
         <a href="home.html" class='btn-conheca'>Conheça a Empresa</a>
     </div>
-    <input type="checkbox" id="menu-check">
-    <label for="menu-check">&#9776</label>
     <div id="menu">
-        <nav>
-            <ul>
-                <li><a href="#">Serviços</a></li>
-                <li><a href="#">Empresa</a></li>
-                <li><a href="#">Contato</a></li>
-                <li><a href="#">Suporte</a></li>
-            </ul>
-        </nav>
+        <div id="icons">
+            <div class="img">
+                <img src="img/index/services.png" title="Serviços">
+            </div>
+            <div class="img">
+                <img src="img/index/team.png" title="Equipe">
+            </div>
+            <div class="img">
+                <img src="img/index/mvv.png" title="Missão, Visão e Valores">
+            </div>
+            <div class="img">
+                <img src="img/index/contact.png" title="Contato">
+            </div>
+            <div class="img">
+                <img src="img/index/questions.png" title="Perguntas Frequentes">
+            </div>
+            <div class="img">
+                <img src="img/index/comments.png" title="Comentários">
+            </div>
+        </div>
     </div>
     <script>
         writter()
@@ -39,6 +49,7 @@
             setTimeout(() => document.getElementById('titulo').innerHTML += e, 100*i)
         })
         }
+        setTimeout(()=> document.querySelector('div#menu').classList.add('translate'), 300)
     </script>
 </body>
 </html>

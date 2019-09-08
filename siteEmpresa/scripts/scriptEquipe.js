@@ -13,8 +13,8 @@ function animateEquipe() {
         imgFunc.classList.add('translateEquipe')
         cargoFunc.classList.add('translateEquipe')
         nomeFunc.classList.add('translateEquipe')
-        setInterval(()=>imgHoverFunc.style.opacity = '1', 400)
-        setInterval(()=>cargoFunc.style.opacity = '1', 800)
+        setTimeout(()=>imgHoverFunc.style.opacity = '1', 400)
+        setTimeout(()=>cargoFunc.style.opacity = '1', 800)
         if(i==0) imgHoverFunc.style.border += '.1vw solid yellow'
         if(i==1 || i==3) imgHoverFunc.style.border += '.1vw solid #ed145b'
         if(i==2) imgHoverFunc.style.border += '.1vw solid #308be8'

@@ -24,7 +24,8 @@
    
 }
 span {
-   color: #ed145b
+   color: #ed145b;
+   font-family: Rubik !important;
 }
 .titulo {
    cursor: default;
@@ -34,49 +35,31 @@ span {
 }
  header {
     position: absolute;
- }
- div#cabecalho {
-    color: white;
     height: 100vh;
     width: 5vw;
     background-color: #ed145b;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
-    align-content: space-between;
-    box-sizing: border-box;
+    align-content: center;
+ }
+ div#cabecalho {
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    padding: .5vw;
-    position: relative;
  }
  div#cabecalho img {
     width: 3.5vw;
     border-radius: 50%;
  }
  div#cabecalho h1 {
+    margin-left: .6vw;
     font-family: Samsung;
     font-size: 2.5vw;
     pointer-events: none;
     writing-mode: vertical-rl;
     transform: rotate(180deg);
+    color: white;
  }
-label[for='menu-check']{
-   font-size: 2.2vw;
-   cursor: pointer;
-   transition: transform .1s;
-   padding: .2vw .85vw .5vw .85vw;
-   border-radius: 50%;
-   transform: translateY(-.3vw);
-   box-shadow: .0vw .25vw .2vw rgba(0,0,0,0.3);
-}
-.btn-down{
-   transform: translateY(0) !important;
-   box-shadow: 0 0 0 !important;
- }
-input[type='checkbox']{
-   display: none;
-}
-/* input[type='checkbox']:checked ~ div#menu-drop {opacity: 1;} */
 div#menu-drop {
    width: 10vw;
    font-size: 1vw;
