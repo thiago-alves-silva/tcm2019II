@@ -178,6 +178,7 @@ div#menu-drop {
 div#empresa {
    color: white;
    background-color: #151819;
+   padding-bottom: 4vw;
 }
 div#img-emp{
    position: relative;
@@ -337,7 +338,7 @@ div#info-contato div#abs-contato img {
    opacity: 1;
 }
 div#suporte{
-   padding-bottom: 3vw;
+   padding-bottom: 4vw;
 }
 div.pergunta {
    width: 60vw;
@@ -380,8 +381,11 @@ div#formcomment{
    display: flex;
    flex-wrap: wrap;
    justify-content: space-around;
+   align-items: center;
    width: 100%;
    color: white;
+   padding-bottom: 4vw;
+
 }
 form#comentario {
    width: 35vw;
@@ -411,11 +415,16 @@ p.erro {
 }
 div#comments {
    width: 45vw;
-   height: 33vw;
+   height: 35vw;
    display: flex;
    align-items: center;
    justify-content: center;
    flex-wrap: wrap;
+   padding-bottom: 4vw;
+   box-shadow: 0 1.5vw 1.5vw rgba(0,0,0,0.5);
+   border-radius: .5vw 0 0 .5vw;
+   box-sizing: border-box;
+   padding: 1vw 0;
 }
 div#comments::-webkit-scrollbar {
    background-color: rgba(0,0,0,0);
