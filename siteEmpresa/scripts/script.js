@@ -2,6 +2,7 @@ document.querySelectorAll('.pergunta').forEach(e => e.childNodes[1].innerHTML +=
 
 document.querySelectorAll('.pergunta').forEach(e => {
     e.addEventListener('click', () => {
+        e.style = "transition: max-height .5s;"
         e.childNodes[1].classList.toggle('color')
         e.childNodes[1].childNodes[1].classList.toggle('rotate')
         e.classList.toggle('maxHeight')
