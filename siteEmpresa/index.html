@@ -45,11 +45,9 @@
         function writter() {
         let txt = document.getElementById('titulo').innerHTML.split("");
         document.getElementById('titulo').innerHTML = ''
-        txt.forEach((e, i) => {
-            setTimeout(() => document.getElementById('titulo').innerHTML += e, 100*i)
-        })
+        txt.forEach((e, i) => setTimeout(() => document.getElementById('titulo').innerHTML += e, 100*i))
         }
-        setTimeout(()=> document.querySelector('div#menu').classList.add('translate'), 300)
+        document.querySelectorAll('div.img').forEach((e,i)=> setTimeout(()=> e.style = 'transform: translateX(0)', 150*i))
     </script>
 </body>
 </html>

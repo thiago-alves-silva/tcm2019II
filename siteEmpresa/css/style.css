@@ -50,7 +50,7 @@
     color: white
  }
  .btn-conheca {
-     width: 20em;
+     width: 15em;
      font-family: monospace;
      font-size: 1.2em;
      text-decoration: none;
@@ -85,11 +85,7 @@
      height: 100vh;
      display: flex;
      align-items: center;
-     background-color: rgba(0,0,0,0.6);
-     transform: translateX(-10vh);
-     transition: transform 1s;
  }
- .translate {transform: translateX(0) !important}
  div#icons {
      display: flex;
      flex-wrap: wrap;
@@ -104,7 +100,8 @@
      position: relative;
      padding: .5vh 0;
      border-radius: 50%;
-     transition: background-color .3s
+     transform: translateX(-7vh);
+     transition: background-color .3s, transform .5s;
  }
  div#icons > div.img img {
      width: 60%;
