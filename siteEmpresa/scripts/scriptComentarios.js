@@ -12,7 +12,7 @@ function first(){
     let h1 = document.createElement('h1')
     h1.innerHTML = "Seja o primeiro<br/> a comentar!"
     h1.id = "first"
-    h1.style = 'text-align:center'
+    h1.style = 'text-align:center; pointer-events:none'
     divComments.appendChild(h1)
     }
 }
