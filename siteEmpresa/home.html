@@ -11,13 +11,24 @@
 </head>
 
 <body>
-    <header>
+    <header class='height'>
         <a href="index.html" style="text-decoration: none">
         <div id="cabecalho">
             <img src="img/icon/icon-branco.png">
             <h1 id="titulo">SYSTEM CROWN</h1>
         </div>
         </a>
+        <div id="menu-itens">
+            <ul>
+                <a href="#servicos"><li>SERVIÇOS</li></a>
+                <a href="#empresa"><li>EQUIPE</li></a>
+                <a href="#"><li>MVV</li></a>
+                <a href="#contato"><li>CONTATO</li></a>
+                <a href="#suporte"><li>PERGUNTAS</li></a>
+                <a href="#comentarios"><li>COMENTÁRIOS</li></a>
+            </ul>
+        </div>
+        <a href="#" id="login">LOGIN</a>
     </header>
     <div id="apresentacao">
         <p id="developed">developed by THIAGO. A</p>
@@ -29,9 +40,8 @@
                 para grandes e pequenos negócios, visando facilitar seu gerenciamento, proporcionando aos nossos
                 clientes a melhor experiência.</p>
         </div>
-        <img src="img/imagem_site.png" data-animation="right">
     </div>
-    <div id="servicos">
+    <div id="servicos" class='height'>
         <h1 class="titulo">TUDO QUE OFERECEMOS<br/> PARA SUA EMPRESA</h1>
         <div id="itens">
             <div>
@@ -80,7 +90,7 @@
             </div>
         </div>
     </div>
-    <div id="empresa">
+    <div id="empresa" class='height'>
         <div id="img-emp">
             <h1>#FOTO DA NOSSA EMPRESA</h1>
         </div>
@@ -145,7 +155,8 @@
             </div>
         </div>
     </div>
-    <div id="contato">
+    <div id="mvv" class="height"></div>
+    <div id="contato" class='height'>
         <h1 class="titulo" style="color: white">CONTATO</h1>
         <div id="info-contato">
             <form onsubmit="document.querySelector('form#formContato').reset(); alert('Mensagem enviada com sucesso! Retornaremos em até 24h.'); return false;" id="formContato">
@@ -177,7 +188,7 @@
             </div>
         </div>
     </div>
-    <div id="suporte">
+    <div id="suporte" class='height'>
         <h1 class="titulo">PERGUNTAS FREQUENTES</h1>
         <div id="perguntas">
             <div class="pergunta">
@@ -210,7 +221,7 @@
             </div>
         </div>
     </div>
-    <div id="comentarios">
+    <div id="comentarios" class='height'>
         <h1 class="titulo" style="color: white">DEIXE O SEU COMENTÁRIO</h1>
         <div id="formcomment">
             <form id="comentario">

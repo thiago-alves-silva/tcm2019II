@@ -107,7 +107,7 @@
      transition: background-color .3s
  }
  div#icons > div.img img {
-     width: 55%;
+     width: 60%;
      padding: 1vh;
  }
 div#icons div.img:hover{
