@@ -3,7 +3,19 @@ let users = []
 const nomeComment = document.getElementById('insertNomeComment')
 const turmaComment = document.getElementById('turmaComment')
 const txtComentario = document.getElementById('txtcomentario')
+const divComments = document.getElementById('comments')
 turmaComment.selectedIndex = -1
+
+first()
+function first(){
+    if(divComments.childNodes.length == 0){
+    let h1 = document.createElement('h1')
+    h1.innerHTML = "Seja o primeiro<br/> a comentar!"
+    h1.id = "first"
+    h1.style = 'text-align:center'
+    divComments.appendChild(h1)
+    }
+}
 
 function cadastro() {
     if (!nomeComment.value) {
@@ -22,11 +34,11 @@ function cadastro() {
         let p = document.getElementById('erroComment')
         p.style = "visibility: visible; margin-bottom: .1vw;"
     } else {
+        if(document.getElementById('first')) divComments.removeChild(document.getElementById('first'))
         let user = newUser()
         users.push(user)
         while (i < users.length) {
             const date = new Date()
-            const comments = document.getElementById('comments')
             const div = document.createElement('div')
             div.classList.add('roll')
             div.setAttribute("data-comment", "left")
@@ -50,14 +62,14 @@ function cadastro() {
             div.appendChild(p)
             div.appendChild(pHora)
             div.appendChild(img)
-            comments.insertAdjacentElement('afterbegin', div)
+            divComments.insertAdjacentElement('afterbegin', div)
             deleteComment()
             document.getElementById('erroNome').style = ''
             document.getElementById('erroTurma').style = ''
             document.getElementById('erroComment').style = 'display:none'
             document.querySelector('form#comentario').reset()
             turmaComment.selectedIndex = -1
-            document.getElementById('comments').scrollTo(0,0)
+            divComments.scrollTo(0,0)
             i++
         }
     }
@@ -84,7 +96,7 @@ function deleteComment() {
         e.addEventListener('click', () => {
             senha  = prompt('Digite a senha para deletar este comentário.')
             if(!senha){}
-            else if (+senha === 123) div.parentNode.removeChild(div)
+            else if (+senha === 123) {div.parentNode.removeChild(div); if(divComments.childNodes.length == 0)first()}
             else alert('Senha incorreta!')
         })
     })

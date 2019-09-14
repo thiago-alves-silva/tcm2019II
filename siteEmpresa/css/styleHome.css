@@ -152,24 +152,27 @@ a#login:hover {
  div#servicos {
     padding-bottom: 3vw;
  }
-
  div#itens {
-     width: 100vw;
-     display: flex;
-     flex-wrap: wrap;
-     justify-content: center;
-     padding-bottom: .4vw;
+     margin: auto;
+     width: 75%;
+     display: grid;
+     grid-template-columns: repeat(2, 1fr);
+     grid-gap: 1vw 0;
+     padding: 5vw 0;
  }
+ div#itens > div:nth-child(2n+1) {margin-top: 4vw; margin-bottom: -4vw}
+ div#itens > div:nth-child(2n) {margin-bottom: 4vw; margin-top: -4vw}
  div#itens > div {
+     width: 98%;
      display: flex;
      flex-wrap: wrap;
      justify-content: center;
-     margin: .5vw;
-     padding: 2.5vw 0;
-     flex-basis: 26vw;
+     margin: .5vw auto;
+     padding: 1vw 0;
      transition: transform .5s, box-shadow .5s;
      cursor: default;
      border-radius: .5vw;
+     text-align: center;
  }
  div#itens div:hover {
    box-shadow: .04vw .65vw 1vw rgba(0,0,0,0.3);
@@ -180,7 +183,7 @@ a#login:hover {
     color: #151819;
     font-size: 2.2vw;
     text-shadow: .06vw .06vw black;
-    margin: 1vw;
+    margin: .5vw;
     width: 100%;
  }
  div#itens div p {
@@ -199,11 +202,9 @@ a#login:hover {
  }
  [data-animation="left"]{
    transform: translate3d(-4vw, 0, 0);
-   text-align: right;
 }
  [data-animation="right"]{
    transform: translate3d(4vw, 0, 0);
-   text-align: left;
 }
  [data-animation="top"]{
    transform: translate3d(0, 4vw, 0);
@@ -213,7 +214,6 @@ a#login:hover {
 }
  [data-animation="center"]{
    transform: translate3d(0, 2vw, 0);
-   text-align: center;
 }
 [data-animation].animate {
    transform: translate3d(0, 0, 0);
