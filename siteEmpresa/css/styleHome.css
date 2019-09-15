@@ -84,7 +84,7 @@ span {
     position: relative;
     padding-bottom: .5vw;
     font-size: 1vw;
-    transition: color .3s, opacity .5s
+    transition: color .3s, opacity .5s;
  }
  div#menu-itens ul li::after{
     content: "";
@@ -108,12 +108,11 @@ a#login {
    padding: .5vw 1vw;
    font-size: .9vw;
    letter-spacing: .2vw;
-   transition: box-shadow .2s linear
+   transition: box-shadow .2s linear;
 }
 a#login:hover {
    box-shadow: 0 0 1vw #be114b
 }
-
  div#apresentacao{
     background-color: #151819;
     background: url('../img/backgroundHome2.jpg');
@@ -158,67 +157,57 @@ a#login:hover {
     padding-bottom: 3vw;
  }
  div#itens {
-     margin: auto;
-     width: 75%;
-     display: grid;
-     grid-template-columns: repeat(2, 1fr);
-     grid-gap: 1vw 0;
-     padding: 5vw 0;
+     padding: 0 1vw;
+     box-sizing: border-box;
  }
- div#itens > div:nth-child(2n+1) {margin-top: 4vw; margin-bottom: -4vw}
- div#itens > div:nth-child(2n) {margin-bottom: 4vw; margin-top: -4vw}
  div#itens > div {
-     width: 98%;
+     width: 15vw;
+     float: left;
      display: flex;
      flex-wrap: wrap;
      justify-content: center;
      margin: .5vw auto;
      padding: 1vw 0;
      transition: transform .5s, box-shadow .5s;
-     cursor: default;
+     cursor: pointer;
      border-radius: .5vw;
      text-align: center;
  }
- div#itens div:hover {
-   box-shadow: .04vw .65vw 1vw rgba(0,0,0,0.3);
+ div#itens > div:hover {
+   box-shadow: .04vw .65vw .5vw rgba(0,0,0,0.3);
    transform: translate3d(0, -.5vw, 0)
  }
+ .display {display: block !important}
  div#itens div h1 {
     text-align: center;
     color: #151819;
-    font-size: 2.2vw;
-    text-shadow: .06vw .06vw black;
+    font-size: 1.5vw;
+    text-shadow: .03vw .03vw black;
     margin: .5vw;
     width: 100%;
  }
- div#itens div p {
+ /* div#itens div p {
     font-size: 1vw;
     font-family: Samsung;
     line-height: 1.5vw;
     padding: 0 3vw;
- }
+ } */
  div#itens div img {
      width: 6vw;
      pointer-events: none;
+ }
+ div.serv {
+    display: none
  }
  [data-animation]{
    opacity: 0;
    transition: transform 1s, opacity 1s;
  }
- [data-animation="left"]{
-   transform: translate3d(-4vw, 0, 0);
-}
- [data-animation="right"]{
-   transform: translate3d(4vw, 0, 0);
-}
  [data-animation="top"]{
    transform: translate3d(0, 4vw, 0);
 }
  [data-animation="bottom"]{
    transform: translate3d(0, -4vw, 0);
-}
- [data-animation="center"]{
-   transform: translate3d(0, 2vw, 0);
 }
 [data-animation].animate {
    transform: translate3d(0, 0, 0);

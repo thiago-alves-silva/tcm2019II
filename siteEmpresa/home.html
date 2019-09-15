@@ -13,19 +13,31 @@
 <body>
     <header class='height'>
         <a href="index.html" style="text-decoration: none">
-        <div id="cabecalho">
-            <img src="img/icon/icon-branco.png">
-            <h1 id="titulo">SYSTEM CROWN</h1>
-        </div>
+            <div id="cabecalho">
+                <img src="img/icon/icon-branco.png">
+                <h1 id="titulo">SYSTEM CROWN</h1>
+            </div>
         </a>
         <div id="menu-itens">
             <ul>
-                <a href="#servicos"><li>SERVIÇOS</li></a>
-                <a href="#empresa"><li>EQUIPE</li></a>
-                <a href="#" title="Missão, Visão e Valores"><li>MVV</li></a>
-                <a href="#contato"><li>CONTATO</li></a>
-                <a href="#suporte"><li>PERGUNTAS</li></a>
-                <a href="#comentarios"><li>COMENTÁRIOS</li></a>
+                <a href="#servicos">
+                    <li>SERVIÇOS</li>
+                </a>
+                <a href="#empresa">
+                    <li>EQUIPE</li>
+                </a>
+                <a href="#" title="Missão, Visão e Valores">
+                    <li>MVV</li>
+                </a>
+                <a href="#contato">
+                    <li>CONTATO</li>
+                </a>
+                <a href="#suporte">
+                    <li>PERGUNTAS</li>
+                </a>
+                <a href="#comentarios">
+                    <li>COMENTÁRIOS</li>
+                </a>
             </ul>
         </div>
         <a href="#" id="login">LOGIN</a>
@@ -42,48 +54,72 @@
         </div>
     </div>
     <div id="servicos" class='height'>
-        <h1 class="titulo">TUDO QUE OFERECEMOS<br/> PARA SUA EMPRESA</h1>
+        <h1 class="titulo">TUDO QUE OFERECEMOS<br /> PARA SUA EMPRESA</h1>
         <div id="itens">
             <div>
                 <img src="img/icon1.png">
-                <h1>Desenvolvimento de<br/>Sistemas</h1>
-                <p data-animation="left">Trabalhamos para desenvolver <span>o melhor</span> para a sua empresa. Nossa
-                    equipe de especialistas passa dia e
-                    noite se dedicando para resolver problemas reais utilizando as melhores e mais requisitadas linguagens do
-                    mercado.</p>
+                <h1>Sistemas</h1>
             </div>
             <div>
                 <img src="img/icon2.png">
-                <h1>Desenvolvimento Web</h1>
-                <p data-animation="right">Construindo com HTML5, estilizando com CSS3 e automatizando com JavaScript,
-                    nós <span>entregamos a perfeição</span> aos nossos clientes. Com sites modernos e feito com o que há
-                    de melhor das linguagens web.</p>
+                <h1>Web</h1>
             </div>
             <div>
                 <img src="img/icon3.png">
-                <h1>Desenvolvimento Mobile</h1>
-                <p data-animation="left"><span>Aprimorar</span> os canais de comunição e trazer praticidade nas vendas
-                    e-commerce é um dos diversos exemplos de projetos que a System Crown se compromete em fazer na área
-                    mobile da sua empresa para os seus clientes.</p>
+                <h1>Mobile</h1>
             </div>
             <div>
                 <img src="img/icon4.png">
-                <h1>Design Digital</h1>
-                <p data-animation="right">Arte também é o nosso forte! Nossa equipe pode dar um tapa no visual sua da
+                <h1>Design</h1>
+            </div>
+            <div>
+                <img src="img/icon6.png">
+                <h1>Manutenção</h1>
+            </div>
+            <div>
+                <img src="img/icon5.png">
+                <h1>Análise</h1>
+            </div>
+        </div>
+        <div id="displayServico">
+            <div class="serv">
+                <p>Trabalhamos para desenvolver <span>o melhor</span> para a sua empresa.
+                    Nossa
+                    equipe de especialistas passa dia e
+                    noite se dedicando para resolver problemas reais utilizando as melhores e mais requisitadas
+                    linguagens do
+                    mercado.</p>
+            </div>
+            <div class="serv">
+                <p>Construindo com HTML5, estilizando com CSS3 e automatizando com
+                    JavaScript,
+                    nós <span>entregamos a perfeição</span> aos nossos clientes. Com sites modernos e feito com o
+                    que há
+                    de melhor das linguagens web.</p>
+            </div>
+            <div class="serv">
+                <p><span>Aprimorar</span> os canais de comunição e trazer praticidade nas
+                    vendas
+                    e-commerce é um dos diversos exemplos de projetos que a System Crown se compromete em fazer na
+                    área
+                    mobile da sua empresa para os seus clientes.</p>
+            </div>
+            <div class="serv">
+                <p>Arte também é o nosso forte! Nossa equipe pode dar um tapa no visual sua
+                    da
                     empresa com a criação de
                     novos flyers, banners, logotipos, telas para o seu site e <span>todo tipo</span> de arte digital
                     <span>que você precisar</span>.</p>
             </div>
-            <div>
-                <img src="img/icon6.png">
-                <h1>Manutenção de<br/>Computadores</h1>
-                <p data-animation="right">Para ser uma empresa <span>completa em todas as partes</span>, oferecemos o
-                    serviço de conserto e reparo de computadores e notebooks em geral. Desde instalação de software até Reballing BGA.</p>
+            <div class="serv">
+                <p>Para ser uma empresa <span>completa em todas as partes</span>, oferecemos
+                    o
+                    serviço de conserto e reparo de computadores e notebooks em geral. Desde instalação de software
+                    até Reballing BGA.</p>
             </div>
-            <div>
-                <img src="img/icon5.png">
-                <h1>Análise de Sistemas</h1>
-                <p data-animation="left">Se está começando com o desenvolvimento de software da sua empresa nós temos
+            <div class="serv">
+                <p>Se está começando com o desenvolvimento de software da sua empresa nós
+                    temos
                     a equipe perfeita para
                     auxilia-lo na análise do seu projeto e orienta-lo para que tudo ocorra perfeitamente e <span>sem
                         imprevistos</span>.</p>
@@ -159,7 +195,9 @@
     <div id="contato" class='height'>
         <h1 class="titulo" style="color: white">FALE CONOSCO</h1>
         <div id="info-contato">
-            <form onsubmit="document.querySelector('form#formContato').reset(); alert('Mensagem enviada com sucesso! Retornaremos em até 24h.'); return false;" id="formContato">
+            <form
+                onsubmit="document.querySelector('form#formContato').reset(); alert('Mensagem enviada com sucesso! Retornaremos em até 24h.'); return false;"
+                id="formContato">
                 <div id="form">
                     <input class="input" type="text" id="nome" placeholder="Nome (obrigatório)" required>
                     <input class="input" type="email" id="email" placeholder="E-mail (obrigatório)" required>
@@ -168,7 +206,8 @@
                         <input class="input" type="text" id="numero" maxlength="9" placeholder="Telefone">
                     </div>
                     <input class="input" type="text" id="assunto" placeholder="Assunto">
-                    <textarea class="input" id="texto" cols="30" rows="10" placeholder="Sua mensagem" required maxlength="1000"></textarea>
+                    <textarea class="input" id="texto" cols="30" rows="10" placeholder="Sua mensagem" required
+                        maxlength="1000"></textarea>
                     <input class="input" type="submit" value="ENVIAR">
                 </div>
             </form>
@@ -193,31 +232,47 @@
         <div id="perguntas">
             <div class="pergunta">
                 <h1>A System Crown atua no Reclame Aqui?</h1>
-                <p>A System Crow disponibiliza diversos canais de atendimento ao consumidor (e-mail, telefone e redes sociais),  além de investir continuamente para aprimorar a evolução dos mesmos, visando proporcionar uma experiência diferenciada aos seus consumidores.</br>A companhia entende que o contato direto é a maneira mais eficiente, ágil e transparente para alcançar soluções juntamente aos seus clientes.</p>
+                <p>A System Crow disponibiliza diversos canais de atendimento ao consumidor (e-mail, telefone e redes
+                    sociais), além de investir continuamente para aprimorar a evolução dos mesmos, visando proporcionar
+                    uma experiência diferenciada aos seus consumidores.</br>A companhia entende que o contato direto é a
+                    maneira mais eficiente, ágil e transparente para alcançar soluções juntamente aos seus clientes.</p>
             </div>
             <div class="pergunta">
                 <h1>A System Crown envia arquivos anexo por e-mail?</h1>
-                <p>A System Crown apenas envia anexos para o e-mail dos clientes em datas programadas e com conteúdos pré-definidos relacionados ao projeto (relatórios para acompanhamento). Fora desta condiçao apenas quando solicitado pelo cliente o envio de boletos, relatórios, segunda via, etc.</p>
+                <p>A System Crown apenas envia anexos para o e-mail dos clientes em datas programadas e com conteúdos
+                    pré-definidos relacionados ao projeto (relatórios para acompanhamento). Fora desta condiçao apenas
+                    quando solicitado pelo cliente o envio de boletos, relatórios, segunda via, etc.</p>
             </div>
             <div class="pergunta">
                 <h1>A System Crown possui loja física?</h1>
-                <p>A System Crown nasceu para ser digital, por isso trabalhamos com o sistema online e nao possuímos loja física.</br>Você solicita os serviços em nossa central online e recebe seu pedido no endereço de e-mail que escolher no final do prazo de entrega do projeto.</p>
+                <p>A System Crown nasceu para ser digital, por isso trabalhamos com o sistema online e nao possuímos
+                    loja física.</br>Você solicita os serviços em nossa central online e recebe seu pedido no endereço
+                    de e-mail que escolher no final do prazo de entrega do projeto.</p>
             </div>
             <div class="pergunta">
                 <h1>Como acompanhar o andamento do meu serviço contratado?</h1>
-                <p>Nossa equipe mantém os clientes informados sobre o andamento dos serviços contratados a cada 7 dias. Caso o cliente necessite de um relatório antecipado ou com mais informaçoes, basta solicitar em nossa página de contato</p>
+                <p>Nossa equipe mantém os clientes informados sobre o andamento dos serviços contratados a cada 7 dias.
+                    Caso o cliente necessite de um relatório antecipado ou com mais informaçoes, basta solicitar em
+                    nossa página de contato</p>
             </div>
             <div class="pergunta">
                 <h1>Como entrar em contato com a System Crown?</h1>
-                <p>Para nos contatar basta nos enviar uma mensagem acessando nossa página de contato, onde serão encontrados canais de comunicaçao como e-mail, telefone e nossa central direta.</br>Para sua comodidade, a nossa Central de Relacionamento funciona das 08h as 20h40 de segunda à sábado, exceto domingos e feriados.</p>
+                <p>Para nos contatar basta nos enviar uma mensagem acessando nossa página de contato, onde serão
+                    encontrados canais de comunicaçao como e-mail, telefone e nossa central direta.</br>Para sua
+                    comodidade, a nossa Central de Relacionamento funciona das 08h as 20h40 de segunda à sábado, exceto
+                    domingos e feriados.</p>
             </div>
             <div class="pergunta">
                 <h1>É possível mudar a data de entrega agendada do meu serviço?</h1>
-                <p>Caso o cliente necessite alterar a data de entrega do serviço contratado é necessário que ele entre em contato com a nossa equipe que estará verificando disponibilidades para novas datas de entrega.</p>
+                <p>Caso o cliente necessite alterar a data de entrega do serviço contratado é necessário que ele entre
+                    em contato com a nossa equipe que estará verificando disponibilidades para novas datas de entrega.
+                </p>
             </div>
             <div class="pergunta">
                 <h1>Se não tiver ninguém no local para a visita técnica, o que acontece?</h1>
-                <p>Em caso de ausência do cliente na visita técnica para manutençao de dispositivos, a System Crown estará entrando em contato para reagendar a visita com um acréscimo de 10% no valor do serviço. Caso o cliente deseje cancelar a visita será estornado 90% do valor pago.</p>
+                <p>Em caso de ausência do cliente na visita técnica para manutençao de dispositivos, a System Crown
+                    estará entrando em contato para reagendar a visita com um acréscimo de 10% no valor do serviço. Caso
+                    o cliente deseje cancelar a visita será estornado 90% do valor pago.</p>
             </div>
         </div>
     </div>
@@ -261,9 +316,11 @@
                 </select>
                 <p class="erro" id="erroTurma">Selecione sua turma</p>
                 <p>Comentário</p>
-                <textarea class="input" id="txtcomentario" placeholder="Máx. 250 caracteres" maxlength="250" style="margin-bottom: 0"></textarea>
+                <textarea class="input" id="txtcomentario" placeholder="Máx. 250 caracteres" maxlength="250"
+                    style="margin-bottom: 0"></textarea>
                 <p class="erro" id="erroComment" style="display: none">Insira um comentário</p>
-                <p id="contadorCaracter" style="margin: 0; font-style: italic; color: #cacaca; font-size: 1vw">Caracteres restantes: 250</p>
+                <p id="contadorCaracter" style="margin: 0; font-style: italic; color: #cacaca; font-size: 1vw">
+                    Caracteres restantes: 250</p>
                 <input class="input" type="button" value="Adicionar comentário" onclick="cadastro()" id="btnComment">
             </form>
             <div id="comments"></div>
@@ -271,14 +328,19 @@
     </div>
     <footer>
         <div id="footer">
-            <p><span style="font-size: 1.3vw; cursor:default">SYSTEM CROWN</span><br/>Rua Belchior de Azevedo, 157<br/>Vila Leopoldina, São Paulo - SP<br/><br/>Segunda - Sexta 08h 18h<br/>Sábado 10h - 16h<br/><br/>Tel.: (11) 95760-4835</p>
+            <p><span style="font-size: 1.3vw; cursor:default">SYSTEM CROWN</span><br />Rua Belchior de Azevedo,
+                157<br />Vila Leopoldina, São Paulo - SP<br /><br />Segunda - Sexta 08h 18h<br />Sábado 10h -
+                16h<br /><br />Tel.: (11) 95760-4835</p>
             <img src="img/icon/logo.png">
-            <p style="text-align: right">&copy; Copyright 2019<br/>System Crown - Software Development<br/>Todos os direitos reservados.</p>
+            <p style="text-align: right">&copy; Copyright 2019<br />System Crown - Software Development<br />Todos os
+                direitos reservados.</p>
         </div>
     </footer>
 </body>
 <script src="scripts/script.js"></script>
 <script src="scripts/scriptData.js"></script>
+<script src="scripts/scriptServicos.js"></script>
 <script src="scripts/scriptEquipe.js"></script>
 <script src="scripts/scriptComentarios.js"></script>
+
 </html>
