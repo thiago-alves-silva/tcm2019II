@@ -159,6 +159,7 @@ a#login:hover {
  div#itens {
      padding: 0 1vw;
      box-sizing: border-box;
+     display: flex
  }
  div#itens > div {
      width: 15vw;
@@ -177,27 +178,33 @@ a#login:hover {
    box-shadow: .04vw .65vw .5vw rgba(0,0,0,0.3);
    transform: translate3d(0, -.5vw, 0)
  }
+ .shadow {
+    box-shadow: .04vw .65vw .5vw rgba(0,0,0,0.3);
+    transform: translate3d(0, -.5vw, 0)
+}
  .display {display: block !important}
  div#itens div h1 {
     text-align: center;
     color: #151819;
     font-size: 1.5vw;
-    text-shadow: .03vw .03vw black;
     margin: .5vw;
     width: 100%;
  }
- /* div#itens div p {
-    font-size: 1vw;
-    font-family: Samsung;
-    line-height: 1.5vw;
-    padding: 0 3vw;
- } */
  div#itens div img {
-     width: 6vw;
+     width: 5vw;
      pointer-events: none;
  }
  div.serv {
-    display: none
+    /* display: none; */
+    /* max-height: 0; */
+    display: block;
+    width: 85%;
+    margin: auto;
+    overflow: hidden;
+    transition: max-height 1s;
+ }
+ div.serv > h1 {
+    font-size: 1.6vw
  }
  [data-animation]{
    opacity: 0;
