@@ -154,7 +154,7 @@ a#login:hover {
     margin-bottom: 3vw;
  }
  div#servicos {
-    padding-bottom: 3vw;
+    padding-bottom: .5vw;
  }
  div#itens {
      padding: 0 1vw;
@@ -182,7 +182,6 @@ a#login:hover {
     box-shadow: .04vw .65vw .5vw rgba(0,0,0,0.3);
     transform: translate3d(0, -.5vw, 0)
 }
- .display {display: block !important}
  div#itens div h1 {
     text-align: center;
     color: #151819;
@@ -194,17 +193,54 @@ a#login:hover {
      width: 5vw;
      pointer-events: none;
  }
+ div#displayServico {
+    margin-top: 2vw;
+    box-sizing: border-box;
+ }
+ div#displayServico> h1#click {
+    text-align: center;
+    cursor: default;
+    margin-bottom: 3vw;
+ }
+ .display {visibility: visible !important}
  div.serv {
-    /* display: none; */
-    /* max-height: 0; */
-    display: block;
-    width: 85%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    max-height: 0;
+    height: 20vw;
+    width: 100%;
     margin: auto;
     overflow: hidden;
-    transition: max-height 1s;
+    transition: max-height .8s;
+    position: relative;
  }
- div.serv > h1 {
-    font-size: 1.6vw
+ div.serv > div.textoServ {
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    width: 30%;
+    height: 100%;
+    position: absolute;
+    box-sizing: border-box;
+    padding: 1vw 2vw;
+    opacity: 0;
+    transition: opacity .5s;
+    left: 0;
+ }
+ div.serv h1 {
+    font-size: 1.5vw;
+    margin: .5vw 0;
+    color: rgb(110, 110, 110);
+    text-align: center
+ }
+ div.serv p {
+    color: #4C4C4C;
+    text-align: justify
  }
  [data-animation]{
    opacity: 0;
