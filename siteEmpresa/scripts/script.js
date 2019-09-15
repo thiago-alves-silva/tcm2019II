@@ -19,11 +19,11 @@ function menuBar(){
     const li = document.querySelectorAll('div#menu-itens ul li');
     const header = document.querySelector('header')
     const a = window.pageYOffset + header.clientHeight
-    if((window.pageYOffset>=(height[0].offsetTop + height[0].clientHeight) && !header.classList.contains('menu-bar'))){
+    if(window.pageYOffset>=height[0].clientHeight && !header.classList.contains('menu-bar')){
         header.classList.add('menu-bar')
         setTimeout(()=> header.style.top = '0', 1)
     }
-    else if(window.pageYOffset<=(height[0].offsetTop + height[0].clientHeight)) {header.classList.remove('menu-bar'); header.style.top = ''}
+    else if(window.pageYOffset==0) {header.classList.remove('menu-bar'); header.style.top = ''}
     a>=height[1].offsetTop && a<=height[2].offsetTop?li[0].style.color = '#ed145b':li[0].style.color = ''
     a>=height[2].offsetTop && a<=height[3].offsetTop?li[1].style.color = '#ed145b':li[1].style.color = ''
     a>=height[3].offsetTop && a<=height[4].offsetTop?li[2].style.color = '#ed145b':li[2].style.color = ''
