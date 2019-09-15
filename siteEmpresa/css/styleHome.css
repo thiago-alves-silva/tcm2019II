@@ -42,8 +42,13 @@ span {
     justify-content: space-between;
     z-index:2;
     background-color: transparent;
-    transition: background-color .3s;
+    transition: background-color .3s, top .4s;
     overflow: hidden;
+ }
+ .menu-bar {
+   position: fixed !important;
+   background-color: #151819;
+   top:-4vw
  }
  div#cabecalho {
     display: flex;

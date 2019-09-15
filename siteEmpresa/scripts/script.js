@@ -19,16 +19,17 @@ function menuBar(){
     const li = document.querySelectorAll('div#menu-itens ul li');
     const header = document.querySelector('header')
     const a = window.pageYOffset + header.clientHeight
-    if(window.pageYOffset>=(height[0].offsetTop + height[0].clientHeight)){
-        header.style = 'position: fixed; background-color: #151819;'
-        a>=height[1].offsetTop && a<=height[2].offsetTop?li[0].style.color = '#ed145b':li[0].style.color = ''
-        a>=height[2].offsetTop && a<=height[3].offsetTop?li[1].style.color = '#ed145b':li[1].style.color = ''
-        a>=height[3].offsetTop && a<=height[4].offsetTop?li[2].style.color = '#ed145b':li[2].style.color = ''
-        a>=height[4].offsetTop && a<=height[5].offsetTop?li[3].style.color = '#ed145b':li[3].style.color = ''
-        a>=height[5].offsetTop && a<=height[6].offsetTop?li[4].style.color = '#ed145b':li[4].style.color = ''
-        a>=(height[6].offsetTop) && a <=(height[6].offsetTop + height[6].clientHeight)?li[5].style.color = '#ed145b':li[5].style.color = ''
+    if((window.pageYOffset>=(height[0].offsetTop + height[0].clientHeight) && !header.classList.contains('menu-bar'))){
+        header.classList.add('menu-bar')
+        setTimeout(()=> header.style.top = '0', 1)
     }
-    else header.style = 'position: absolute'
+    else if(window.pageYOffset<=(height[0].offsetTop + height[0].clientHeight)) {header.classList.remove('menu-bar'); header.style.top = ''}
+    a>=height[1].offsetTop && a<=height[2].offsetTop?li[0].style.color = '#ed145b':li[0].style.color = ''
+    a>=height[2].offsetTop && a<=height[3].offsetTop?li[1].style.color = '#ed145b':li[1].style.color = ''
+    a>=height[3].offsetTop && a<=height[4].offsetTop?li[2].style.color = '#ed145b':li[2].style.color = ''
+    a>=height[4].offsetTop && a<=height[5].offsetTop?li[3].style.color = '#ed145b':li[3].style.color = ''
+    a>=height[5].offsetTop && a<=height[6].offsetTop?li[4].style.color = '#ed145b':li[4].style.color = ''
+    a>=(height[6].offsetTop) && a <=(height[6].offsetTop + height[6].clientHeight)?li[5].style.color = '#ed145b':li[5].style.color = ''
 }
 menuBar()
 window.addEventListener('scroll', debounce3(() => menuBar(), 50))
