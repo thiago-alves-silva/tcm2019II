@@ -230,7 +230,6 @@ a#login:hover {
     padding: 1vw 2vw;
     opacity: 0;
     transition: opacity .5s;
-    left: 0;
  }
  div.serv h1 {
     font-size: 1.5vw;
