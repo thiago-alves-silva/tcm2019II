@@ -154,7 +154,7 @@ a#login:hover {
     margin-bottom: 3vw;
  }
  div#servicos {
-    padding-bottom: .5vw;
+    padding-bottom: 3vw;
  }
  div#itens {
      padding: 0 1vw;
@@ -193,44 +193,43 @@ a#login:hover {
      width: 5vw;
      pointer-events: none;
  }
- div#displayServico {
-    margin-top: 2vw;
-    box-sizing: border-box;
- }
  div#displayServico> h1#click {
     text-align: center;
     cursor: default;
-    margin-bottom: 3vw;
+    margin: 3vw auto;
  }
- .display {visibility: visible !important}
+ .display {display: block !important}
  div.serv {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    visibility: hidden;
-    max-height: 0;
-    height: 20vw;
-    width: 100%;
-    margin: auto;
+    width: 50%;
+    display: none;
+    max-height: 15vw;
     overflow: hidden;
-    transition: max-height .8s;
-    position: relative;
  }
  div.serv > div.textoServ {
-    overflow: hidden;
-    display: flex;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: center;
-    width: 30%;
-    height: 100%;
-    position: absolute;
     box-sizing: border-box;
-    padding: 1vw 2vw;
+    padding: 1vw 1.5vw;
     opacity: 0;
-    transition: opacity .5s;
- }
+    transition: opacity .5s
+   }
+   div#displayServico {
+      width: 100%;
+      height: 20vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+      transition: background-image .5s
+   }
+ /* div.serv:nth-child(1) > div.textoServ{left: 1.7vw}
+ div.serv:nth-child(2) > div.textoServ{left: 18vw}
+ div.serv:nth-child(3) > div.textoServ{left: 34.2vw}
+ div.serv:nth-child(4) > div.textoServ{left: 50.5vw}
+ div.serv:nth-child(5) > div.textoServ{left: 66.7vw}
+ div.serv:nth-child(6) > div.textoServ{left: 68.1vw} */
+
  div.serv h1 {
     font-size: 1.5vw;
     margin: .5vw 0;
@@ -238,6 +237,7 @@ a#login:hover {
     text-align: center
  }
  div.serv p {
+    font-size: 1.2vw;
     color: #4C4C4C;
     text-align: justify
  }
