@@ -154,7 +154,7 @@ a#login:hover {
     margin-bottom: 3vw;
  }
  div#servicos {
-    padding-bottom: .5vw;
+    padding-bottom: 3vw;
  }
  div#itens {
      padding: 0 1vw;
@@ -193,23 +193,18 @@ a#login:hover {
      width: 5vw;
      pointer-events: none;
  }
- div#displayServico> h1#click {
-    text-align: center;
-    cursor: default;
-    margin: 3vw auto;
- }
  .display {display: block !important}
  div.serv {
     width: 50%;
     display: none;
     max-height: 15vw;
     overflow: hidden;
- }
- div.serv > div.textoServ {
-    box-sizing: border-box;
-    padding: 1vw 1.5vw;
-    opacity: 0;
-    transition: opacity .5s
+   }
+   div.serv > div.textoServ {
+      box-sizing: border-box;
+      padding: 1vw 1.5vw;
+      opacity: 0;
+      transition: opacity .5s
    }
    div#displayServico {
       width: 100%;
@@ -221,10 +216,18 @@ a#login:hover {
       background-repeat: no-repeat;
       background-size: cover;
       background-attachment: fixed;
-      transition: background-image .5s;
       margin-top: 1vw;
+      opacity: 0;
+      box-shadow: 0vw .3vw .8vw rgba(0,0,0,0.5)
+
    }
- div.serv h1 {
+   h1#click {
+      position: absolute;
+      text-align: center;
+      width: 100%;
+      margin: 12vw auto;
+   }
+   div.serv h1 {
     font-size: 1.5vw;
     margin: .5vw 0;
     color: #cacaca;
@@ -255,12 +258,12 @@ a#login:hover {
 div#empresa {
    color: white;
    background-color: #151819;
-   padding-bottom: 3vw
+   /* padding-bottom: 3vw */
 }
 div#img-emp{
    position: relative;
    width: 100%;
-   height: 30vw;
+   height: 25vw;
    display: flex;
    justify-content: center;
    align-items: center;
@@ -325,6 +328,11 @@ div#equipe p {
    cursor: default
 }
 .translateEquipe {transform: translateX(6.5vw); transition: transform .5s}
+
+div#mvv {
+
+}
+
 
 div#contato {
    background-color: #090a0d;
