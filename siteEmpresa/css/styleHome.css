@@ -329,10 +329,26 @@ div#equipe p {
 }
 .translateEquipe {transform: translateX(6.5vw); transition: transform .5s}
 
-div#mvv {
-
+div#mvv{
+   padding-bottom: 3vw;
 }
-
+div#mvv div {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border: .05vw solid rgba(0,0,0,0.15);
+   border-bottom-width : .025vw;
+   padding: 5vw 0
+}
+div#mvv img{
+   width: 8vw;
+   margin: 0 5vw;
+}
+div#mvv p {
+   font-size: 1.5vw;
+   width: 49%;
+   color: #4C4C4C
+}
 
 div#contato {
    background-color: #090a0d;
