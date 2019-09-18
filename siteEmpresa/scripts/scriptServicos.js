@@ -12,8 +12,6 @@ function abrirServico(){
             click = newClick
             newClick = i
             if(click === newClick){
-                //wallpaper.style = ""
-                //mostrarServico.forEach(e=>{e.classList.remove('display'); e.style =''})
                 servicos.forEach(e=>e.classList.remove('shadow'))
                 wallpaper.style.opacity = '0'
                 mostrarServico[i].classList.remove('display');
