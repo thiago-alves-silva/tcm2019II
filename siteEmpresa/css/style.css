@@ -91,21 +91,19 @@
      flex-wrap: wrap;
      justify-content: center;
  }
- div#icons > div.img {
+ div#icons div.img {
      width: 70%;
-     display: flex;
-     justify-content: center;
      margin: 1vh 0;
      cursor: pointer;
-     position: relative;
-     padding: .5vh 0;
      border-radius: 50%;
      transform: translateX(-7vh);
      transition: background-color .3s, transform .5s;
  }
  div#icons > div.img img {
      width: 60%;
-     padding: 1vh;
+     margin-left: 1.4vh;
+     margin-top: .5vh;
+     padding: 1vh 0
  }
 div#icons div.img:hover{
     background-color: rgba(255, 255, 255, .2)
