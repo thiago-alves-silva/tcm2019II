@@ -260,7 +260,7 @@ div#empresa {
    background-color: #000000;
    padding-bottom: 3vw
 }
-div#img-emp{
+/* div#img-emp{
    position: relative;
    width: 100%;
    height: 25vw;
@@ -282,7 +282,7 @@ div#img-emp::before{
    width: 100%;
    height: 100%;
    background-color: rgba(0,0,0,0.5);
-}
+} */
 div#equipe{
    width: 75vw;
    margin: auto;
@@ -292,30 +292,24 @@ div#equipe{
 div#equipe > div {
    display: flex;
    align-items: center;
-   flex-basis: 35vw;
+   flex-basis: 33vw;
    margin: 2.5vw auto;
-}
-div#equipe div > div.imgs {
-   width: 6vw;
-   border-radius: 50%;
 }
 div#equipe img {
    width: 6vw;
    border-radius: 50%;
 }
 div#equipe img.hover {
-   width: 5vw;
-   background-color:rgba(0,0,0,0.5);
-   padding: 1vw;
+   margin-left: 1.5vw;
+   width: 3vw;
    box-sizing: border-box;
-   border-radius: 50%;
    opacity: 0;
    transition: opacity 1s, transform .5s;
    position: absolute;
 }
 div#equipe div > div > h1 {
    color: #4C4C4C;
-   margin-left: 2.5vw;
+   margin-left: 1.5vw;
    padding-right: 7vw;
    font-size: 1.5vw;
    cursor: default;
@@ -323,7 +317,7 @@ div#equipe div > div > h1 {
    transition: opacity .5s
 }
 div#equipe p {
-   margin-left: 2.5vw;
+   margin-left: 1.5vw;
    font-size: 1vw;
    cursor: default
 }
@@ -439,6 +433,19 @@ div#info-contato div#abs-contato img {
 [data-icon_contato].animate2 {
    transform: translateY(0);
    opacity: 1;
+}
+div#parceiros {
+   background-color: white;
+   padding-bottom: 4vw;
+}
+div#partner {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+div#partner img {
+   width: 10vw;
+   margin: 0 2vw;
 }
 div#suporte{
    padding-bottom: 4vw;

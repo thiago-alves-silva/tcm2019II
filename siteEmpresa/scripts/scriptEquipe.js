@@ -15,12 +15,12 @@ function animateEquipe() {
         nomeFunc.classList.add('translateEquipe')
         setTimeout(()=>imgHoverFunc.style.opacity = '1', 400)
         setTimeout(()=>cargoFunc.style.opacity = '1', 800)
-        if(i==0) imgHoverFunc.style.border += '.1vw solid yellow'
+        /* if(i==0) imgHoverFunc.style.border += '.1vw solid #e6cd1b'
         if(i==1 || i==3) imgHoverFunc.style.border += '.1vw solid #ed145b'
         if(i==2) imgHoverFunc.style.border += '.1vw solid #308be8'
         if(i==4) imgHoverFunc.style.border += '.1vw solid #f14f21'
         if(i==5) imgHoverFunc.style.border += '.1vw solid #67cc7e'
-        if(i==6) imgHoverFunc.style.border += '.1vw solid #a875de'
+        if(i==6) imgHoverFunc.style.border += '.1vw solid #a875de' */
         }
     })
 }

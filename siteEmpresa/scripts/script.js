@@ -33,3 +33,22 @@ function menuBar(){
 }
 menuBar()
 window.addEventListener('scroll', debounce3(() => menuBar(), 50))
+
+function parceiros() {
+    const parceiros = document.querySelectorAll('.partner')
+    parceiros.forEach((e, i) => {
+        e.addEventListener('mouseover', ()=>{
+            switch(i){
+                case 0: e.src = 'img/parceiros/onpower.png'; break;
+                case 1: e.src = 'img/parceiros/tyros.png'; break;
+            }
+        })
+        e.addEventListener('mouseout', ()=>{
+            switch(i){
+                case 0: e.src = 'img/parceiros/onpower_gray.png'; break;
+                case 1: e.src = 'img/parceiros/tyros_gray.png'; break;
+            }
+        })
+    })
+}
+parceiros()
