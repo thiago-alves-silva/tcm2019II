@@ -52,3 +52,7 @@ function parceiros() {
     })
 }
 parceiros()
+
+console.log(document.querySelectorAll('div.login-container input'))
+document.querySelectorAll('div.login-container input')[0].style.backgroundImage = 'url("img/user.png")'
+document.querySelectorAll('div.login-container input')[1].style.backgroundImage = 'url("img/password.png")'
