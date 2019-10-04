@@ -61,4 +61,7 @@ document.getElementById('btnLogin').addEventListener('click', ()=> {
     document.querySelector('.login-container').classList.remove('animate')
     setTimeout(()=> document.querySelector('.login-container').classList.add('animate'), 1)
 })
-document.getElementById('btnFechar').addEventListener('click', ()=> document.getElementById('login').classList.toggle("mostrar"))
+document.getElementById('btnFechar').addEventListener('click', ()=> {
+    document.querySelector('.login-container').classList.remove('animate')
+    setTimeout(()=>document.getElementById('login').classList.toggle("mostrar"),500)
+})

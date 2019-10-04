@@ -141,18 +141,20 @@ a#btnLogin:hover {
     overflow: hidden;
     font-family: Rubik;
     color: white;
-    pointer-events: visiblePainted
+    pointer-events: visiblePainted;
  }
  div#texto-apresentacao > h1{
     font-size: 2.5vw;
     line-height: 3.5vw;
     margin-top: 3vw;
+    transition: transform 1s !important;
  }
  div#texto-apresentacao p{
     font-family: Samsung;
     line-height: 1.9vw;
     font-size: 1.4vw;
     margin-bottom: 3vw;
+    transition: transform 1s !important;
  }
  div#servicos {
     padding-bottom: 1vw;
@@ -220,7 +222,6 @@ a#btnLogin:hover {
       margin-top: 1vw;
       opacity: 0;
       box-shadow: 0vw .3vw .8vw rgba(0,0,0,0.5)
-
    }
    h1#click {
       position: absolute;
@@ -244,7 +245,7 @@ a#btnLogin:hover {
  }
  [data-animation]{
    opacity: 0;
-   transition: transform 1s, opacity 1s;
+   transition: transform .5s, opacity .5s;
  }
  [data-animation="top"]{
    transform: translate3d(0, 4vw, 0);
