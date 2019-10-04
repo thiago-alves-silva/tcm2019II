@@ -100,7 +100,8 @@ span {
     width: 60%;
  }
  div#menu-itens ul li:hover {color: white}
-a#login {
+a#btnLogin {
+   cursor: pointer;
    color: white;
    text-decoration: none;
    margin-right: 1vw;
@@ -110,7 +111,7 @@ a#login {
    letter-spacing: .2vw;
    transition: box-shadow .2s linear;
 }
-a#login:hover {
+a#btnLogin:hover {
    box-shadow: 0 0 1vw #be114b
 }
  div#apresentacao{
@@ -618,10 +619,11 @@ div#login {
    z-index: 2;
    top: 0;
    left: 0;
-   display: flex;
+   display: none;
    justify-content: center;
    align-items: center;
 }
+div#login.mostrar {display: flex}
 div.login-container {
    width: 30%;
    height: 60%;
@@ -644,7 +646,8 @@ div.login-container button {
    background-color: transparent;
    color: #ed145b;
    cursor: pointer;
-   font-size: 1vw
+   font-size: 1vw;
+   outline: none
 }
 div.login-container form {
    width: 70%;
@@ -675,6 +678,7 @@ div.login-container input[type="button"]{
    height: 2.5vw;
    font-size: 1vw;
    transition: background-color .3s;
+   outline: none;
 }
 div.login-container input[type="button"]:hover {
    background-color: #ed145b;

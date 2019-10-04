@@ -53,6 +53,12 @@ function parceiros() {
 }
 parceiros()
 
-console.log(document.querySelectorAll('div.login-container input'))
 document.querySelectorAll('div.login-container input')[0].style.backgroundImage = 'url("img/user.png")'
 document.querySelectorAll('div.login-container input')[1].style.backgroundImage = 'url("img/password.png")'
+
+document.getElementById('btnLogin').addEventListener('click', ()=> {
+    document.getElementById('login').classList.toggle("mostrar")
+    document.querySelector('.login-container').classList.remove('animate')
+    setTimeout(()=> document.querySelector('.login-container').classList.add('animate'), 1)
+})
+document.getElementById('btnFechar').addEventListener('click', ()=> document.getElementById('login').classList.toggle("mostrar"))
