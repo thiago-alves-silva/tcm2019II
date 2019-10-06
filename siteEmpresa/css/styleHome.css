@@ -157,76 +157,94 @@ a#btnLogin:hover {
  }
  div#servicos {
     padding-bottom: 1vw;
+    position: relative;
+    padding-bottom: 4vw;
  }
  div#itens {
-     padding: 0 1vw;
+     width: 100vw;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     padding: .5vw;
      box-sizing: border-box;
-     display: flex
+     background-color: white;
+     z-index: 1;
  }
  div#itens > div {
-     width: 15vw;
-     float: left;
+     width: 9vw;
      display: flex;
      flex-wrap: wrap;
      justify-content: center;
-     margin: .5vw auto;
-     padding: 1vw 0;
+     padding: .5vw 0;
      transition: transform .5s, box-shadow .5s;
-     cursor: pointer;
      border-radius: .5vw;
      text-align: center;
+     /* cursor: pointer; */
+     pointer-events: none;
+     margin: 0 .3vw;
  }
- div#itens > div:hover {
+ /* div#itens > div:hover {
    box-shadow: .04vw .65vw .5vw rgba(0,0,0,0.3);
    transform: translate3d(0, -.5vw, 0)
- }
+ } */
  .shadow {
     box-shadow: .04vw .65vw .5vw rgba(0,0,0,0.3);
     transform: translate3d(0, -.5vw, 0)
 }
+.small {height: 80% !important;}
  div#itens div h1 {
     text-align: center;
     color: #151819;
-    font-size: 1.5vw;
+    font-size: 1.1vw;
     margin: .5vw;
     width: 100%;
  }
  div#itens div img {
-     width: 5vw;
+     width: 3vw;
      pointer-events: none;
  }
- .display {display: block !important}
- div.serv {
-    width: 50%;
-    display: none;
-    max-height: 15vw;
+ div#itens button {
+    background-color: white;
+    font-size: 3vw;
+    height: 3.5vw;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin: 0 .5vw;
     overflow: hidden;
+ }
+ div#displayServico {
+    width: 540%;
+    height: 25vw;
+    display: flex;
+    align-items: center;
+    margin-top: 1vw;
+    margin-left: 10vw;
+    transition: transform 1s;
+    position: relative;
+    padding: 1vw 0;
+    /* box-shadow: 0vw .3vw .8vw rgba(0,0,0,0.5); */
+    /* position: absolute; */
+ }
+ div.serv {
+    width: 70vw;
+    margin: 0 5vw;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: .5vw;
+    transition: height .5s;
+    box-shadow: 0vw .3vw .8vw rgba(0,0,0,0.5);
    }
    div.serv > div.textoServ {
       box-sizing: border-box;
       padding: 1vw 1.5vw;
-      opacity: 0;
-      transition: opacity .5s
-   }
-   div#displayServico {
-      width: 100%;
-      height: 25vw;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-attachment: fixed;
-      margin-top: 1vw;
-      opacity: 0;
-      box-shadow: 0vw .3vw .8vw rgba(0,0,0,0.5)
-   }
-   h1#click {
-      position: absolute;
-      text-align: center;
-      width: 100%;
-      margin: 12vw auto;
+      transition: opacity .5s;
+      width: 55%
    }
    div.serv h1 {
     font-size: 1.5vw;
@@ -241,6 +259,16 @@ a#btnLogin:hover {
     text-align: justify;
     text-shadow: .2vw .2vw .2vw black;
     padding: 0 .5vw
+ }
+ img.pause {
+    width: 2vw;
+    position: absolute;
+    z-index: 1;
+    top: 30vw;
+    left: 16.5vw;
+    opacity: 0;
+    transition: opacity .2s;
+    pointer-events: none;
  }
  [data-animation]{
    opacity: 0;
