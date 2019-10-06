@@ -1,7 +1,6 @@
 const servicos = document.querySelectorAll('div#itens > div')
 const mostrarServico = document.querySelectorAll('div#displayServico > div.serv')
 const carrossel = document.querySelector('div#displayServico')
-const pause = document.querySelector('.pause')
 const voltar = document.getElementById('voltar')
 const avancar = document.getElementById('avancar')
 mostrarServico[0].style.backgroundImage = 'url("img/servico/system.jpg")'
