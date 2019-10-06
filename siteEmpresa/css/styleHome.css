@@ -338,13 +338,15 @@ div#equipe div > div > h1 {
 }
 div#equipe p {
    margin-left: 1.5vw;
-   font-size: 1vw;
-   cursor: default
+   font-size: 1.2vw;
+   cursor: default;
+   color: black
 }
 .translateEquipe {transform: translateX(6.5vw); transition: transform .5s}
 
 div#mvv{
    padding-bottom: 3vw;
+   border-top: .1vw solid #cacaca;
 }
 div#mvv div {
    display: flex;
@@ -616,12 +618,12 @@ div#footer > img {
    pointer-events: none;
 }
 div#parceiros {
-   margin-top: 2.5vw;
-   padding: 1vw;
+   padding-bottom: 2vw;
+   border-top: .1vw solid #cacaca;
    width: 100%;
    background-color: white
 }
-div#parceiros h1 {text-align: center}
+div#parceiros h1 {text-align: center; margin: 2vw 0}
 div#partner {
    display: flex;
    justify-content: center;
