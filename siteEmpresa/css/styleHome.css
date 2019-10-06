@@ -276,33 +276,10 @@ a#btnLogin:hover {
 }
 div#empresa {
    color: white;
-   background-color: #fdfafa;
+   background-color: black;
    border-top: .1vw solid #cacaca;
    padding-bottom: 3vw
 }
-/* div#img-emp{
-   position: relative;
-   width: 100%;
-   height: 25vw;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   background: url('../img/img-empresa2.jpg');
-   background-position: center;
-   background-repeat: no-repeat;
-   background-size: cover;
-   background-attachment: fixed
-}
-div#img-emp h1{
-   z-index: 1;
-}
-div#img-emp::before{
-   content: '';
-   position: absolute;
-   width: 100%;
-   height: 100%;
-   background-color: rgba(0,0,0,0.5);
-} */
 div#equipe{
    width: 75vw;
    margin: auto;
@@ -340,7 +317,6 @@ div#equipe p {
    margin-left: 1.5vw;
    font-size: 1.2vw;
    cursor: default;
-   color: black
 }
 .translateEquipe {transform: translateX(6.5vw); transition: transform .5s}
 
