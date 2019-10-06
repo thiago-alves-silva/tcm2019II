@@ -260,16 +260,6 @@ a#btnLogin:hover {
     text-shadow: .2vw .2vw .2vw black;
     padding: 0 .5vw
  }
- img.pause {
-    width: 2vw;
-    position: absolute;
-    z-index: 1;
-    top: 30vw;
-    left: 16.5vw;
-    opacity: 0;
-    transition: opacity .2s;
-    pointer-events: none;
- }
  [data-animation]{
    opacity: 0;
    transition: transform .5s, opacity .5s;
@@ -286,7 +276,8 @@ a#btnLogin:hover {
 }
 div#empresa {
    color: white;
-   background-color: #000000;
+   background-color: #fdfafa;
+   border-top: .1vw solid #cacaca;
    padding-bottom: 3vw
 }
 /* div#img-emp{
