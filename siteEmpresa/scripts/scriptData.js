@@ -23,4 +23,3 @@ function animeScroll3() {
     })
 }
 animeScroll3()
-document.getElementById('btnComment').addEventListener('click', () => animeScroll3())

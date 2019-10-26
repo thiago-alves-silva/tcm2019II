@@ -1,14 +1,14 @@
-let i = 0
+/*let i = 0
 let users = []
 const nomeComment = document.getElementById('insertNomeComment')
 const turmaComment = document.getElementById('turmaComment')
 const txtComentario = document.getElementById('txtcomentario')
-const divComments = document.getElementById('comments')
 turmaComment.selectedIndex = -1
 
 first()
 function first(){
-    if(divComments.childNodes.length == 0){
+    const divComments = document.getElementById('comments')
+    if(divComments.childNodes.length < 1){
     let h1 = document.createElement('h1')
     h1.innerHTML = "Seja o primeiro<br/> a comentar!"
     h1.id = "first"
@@ -63,12 +63,11 @@ function cadastro() {
             div.appendChild(pHora)
             div.appendChild(img)
             divComments.insertAdjacentElement('afterbegin', div)
-            deleteComment()
             document.getElementById('erroNome').style = ''
             document.getElementById('erroTurma').style = ''
             document.getElementById('erroComment').style = 'display:none'
-            document.querySelector('form#comentario').reset()
-            turmaComment.selectedIndex = -1
+            //document.querySelector('form#comentario').reset()
+            //turmaComment.selectedIndex = -1
             divComments.scrollTo(0,0)
             i++
         }
@@ -100,7 +99,7 @@ function deleteComment() {
             else alert('Senha incorreta!')
         })
     })
-}
+}*/
 
 function contadorCaracter() {
     let contador = document.getElementById('contadorCaracter')

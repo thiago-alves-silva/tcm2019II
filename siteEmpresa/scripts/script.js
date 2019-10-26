@@ -1,6 +1,8 @@
 const debounce3=function(n,t,e){let o;return function(...u){const c=this,i=e&&!o;clearTimeout(o),o=setTimeout(function(){o=null,e||n.apply(c,u)},t),i&&n.apply(c,u)}};
 
 document.querySelectorAll('.pergunta').forEach(e => e.childNodes[1].innerHTML += "<span>+</span>")
+const turmaComment = document.getElementById('turmaComment')
+turmaComment.selectedIndex = -1
 
 document.querySelectorAll('.pergunta').forEach(e => {
     e.addEventListener('click', () => {
@@ -10,20 +12,29 @@ document.querySelectorAll('.pergunta').forEach(e => {
         e.classList.toggle('maxHeight')
     })
 })
-
-document.querySelectorAll('div#menu-itens ul li').forEach((e, i) => {
-    setTimeout(()=>e.style = 'opacity: 1', 200*i)
-})
 function menuBar(){
     const height = document.querySelectorAll('.height')
     const li = document.querySelectorAll('div#menu-itens ul li');
     const header = document.querySelector('header')
     const a = window.pageYOffset + header.clientHeight
+    if(sessionStorage.getItem('menu')) header.style.transition = 'background-color 0s, top 0s';
     if(window.pageYOffset>=height[0].clientHeight && !header.classList.contains('menu-bar')){
         header.classList.add('menu-bar')
         setTimeout(()=> header.style.top = '0', 1)
+        sessionStorage.setItem('menu', 1)
+        document.querySelectorAll('div#menu-itens ul li').forEach(e => {
+            e.style = 'opacity: 1'
+        })
     }
-    else if(window.pageYOffset==0) {header.classList.remove('menu-bar'); header.style.top = ''}
+    else if(window.pageYOffset==0) {
+        header.classList.remove('menu-bar');
+        header.style.top = '';
+        sessionStorage.removeItem('menu');
+        header.style.transition = '';
+        document.querySelectorAll('div#menu-itens ul li').forEach((e, i) => {
+            setTimeout(()=>e.style = 'opacity: 1', 200*i)
+        })
+    }
     a>=height[1].offsetTop && a<=height[2].offsetTop?li[0].style.color = '#ed145b':li[0].style.color = ''
     a>=height[2].offsetTop && a<=height[3].offsetTop?li[1].style.color = '#ed145b':li[1].style.color = ''
     a>=height[3].offsetTop && a<=height[4].offsetTop?li[2].style.color = '#ed145b':li[2].style.color = ''

@@ -7,12 +7,12 @@
    font-family: Samsung;
    src: url('../fonts/SamsungSharpSansRegular-Regular.ttf')
 }
+body {scroll-behavior: smooth}
  * {
      margin: 0;
      padding: 0;
      font-family: Rubik;
      overflow-x: hidden;
-     scroll-behavior: smooth
  }
 *::-webkit-scrollbar {
    width: .5vw;
@@ -493,14 +493,16 @@ form#comentario p {
    width: 100%;
    font-size: 1.2vw;
 }
-form#comentario input[type='button']{
+form#comentario button{
    background-color: #ed145b;
    border: none;
    cursor: pointer;
    font-weight: bold;
    padding-left: 0vw;
+   width: 100% !important;
+   height: 2.5vw;
 }
-form#comentario input[type='button']:hover {
+form#comentario button:hover {
    background-color: #be114b
 }
 p.erro {
@@ -555,7 +557,7 @@ div.roll > p#horaComment {
    bottom: .6vw;
    right: 1.5vw;
 }
-div.roll > img {
+div.roll a img {
    width: 1vw;
    position: absolute;
    top: .8vw;
@@ -563,11 +565,8 @@ div.roll > img {
    opacity: 0;
    transition: opacity .3s
 }
-div.roll:hover > img {
+div.roll:hover img {
    opacity: 1;
-}
-div.roll > img:hover {
-   cursor: pointer;
 }
 div.roll:hover {
    background-color: #2b3031;
@@ -588,6 +587,7 @@ div#footer {
    justify-content: space-around;
    align-items: center;
    font-size: 1vw;
+   padding-bottom: 3vw
 }
 div#footer > img {
    width: 5vw;
@@ -677,15 +677,18 @@ div.login-container input {
 }
 div.login-container input[type="button"]{
    cursor: pointer;
-   background-color: black;
+   background-color: transparent;
    color: white;  
    border: .1vw solid #ed145b;
    padding: 0;
-   width: 40% !important;
    height: 2.5vw;
    font-size: 1vw;
    transition: background-color .3s;
    outline: none;
+}
+div.login-container a {
+   width: 40%;
+   text-decoration: none;
 }
 div.login-container input[type="button"]:hover {
    background-color: #ed145b;
