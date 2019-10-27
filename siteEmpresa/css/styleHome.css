@@ -7,7 +7,6 @@
    font-family: Samsung;
    src: url('../fonts/SamsungSharpSansRegular-Regular.ttf')
 }
-body {scroll-behavior: smooth}
  * {
      margin: 0;
      padding: 0;
@@ -22,9 +21,8 @@ body {scroll-behavior: smooth}
    background-color: #ed145b;
    border-radius: .5vw;
 }
-span {
-   color: #ed145b;
-}
+span { color: #ed145b; }
+a { text-decoration: none; }
 .titulo {
    cursor: default;
    font-size: 4vw;
@@ -112,6 +110,44 @@ a#btnLogin {
 }
 a#btnLogin:hover {
    box-shadow: 0 0 1vw #be114b
+}
+div#user {
+   color: white;
+   display: flex;
+   align-items: center;
+   margin-right: 1vw;
+   cursor: pointer;
+}
+div#user img {
+   width: 2.5vw;
+   border-radius: 50%;
+}
+div#dashboard {
+   position: fixed;
+   z-index: 1;
+   right: .5vw;
+   top: 4vw;
+   background-color: #151819;
+   display: none;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
+   border-radius: .5vw;
+   box-shadow: 0 .5vw 1vw rgba(0,0,0,0.5);
+}
+.flex {display:flex !important;}
+div#dashboard .btnDash {
+   background-color: #ed145b;
+   padding: .5vw;
+   border-radius: .5vw;
+   width: 100%;
+   color: white;
+   text-align: center;
+   margin: 1.5vw 1vw 1vw 1vw;
+}
+div#dashboard .logout {
+   margin-bottom: 1vw;
+   color: white;
 }
  div#apresentacao{
     background-color: #151819;
@@ -675,7 +711,7 @@ div.login-container input {
    background-position: left;
    padding-left: 3vw;
 }
-div.login-container input[type="button"]{
+div.login-container input[type="submit"]{
    cursor: pointer;
    background-color: transparent;
    color: white;  
@@ -687,9 +723,8 @@ div.login-container input[type="button"]{
    outline: none;
 }
 div.login-container a {
-   width: 40%;
    text-decoration: none;
 }
-div.login-container input[type="button"]:hover {
+div.login-container input[type="submit"]:hover {
    background-color: #ed145b;
 }

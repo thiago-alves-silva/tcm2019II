@@ -45,6 +45,11 @@ function menuBar(){
 menuBar()
 window.addEventListener('scroll', debounce3(() => menuBar(), 50))
 
+if(document.getElementById('user')){
+    document.getElementById('user').addEventListener('click', ()=>{
+        document.getElementById('dashboard').classList.toggle('flex')
+    })
+}
 function parceiros() {
     const parceiros = document.querySelectorAll('.partner')
     parceiros.forEach((e, i) => {
@@ -67,11 +72,14 @@ parceiros()
 document.querySelectorAll('div.login-container input')[0].style.backgroundImage = 'url("img/user.png")'
 document.querySelectorAll('div.login-container input')[1].style.backgroundImage = 'url("img/password.png")'
 
-document.getElementById('btnLogin').addEventListener('click', ()=> {
+if(document.getElementById('btnLogin')){
+    document.getElementById('btnLogin').addEventListener('click', ()=> {
+    document.querySelector('#user_login').reset()
     document.getElementById('login').classList.toggle("mostrar")
     document.querySelector('.login-container').classList.remove('animate')
     setTimeout(()=> document.querySelector('.login-container').classList.add('animate'), 1)
-})
+    })
+}
 document.getElementById('login').addEventListener('click', e=> {
     if(e.target.id == 'login' || e.target.id == 'btnFechar'){
         document.querySelector('.login-container').classList.remove('animate')

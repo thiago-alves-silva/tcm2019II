@@ -28,8 +28,25 @@
                 <a href="#comentarios"><li>COMENTÁRIOS</li></a>
             </ul>
         </div>
-        <a id="btnLogin">LOGIN</a>
+        <?php
+            error_reporting(0);
+            ini_set(“display_errors”, 0 );
+            session_start();
+            if($_SESSION['user']){
+                echo "<div id='user'> <p id='username' style='margin-right: .5vw'>".$_SESSION['user']."</p> <img src='img/userl.png'> </div>";
+            }
+            else {
+                echo "<a id='btnLogin'>LOGIN</a>";
+                if(isset($_SESSION['not_found'])) echo "<script>alert('Usuário não cadastrado!')</script>";
+                unset($_SESSION['not_found']);
+            }
+        ?>
     </header>
+        <?php
+            if($_SESSION['user']){
+                echo "<div id='dashboard'><a href='php/dashboard.php' class='btnDash'>DASHBOARD</a><a href='php/logout.php' class='logout'>Logout</a></div>";
+            }
+        ?>
     <div id="apresentacao">
         <p id="developed">developed by THIAGO. A</p>
         <div id="texto-apresentacao">
@@ -306,10 +323,10 @@
         <div id="formcomment">
             <form id="comentario" action ="home.php?id=1000#comentarios" method="POST">
                 <p>Nome</p>
-                <input class="input" type="text" id="insertNomeComment" name="txtnome" style="margin-bottom: .1vw" maxlength="50">
+                <input class="input" type="text" id="insertNomeComment" name="txtnome" style="margin-bottom: .1vw" maxlength="50" required>
                 <p class="erro" id="erroNome">Insira um nome</p>
                 <p>Turma</p>
-                <select class="input" id="turmaComment" name="txtturma" style="margin-bottom: 0">
+                <select class="input" id="turmaComment" name="txtturma" style="margin-bottom: 0" required>
                     <option value="Professor(a)">Professor(a)</option>
                     <option value="1ºA Médio" selected="">1ºA Médio</option>
                     <option value="1ºB Médio">1ºB Médio</option>
@@ -342,7 +359,7 @@
                 <p class="erro" id="erroTurma">Selecione sua turma</p>
                 <p>Comentário</p>
                 <textarea class="input" name="txtcomentario" id="txtcomentario" placeholder="Máx. 250 caracteres" maxlength="250"
-                    style="margin-bottom: 0"></textarea>
+                    style="margin-bottom: 0" required></textarea>
                 <p class="erro" id="erroComment" style="display: none">Insira um comentário</p>
                 <p id="contadorCaracter" style="margin: 0; font-style: italic; color: #cacaca; font-size: 1vw">
                     Caracteres restantes: 250</p>
@@ -439,13 +456,13 @@
         <div class="login-container" data-animation="bottom">
             <img src="img/icon/logo-rosa.png">
             <button id="btnFechar" title="Fechar">X</button>
-            <form>
+            <form action="php/cadastro.php" method="POST" id="user_login">
                 <p>Login</p>
-                <input type="text" class="input" placeholder="Username">
+                <input type="text" class="input" name="user" placeholder="Username" required>
                 <p>Senha</p>
-                <input type="password" class="input" placeholder="Password">
+                <input type="password" class="input" name="senha" placeholder="Password" required>
                 <a href="php/index.php"><span>Cadastrar-se</span></a>
-                <a href="#"><input type="button" value="Entrar"></a>
+                <input type="submit" value="Entrar">
             </form>
         </div>
     </div>
