@@ -2,8 +2,8 @@
 -- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1:3308
--- Generation Time: 28-Out-2019 às 00:21
+-- Host: 127.0.0.1:3306
+-- Generation Time: 08-Nov-2019 às 19:33
 -- Versão do servidor: 5.7.26
 -- versão do PHP: 7.2.18
 
@@ -21,8 +21,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `sitetcm`
 --
-CREATE DATABASE IF NOT EXISTS `sitetcm` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-USE `sitetcm`;
 
 -- --------------------------------------------------------
 
@@ -38,7 +36,7 @@ CREATE TABLE IF NOT EXISTS `comentario` (
   `txt` varchar(250) CHARACTER SET utf8 NOT NULL,
   `horario` varchar(5) CHARACTER SET utf8 NOT NULL,
   PRIMARY KEY (`cod`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4;
 
 --
 -- Extraindo dados da tabela `comentario`
@@ -47,6 +45,58 @@ CREATE TABLE IF NOT EXISTS `comentario` (
 INSERT INTO `comentario` (`cod`, `nome`, `turma`, `txt`, `horario`) VALUES
 (1, 'gil da esfiha', '1ÂºA MÃ©dio', 'vou pegar o galerito!', '17:58'),
 (2, 'galerito', '2ÂºB MÃ©dio', 'vem me pegar, Gil!!!', '19:40');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `tbl_consultor`
+--
+
+DROP TABLE IF EXISTS `tbl_consultor`;
+CREATE TABLE IF NOT EXISTS `tbl_consultor` (
+  `cd_Consultor` int(11) NOT NULL AUTO_INCREMENT,
+  `nm_Consultor` varchar(80) NOT NULL,
+  `no_Telefone` varchar(14) NOT NULL,
+  `ds_Email` varchar(80) NOT NULL,
+  `nm_Usuario` varchar(20) NOT NULL,
+  `ds_Senha` varchar(8) NOT NULL,
+  `nm_cargo` varchar(50) NOT NULL,
+  PRIMARY KEY (`cd_Consultor`)
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+
+--
+-- Extraindo dados da tabela `tbl_consultor`
+--
+
+INSERT INTO `tbl_consultor` (`cd_Consultor`, `nm_Consultor`, `no_Telefone`, `ds_Email`, `nm_Usuario`, `ds_Senha`, `nm_cargo`) VALUES
+(1, 'administrador', '(11)98585-4596', 'admin@gmail.com', 'admin', '1234', ''),
+(2, 'teste', '123', 'hthth', 'th', '12123', '');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `tbl_contrato`
+--
+
+DROP TABLE IF EXISTS `tbl_contrato`;
+CREATE TABLE IF NOT EXISTS `tbl_contrato` (
+  `cd_Contrato` int(11) NOT NULL AUTO_INCREMENT,
+  `nm_Contato` varchar(80) NOT NULL,
+  `no_Telefone` varchar(14) DEFAULT NULL,
+  `ds_Email` varchar(80) NOT NULL,
+  `ds_logradouro` varchar(60) NOT NULL,
+  `no_Logradouro` varchar(5) NOT NULL,
+  `ds_Complemento` varchar(60) DEFAULT NULL,
+  `ds_Bairro` varchar(60) NOT NULL,
+  `no_Cep` char(9) NOT NULL,
+  `ds_Cidade` varchar(60) NOT NULL,
+  `sg_UF` char(2) NOT NULL,
+  `nm_Projeto` varchar(80) NOT NULL,
+  `ds_TempoProj` varchar(10) DEFAULT NULL,
+  `ds_Projeto` varchar(20) DEFAULT NULL,
+  `sg_status` bit(1) NOT NULL,
+  PRIMARY KEY (`cd_Contrato`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
