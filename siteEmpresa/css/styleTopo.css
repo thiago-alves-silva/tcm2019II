@@ -1,0 +1,56 @@
+@font-face{
+    font-family: Rubik;
+    src: url('../fonts/Rubik-Regular.ttf')
+}
+*{
+	margin:0;
+	padding:0;
+}	
+body{
+	margin:0;
+	padding:0;
+    font-family: Rubik;
+}
+.menu{
+	width:100%;
+    background-color: #fff;
+    box-shadow: 0 0 1vw rgba(0,0,0,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2vw;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+.menu > a img {
+    width: 2.5vw;
+    margin: .5vw 0
+}
+.menu > ul{
+    list-style:none;
+    text-decoration:none;
+}
+.menu ul li { float: left; margin: 0 1vw;}
+.menu ul li ul li {float: none !important;}
+.menu ul a{
+    padding: 1.5vw 1vw;
+	display:block;
+	text-decoration:none;
+	text-align:center;
+    color:rgba(55, 55, 55, 0.75);
+    font-size: 1vw;
+}
+.menu ul li ul{
+    position: absolute;
+    display: none;
+    list-style: none;
+    box-shadow: 0 .4vw 1vw rgba(0,0,0,0.2);
+}
+.menu ul li:hover ul{ display: block !important }
+.menu ul a:hover, #sair:hover{ color: #ed145b !important; }
+.menu ul ul li a{ background-color: rgb(240, 240, 240); transition: background-color .3s;}
+.menu ul ul li a:hover {background-color: white;}
+.menu ul ul li {margin: 0 !important;}
+#sair {text-decoration: none; color: rgba(55, 55, 55, 0.75) !important; font-size: 1vw;}

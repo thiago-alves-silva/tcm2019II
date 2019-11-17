@@ -1,0 +1,10 @@
+
+
+fazer download de arquivo FPDF
+site http://fpdf.org/
+
+Enviar relatório de pesquisa php + mysql para pagina em pdf com FPDF
+https://www.youtube.com/watch?v=vQ9mI24FaOo
+
+Aula 39 - Relatório PDF no PHP - Biblioteca FPDF
+https://www.youtube.com/watch?v=aLIz_qgk5z4 	

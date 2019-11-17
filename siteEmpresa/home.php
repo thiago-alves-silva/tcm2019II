@@ -44,7 +44,7 @@
     </header>
         <?php
             if($_SESSION['user']){
-                echo "<div id='dashboard'><a href='php/dashboard.php' class='btnDash'>DASHBOARD</a><a href='php/logout.php' class='logout'>Logout</a></div>";
+                echo "<div id='dashboard'><a href='php/dashboard/indexa.php' class='btnDash'>DASHBOARD</a><a href='php/logout.php' class='logout'>Logout</a></div>";
             }
         ?>
     <div id="apresentacao">
@@ -368,8 +368,8 @@
             <div id="comments"><?php
                 error_reporting(0);
                 ini_set(“display_errors”, 0 );
-
-                $con = mysqli_connect('localhost:3308','root','','sitetcm') or die ("Erro de Conexão com o Banco de Dados");
+                
+                include("php/dashboard/conexao.php");
                 
                 $comando = mysqli_query($con, "select * from Comentario") or die ("Erro na Seleção");
                 echo "<table>";
@@ -456,9 +456,9 @@
         <div class="login-container" data-animation="bottom">
             <img src="img/icon/logo-rosa.png">
             <button id="btnFechar" title="Fechar">X</button>
-            <form action="php/cadastro.php" method="POST" id="user_login">
+            <form action="php/login.php" method="POST" id="user_login">
                 <p>Login</p>
-                <input type="text" class="input" name="user" placeholder="Username" required>
+                <input type="text" class="input" name="user" placeholder="Username" autocomplete="off" required>
                 <p>Senha</p>
                 <input type="password" class="input" name="senha" placeholder="Password" required>
                 <a href="php/index.php"><span>Cadastrar-se</span></a>
