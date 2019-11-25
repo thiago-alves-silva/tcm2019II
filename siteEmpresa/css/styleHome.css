@@ -22,12 +22,12 @@
    border-radius: .5vw;
 }
 span { color: #ed145b; }
-a { text-decoration: none; }
+a { text-decoration: none; color: #cacaca; transition: color .3s, opacity .5s;}
 .titulo {
    cursor: default;
    font-size: 4vw;
    text-align: center;
-   margin: 5vw auto;
+   margin: 5vw auto 3vw auto;
 }
  header {
     position: absolute;
@@ -75,15 +75,13 @@ a { text-decoration: none; }
  div#menu-itens ul li {
     display: inline-block;
     margin: auto 1vw;
-    color: #cacaca;
     opacity: 0;
     transition: opacity .5s;
     position: relative;
     padding-bottom: .5vw;
     font-size: 1vw;
-    transition: color .3s, opacity .5s;
  }
- div#menu-itens ul li::after{
+ div#menu-itens ul a::after{
     content: "";
     height: .08vw;
     width: 0vw;
@@ -93,10 +91,10 @@ a { text-decoration: none; }
     left: 0;
     transition: width .4s
  }
- div#menu-itens ul li:hover::after{
+ div#menu-itens ul a:hover::after{
     width: 60%;
  }
- div#menu-itens ul li:hover {color: white}
+ div#menu-itens ul a:hover {color: white}
 a#btnLogin {
    cursor: pointer;
    color: white;
@@ -151,7 +149,7 @@ div#dashboard .logout {
 }
  div#apresentacao{
     background-color: #151819;
-    background: url('../img/backgroundHome2.jpg');
+    background: url('../img/background.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -160,6 +158,7 @@ div#dashboard .logout {
     height: 100vh;
     display: flex;
     align-items: center;
+    justify-content: center;
     pointer-events: none;
  }
  div#apresentacao p#developed{
@@ -170,26 +169,41 @@ div#dashboard .logout {
    font-family: Consolas;
  }
  div#texto-apresentacao{
-    width: 35vw;
-    margin-left: 5vw;
-    max-height: auto;
+    width: 65%;
     overflow: hidden;
     font-family: Rubik;
     color: white;
     pointer-events: visiblePainted;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
  }
  div#texto-apresentacao > h1{
     font-size: 2.5vw;
     line-height: 3.5vw;
-    margin-top: 3vw;
+    margin: 0 3vw .5vw 3vw;
     transition: transform 1s !important;
+    text-align: center;
+    text-transform: uppercase
  }
  div#texto-apresentacao p{
     font-family: Samsung;
     line-height: 1.9vw;
     font-size: 1.4vw;
-    margin-bottom: 3vw;
+    margin: 0 3vw;
     transition: transform 1s !important;
+    text-align: center
+ }
+ div#texto-apresentacao > a{
+    background: url('../img/double-pointer.png');
+    background-size: 1.5vw;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #ed145b;
+    padding: 2vw;
+    margin-top: 1vw;
+    border-radius: 50%;
  }
  div#servicos {
     padding-bottom: 1vw;
@@ -215,14 +229,9 @@ div#dashboard .logout {
      transition: transform .5s, box-shadow .5s;
      border-radius: .5vw;
      text-align: center;
-     /* cursor: pointer; */
      pointer-events: none;
      margin: 0 .3vw;
  }
- /* div#itens > div:hover {
-   box-shadow: .04vw .65vw .5vw rgba(0,0,0,0.3);
-   transform: translate3d(0, -.5vw, 0)
- } */
  .shadow {
     box-shadow: .04vw .65vw .5vw rgba(0,0,0,0.3);
     transform: translate3d(0, -.5vw, 0)
@@ -259,8 +268,6 @@ div#dashboard .logout {
     transition: transform 1s;
     position: relative;
     padding: 1vw 0;
-    /* box-shadow: 0vw .3vw .8vw rgba(0,0,0,0.5); */
-    /* position: absolute; */
  }
  div.serv {
     width: 70vw;
@@ -305,6 +312,12 @@ div#dashboard .logout {
 }
  [data-animation="bottom"]{
    transform: translate3d(0, -4vw, 0);
+}
+ [data-animation="right"]{
+   transform: translate3d(4vw, 0, 0);
+}
+ [data-animation="left"]{
+   transform: translate3d(-4vw, 0, 0);
 }
 [data-animation].animate {
    transform: translate3d(0, 0, 0);
@@ -365,17 +378,17 @@ div#mvv div {
    justify-content: center;
    align-items: center;
    border-bottom : .05vw solid rgba(0,0,0,0.3);
-   padding: 5vw 0;
+   padding: 3vw 0;
    width: 80%;
    margin: auto;
 }
 div#valores {border: none !important}
 div#mvv img{
-   width: 8vw;
+   width: 7vw;
    margin: 0 5vw;
 }
 div#mvv p {
-   font-size: 1.5vw;
+   font-size: 1.4vw;
    width: 61%;
    color: #4C4C4C
 }

@@ -20,12 +20,12 @@
         </a>
         <div id="menu-itens">
             <ul>
-                <a href="#servicos"><li>SERVIÇOS</li></a>
-                <a href="#empresa"><li>EQUIPE</li></a>
-                <a href="#mvv" title="Missão, Visão e Valores"><li>MVV</li></a>
-                <a href="#contato"><li>CONTATO</li></a>
-                <a href="#suporte"><li>PERGUNTAS</li></a>
-                <a href="#comentarios"><li>COMENTÁRIOS</li></a>
+                <li><a href="#servicos">SERVIÇOS</a></li>
+                <li><a href="#empresa">EQUIPE</a></li>
+                <li><a href="#mvv" title="Missão, Visão e Valores">MVV</a></li>
+                <li><a href="#contato">CONTATO</a></li>
+                <li><a href="#suporte">PERGUNTAS</a></li>
+                <li><a href="#comentarios">COMENTÁRIOS</a></li>
             </ul>
         </div>
         <?php
@@ -50,12 +50,13 @@
     <div id="apresentacao">
         <p id="developed">developed by THIAGO. A</p>
         <div id="texto-apresentacao">
-            <h1 data-animation="bottom">Desenvolvimento front-end, back-end, mobile, modelagem de dados e <span>muito
+            <h1 data-animation="left">Desenvolvimento front-end, back-end, mobile, modelagem de dados e <span>muito
                     mais</span>.</h1>
-            <p data-animation="top">Temos o intuito de ajudar e desenvolver em diversas áreas da TI, com foco no
+            <p data-animation="right">Temos o intuito de ajudar e desenvolver em diversas áreas da TI, com foco no
                 desenvolvimento de software
                 para grandes e pequenos negócios, visando facilitar seu gerenciamento, proporcionando aos nossos
                 clientes a melhor experiência.</p>
+            <a href="#servicos"></a>
         </div>
     </div>
     <div id="servicos" class='height'>
@@ -154,7 +155,7 @@
         <div id="equipe">
             <h1 class="titulo">CONHEÇA A NOSSA EQUIPE</h1>
             <div>
-                <div class='imgs'><img class='equipe' src="img/icon/equipe/person2.jpg"></div>
+                <div class='imgs'><img class='equipe' src="img/equipe/func1.png"></div>
                 <img class="hover" src="img/icon/equipe/icon_frontend.png">
                 <div>
                     <h1>DESEN. FRONT-END</h1>
@@ -162,7 +163,7 @@
                 </div>
             </div>
             <div>
-                <div class='imgs'><img class='equipe' src="img/icon/equipe/person2.jpg"></div>
+                <div class='imgs'><img class='equipe' src="img/equipe/func2.png"></div>
                 <img class="hover" src="img/icon/equipe/icon_analista.png">
                 <div>
                     <h1>ANALISTA DE SISTEMAS</h1>
@@ -170,7 +171,7 @@
                 </div>
             </div>
             <div>
-                <div class='imgs'><img class='equipe' src="img/icon/equipe/person.jpg"></div>
+                <div class='imgs'><img class='equipe' src="img/equipe/func3.png"></div>
                 <img class="hover" src="img/icon/equipe/icon_bd.png">
                 <div>
                     <h1>BANCO DE DADOS</h1>
@@ -178,7 +179,7 @@
                 </div>
             </div>
             <div>
-                <div class='imgs'><img class='equipe' src="img/icon/equipe/person.jpg"></div>
+                <div class='imgs'><img class='equipe' src="img/equipe/func4.png"></div>
                 <img class="hover" src="img/icon/equipe/icon_analista.png">
                 <div>
                     <h1>ANALISTA DE SISTEMAS</h1>
@@ -186,7 +187,7 @@
                 </div>
             </div>
             <div>
-                <div class='imgs'><img class='equipe' src="img/icon/equipe/person2.jpg"></div>
+                <div class='imgs'><img class='equipe' src="img/equipe/func5.png"></div>
                 <img class="hover" src="img/icon/equipe/icon_infra.png">
                 <div>
                     <h1>INFRAESTRUTURA</h1>
@@ -194,7 +195,7 @@
                 </div>
             </div>
             <div>
-                <div class='imgs'><img class='equipe' src="img/icon/equipe/person.jpg"></div>
+                <div class='imgs'><img class='equipe' src="img/equipe/func6.png"></div>
                 <img class="hover" src="img/icon/equipe/icon_android.png">
                 <div>
                     <h1>DESEN. MOBILE</h1>
@@ -202,7 +203,7 @@
                 </div>
             </div>
             <div>
-                <div class='imgs'><img class='equipe' src="img/icon/equipe/person.jpg"></div>
+                <div class='imgs'><img class='equipe' src="img/equipe/func7.png"></div>
                 <img class="hover" src="img/icon/equipe/icon_backend.png">
                 <div>
                     <h1>DESEN. BACK-END</h1>
@@ -227,10 +228,9 @@
         </div>
     </div>
     <div id="contato" class='height'>
-        <h1 class="titulo" style="color: white">FALE CONOSCO</h1>
+        <h1 class="titulo" style="color: white">CONTRATE O SEU SERVIÇO</h1>
         <div id="info-contato">
-            <form
-                onsubmit="document.querySelector('form#formContato').reset(); alert('Mensagem enviada com sucesso! Retornaremos em até 24h.'); return false;"
+            <form onsubmit="document.querySelector('form#formContato').reset(); alert('Mensagem enviada com sucesso! Retornaremos em até 24h.'); return false;"
                 id="formContato">
                 <div id="form">
                     <input class="input" type="text" id="nome" placeholder="Nome (obrigatório)" required>
@@ -471,5 +471,4 @@
 <script src="scripts/scriptData.js"></script>
 <script src="scripts/scriptServicos.js"></script>
 <script src="scripts/scriptEquipe.js"></script>
-<!-- <script src="scripts/scriptComentarios.js"></script> -->
 </html>

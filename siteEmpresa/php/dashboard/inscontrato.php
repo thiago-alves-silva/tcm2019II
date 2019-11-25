@@ -25,12 +25,11 @@ $query = mysqli_query($con, $sql); // executando variavel $sql
 $linhas = mysqli_affected_rows($con); // comando para ver o numero de linhas afetadas
 
 if($linhas == 1){  // se o número de linnhas for  igual a 1 então...
-
-      header('location:sucesso.php'); //redirecionando para página de dados inseridos com sucesso.
+      header('location:consultaproj.php'); //redirecionando para página de dados inseridos com sucesso.
 }
-
 else{ // caso contrário, escreva o texto que estiver entre aspas
-	 header('location:insucesso.php');	
+	echo "<script>alert('Não foi possível cadastrar este contrato!')</script>";
+      echo "<script>javascript:history.back(-2)</script>";	
 }
 mysqli_close($conexao); // encerrando a conexão com banco de dados.
 ?>

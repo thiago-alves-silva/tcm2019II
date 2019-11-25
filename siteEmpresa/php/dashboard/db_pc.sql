@@ -45,7 +45,7 @@ create table tbl_Contrato(
 )default charset utf8;
 
 create table tbl_Atividade(
-	cd_atividade int primary key auto_increment,
+    cd_atividade int primary key auto_increment,
     nm_tarefa varchar(80) not null,
     cd_Consultor int not null,
     ds_atividade varchar(255) not null,
@@ -55,43 +55,21 @@ create table tbl_Atividade(
     ds_Obs varchar(255) not null,
     ds_prioridade enum('A','M','B'),
     cd_Contrato int not null,
-	constraint foreign key(cd_Consultor) references tbl_Consultor(cd_Consultor),
+    constraint foreign key(cd_Consultor) references tbl_Consultor(cd_Consultor),
     constraint foreign key(cd_Contrato) references tbl_Contrato(cd_Contrato)
 )default charset utf8;
 
 insert into tbl_Atividade(nm_tarefa,cd_Consultor,ds_atividade,dt_inicio,dt_Final,ds_Status,ds_Obs,ds_prioridade,cd_Contrato)
 values('Criação de crud para professores','2','crud para professores','2019-11-10','2019-11-13','A','Professores poderão alterar seus dados no BD','A','1');
-
-    -- inserindo registro para teste tbl_cargo
-insert into tbl_Cargo 
-	values(default,'Gerente de Projetos');
-
-/*  inserindo registro para teste tbl_consultor */ 
-insert into tbl_Consultor 
-	values(default,'Yulia Volkova','(11)98585-4596','yuliavolkova@pc.com','admin','1234','1');   
     
-    
-
--- selecionando os dados da tabela consultor
-select * from tbl_Consultor;
-
--- selecionando os dados da tabela cargo
-select * from tbl_Cargo;
-
--- selecionando os dados da tabela consultor
-select * from tbl_Contrato;
-
 -- selecionando os dados da tabela consultor
 select nm_Contato, sg_status from tbl_Contrato;
-
--- selecionando os dados da tabela consultor
-select * from tbl_Atividade;
 
 
 create view vw_atividade
 as select 
-	tbl_Contrato.cd_Contrato,
-	tbl_Contrato.nm_projeto,
+    tbl_Contrato.cd_Contrato,
+    tbl_Contrato.nm_projeto,
     tbl_Consultor.cd_consultor,
     tbl_Consultor.nm_consultor,
     tbl_cargo.nm_cargo,

@@ -14,7 +14,7 @@ document.querySelectorAll('.pergunta').forEach(e => {
 })
 function menuBar(){
     const height = document.querySelectorAll('.height')
-    const li = document.querySelectorAll('div#menu-itens ul li');
+    const li = document.querySelectorAll('div#menu-itens ul a');
     const header = document.querySelector('header')
     const a = window.pageYOffset + header.clientHeight
     if(sessionStorage.getItem('menu')) header.style.transition = 'background-color 0s, top 0s';
@@ -44,6 +44,20 @@ function menuBar(){
 }
 menuBar()
 window.addEventListener('scroll', debounce3(() => menuBar(), 50))
+
+function scrollSuave(){
+    const menuItems = document.querySelectorAll('div#menu-itens ul a, div#texto-apresentacao a');
+    menuItems.forEach(e=>{
+        e.addEventListener('click', (event)=>{
+            event.preventDefault()
+            const id = event.target.getAttribute('href')
+            const section =  document.querySelector(id)
+            const header = document.querySelector('.height').clientHeight
+            window.scroll({top:section.offsetTop, behavior:"smooth"})
+        })
+    })
+}
+scrollSuave()
 
 if(document.getElementById('user')){
     document.getElementById('user').addEventListener('click', ()=>{

@@ -61,13 +61,15 @@
 		<ul>
 			<li id="menuPanel"><a href="#"><img src="../../img/dashboard/register.png">Cadastro</a>
 				<ul>
+					<li><a href="cadatv.php">Atividade</a></li>
 					<li><a href="consultor.php">Consultor</a></li>
 					<li><a href="contrato.php">Contrato</a></li>
 				</ul>
 			</li>
 			<li id="menuPanel"><a href="#"><img src="../../img/dashboard/search.png">Consulta</a>
 				<ul>
-					<li><a href="#">Contrato</a></li>
+					<li><a href="consanalise.php">Atividade</a></li>
+					<li><a href="consultaproj.php">Contrato</a></li>
 				</ul>
 			</li>
 			<li id="menuPanel"><a href="#"><img src="../../img/dashboard/report.png">Relatório</a>

@@ -12,13 +12,15 @@
 			<li><a href="indexa.php">Dashboard</a></li>
 			<li><a href="#">Cadastro</a>
 				<ul>
+					<li><a href="cadatv.php">Atividade</a></li>
 					<li><a href="consultor.php">Consultor</a></li>
 					<li><a href="contrato.php">Contrato</a></li>
 				</ul>
 			</li>
 			<li><a href="#">Consulta</a>
 				<ul>
-					<li><a href="#">Contrato</a></li>
+					<li><a href="consanalise.php">Atividade</a></li>
+					<li><a href="consultaproj">Contrato</a></li>
 				</ul>
 			</li>
 			<li><a href="#">Relatório</a>

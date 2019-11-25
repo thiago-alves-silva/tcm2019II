@@ -15,15 +15,19 @@ body{
 	font-family: Rubik;
 }
 .container {
-  width: 35vw;
+  width: 40vw;
   padding: 1vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 .container form {
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
 }
-.container h1 {
+h1 {
 	text-align: center;
 	position: relative;
 	display: flex;
@@ -32,7 +36,7 @@ body{
 	margin-bottom: 1.5vw;
 	color: rgb(80,80,80);
 }
-.container h1::after{
+h1::after{
 	content: "";
 	position: absolute;
 	bottom: 0;
@@ -67,3 +71,36 @@ input:hover, input:focus, select:focus, select:hover, textarea:hover, textarea:f
 	color: white;
 }
 .botVermelho:hover {background-color: #cf1050;}
+
+table {
+    min-width:80vw;
+    border-collapse: collapse;
+	font-size: 1vw;
+	margin-top: 2vw;
+}
+th {
+	text-align: center;
+	text-transform: uppercase;
+    padding: .5vw 1vw;
+    background-color:#ff71a1;
+    border:none
+}
+td {
+    padding: .5vw 1vw;
+    text-align: center;
+    margin: .5vw 0;
+	border: none;
+	max-width: 8vw;
+}
+tr:nth-child(2n+1) {
+    background-color: rgb(222, 222, 222)
+}
+tr td a img{
+    width:1.3vw
+}
+label {
+	width: 100%;
+	margin-left: .5vw;
+	font-size: 1vw;
+	color: rgb(55, 55, 55);
+}
