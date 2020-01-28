@@ -1,0 +1,57 @@
+@font-face {
+    font-family: Poppins;
+    src: url('../fonts/Poppins-Regular.ttf');
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+a {text-decoration: none;}
+body{
+    font-family: 'Poppins';
+    background-color: rgb(233, 234, 229);
+}
+.estoque{
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1vw;
+    padding-top: 5vw;
+    background-color: rgb(233, 234, 229);
+}
+.estoquemenor{
+    border-radius: 1vw;;
+    padding: 2vw;
+    background-color: rgb(182,213,240);
+}
+table {
+    margin-top: 1.5vw;
+    border-collapse: collapse
+}
+
+th {
+    text-align: center;
+    padding: .5vw 1vw;
+    background-color: rgb(182,213,240);
+    border: none
+}
+
+td {
+    padding: 1vw;
+    text-align: center;
+    margin: .5vw 0;
+    border: none
+}
+
+tr:nth-child(2n+1) {
+    background-color: rgb(222, 222, 222)
+}
+
+::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+tr td a img {
+    width: 1vw
+}

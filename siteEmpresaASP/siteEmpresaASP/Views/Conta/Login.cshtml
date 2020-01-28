@@ -1,0 +1,35 @@
+﻿@model siteEmpresaASP.Models.Conta
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Login - Beauty Place</title>
+    <link rel="stylesheet" href="~/Content/stylelogin.css" />
+</head>
+<body>
+    <div id="formLogin">
+        <div id="formChildren">
+            <h1> Entre ou Cadastre-se </h1>
+            @Html.ValidationSummary(true)
+            <form action="Verifica" method="POST">
+                <label> Usuário </label><br />
+                <input type="text" name="login" autocomplete="off">
+                <p>@Html.ValidationMessageFor(model => model.login)</p>
+
+                <label> Senha </label><br />
+                <input type="password" name="senha" autocomplete="off">
+                <p>@Html.ValidationMessageFor(model => model.senha)</p>
+
+                <div id="btnLogin">
+                    <button type="submit">ENTRAR</button>
+                </div>
+                @{
+                    if (!String.IsNullOrWhiteSpace(@ViewBag.ErroAut))
+                    {
+                        <p>@ViewBag.ErroAut</p>
+                    }
+                }
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+﻿
+@model siteEmpresaASP.Models.Cliente
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Alterar Cliente - Beauty Place</title>
+    <link rel="stylesheet" href="~/Content/stylecadastro.css" />
+   
+</head>
+<body>
+    <div id="formCadastrinho">
+        <h1>Alteração Cliente</h1>
+        <form action="AlterarCli" method="post">
+            <label> ID Cliente </label>
+            <input type="number" value="@ViewBag.cli.idcli" name="idcli" disabled><br />
+            <label> Nome Completo </label>
+            <input type="text" value="@ViewBag.cli.nomeCli" name="nomeCli" maxlength="60"><br />
+            <p style="width:100%">@Html.ValidationMessageFor(model => model.nomeCli)</p>
+            <label> CPF </label>
+            <input type="text" value="@ViewBag.cli.cpfCli" id="cpf" name="cpfCli">
+            <p style="width:100%">@Html.ValidationMessageFor(model => model.cpfCli)</p>
+            <label> RG </label>
+            <input type="text" value="@ViewBag.cli.rgCli" name="rgCli" id="rg">
+            <p style="width:100%">@Html.ValidationMessageFor(model => model.rgCli)</p>
+            <label> Telefone </label>
+            <input type="tel" name="telCli" value="@ViewBag.cli.telCli" id="telefone"><br />
+            <p style="width:100%">@Html.ValidationMessageFor(model => model.telCli)</p>
+            <label> Email </label>
+            <input type="email" name="emailCli" value="@ViewBag.cli.emailCli" maxlength="60">
+            <p style="width:100%">@Html.ValidationMessageFor(model => model.emailCli)</p>
+            <label> Data de Nasc. </label>
+            <input type="date" value="@ViewBag.cli.datanCli.ToString("yyyy-MM-dd")" name="datanCli" max="@DateTime.Now.Date.ToString("yyyy-MM-dd")" required><br />
+            <p style="width:100%">@Html.ValidationMessageFor(model => model.datanCli)</p>
+            <div id="btnLogin">
+                <button type="submit">Alterar</button>
+                <p style="color:lawngreen"> @ViewBag.sucesso</p>
+            </div>
+        </form>
+    </div>
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script src="~/Scripts/jquery.mask.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#cpf').mask('000.000.000-00', { reverse: true });
+            $('#rg').mask('00.000.000-0', { reverse: true });
+            $('#telefone').mask('(00) 00000-0000');
+            $('#data').mask('00/00/0000');
+        });
+    </script>
+</body>
+</html>

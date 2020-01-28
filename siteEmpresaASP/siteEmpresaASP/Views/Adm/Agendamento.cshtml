@@ -1,0 +1,69 @@
+﻿@model siteEmpresaASP.Models.Agendamento
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title> Agendamento - Beauty Place </title>
+    <link rel="stylesheet" href="~/Content/styleagendamento.css"/>
+</head>
+<body>
+    @{
+        if (!String.IsNullOrWhiteSpace(ViewBag.Agendamento))
+        { <p style="color:green; margin-left:16vw; top:13vw; position: absolute">@ViewBag.Agendamento</p> }
+    }
+    <div id="formAgendamento">
+        <div id="formAgendamentozinho">
+            <form action="Agendamento" method="post">
+                <div id="agendamento">
+                    <h1>Agendar Procedimento</h1>
+                    <label> CPF do Cliente </label>
+                    <input style="width: 66%;" type="text" name="cpfCli" id="cpf" placeholder="000.000.000-00"><br />
+                    <p style="width:100%">@Html.ValidationMessageFor(model => model.cpfCli)</p>
+                    <label> Data </label>
+                    <input style="width: 30%;" type="date" min="@DateTime.Now.Date.ToString("yyyy-MM-dd")" name="data" placeholder="dd/mm/aaaa">
+                    <label> Horário </label>
+                    <input style="width: 30%;" type="text" name="horario" id="hora" placeholder="00:00">
+                    <p style="width:50%">@Html.ValidationMessageFor(model => model.data)</p>
+                    <p style="width:45%">@Html.ValidationMessageFor(model => model.horario)</p>
+                    <div id="tiposerviço">
+                        <label> Tipo de Procedimentos </label>
+                        <select onchange="Procedimento()" style="width: 55%; margin-bottom:1vw" id="procedimento">
+                            <option selected></option>
+                            <option> Corporal </option>
+                            <option> Facial </option>
+                            <option> Especial </option>
+                            <option> Diversos </option>
+                        </select>
+                        <label>Procedimento</label>
+                        <select style="width: 70%" id="procedimentos" name="procedimento" onfocus="Procedimento()"></select>
+                        <p style="width:100%">@Html.ValidationMessageFor(model => model.procedimento)</p>
+                    </div>
+                </div>
+                <div id="pagamento">
+                    <h1> Forma de Pagamento </h1>
+                    <div>
+                        <input type="radio" name="tipoPag" value="Dinheiro" id="money"><label for="money">Dinheiro</label>
+                        <input type="radio" name="tipoPag" value="Cartão" id="card"><label for="card">Cartão</label>
+                        <p style="width:100%">@Html.ValidationMessageFor(model => model.tipoPag)</p>
+                    </div>
+                    <div>
+                        <label> Valor </label><input type="text" id="valor" name="valor" value="@ViewBag.valor"><br />
+                        <p style="width:100%">@Html.ValidationMessageFor(model => model.valor)</p>
+                    </div>
+                    <button type="submit">Finalizar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script type="text/javascript" src="~/Scripts/scriptAgendamento.js"></script>
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script src="~/Scripts/jquery.mask.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#data').mask('00/00/0000');
+            $('#cpf').mask('000.000.000-00', { reverse: true });
+            $('#hora').mask('00:00');
+            $('#valor').mask('000.000.000.000.000,00', { reverse: true });
+        });
+    </script>
+</body>
+</html>

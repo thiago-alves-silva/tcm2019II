@@ -1,0 +1,44 @@
+﻿@using System.Data.SqlClient;
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Estoque - Beauty Place</title>
+    <link rel="stylesheet" href="~/Content/styleestoque.css" />
+
+</head>
+<body>
+    <div class="estoque">
+        <div class="estoquemenor">
+            <a href="@Url.Action("CadProd","Adm")" id="btnconsulta">+</a>
+            <h1>Controle de Estoque</h1>
+        </div>
+        <div>
+            @{
+                Database banco = new Database();
+                SqlDataReader leitor = banco.RetornaComando(string.Format("select p.idprod, p.nmprod, p.marca, e.qtdprod from Estoque as e inner join Produto as p on e.idprod = p.idprod"));
+                <table>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Marca</th>
+                        <th>Quantidade</th>
+                        <th colspan="2">Ação</th>
+                    </tr>
+                    @while (leitor.Read())
+                    {
+                    <tr>
+                        <td>@leitor["idprod"]</td>
+                        <td>@leitor["nmprod"]</td>
+                        <td>@leitor["marca"]</td>
+                        <td>@leitor["qtdprod"]</td>
+                        <td><a href="@Url.Action("","")"><img src="~/Content/img/edit.png" /></a></td>
+                        <td><a href="@Url.Action("ExcluirProd","Adm", new { id=leitor["idprod"]})"><img src="~/Content/img/trash.png" /></a></td>
+                    </tr>
+                    }
+                </table>
+            }
+        </div>
+    </div>
+</body>
+</html>

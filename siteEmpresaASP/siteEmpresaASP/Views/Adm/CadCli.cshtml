@@ -1,0 +1,51 @@
+﻿@model siteEmpresaASP.Models.Cliente
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Cadastrar Cliente - Beauty Place</title>
+    <link rel="stylesheet" href="~/Content/stylecadastro.css"/>
+
+</head>
+<body>
+    <div id="formCadastrinho">
+        <h1>Cadastrar Cliente</h1>
+        <form action="CadCli" method="POST">
+            <label> Nome Completo </label>
+            <input type="text" name="nomeCli" maxlength="60"><br />
+            <p style="width:100%">@Html.ValidationMessageFor(model => model.nomeCli)</p>
+            <label> CPF </label>
+            <input type="text" name="cpfCli" id="cpf" placeholder="000.000.000-00">
+            <p style="width:100%">@Html.ValidationMessageFor(model => model.cpfCli)</p>
+            <label> RG </label>
+            <input type="text" name="rgCli" id="rg" placeholder="00.000.000-0">
+            <p style="width:100%">@Html.ValidationMessageFor(model => model.rgCli)</p>
+            <label> E-mail </label>
+            <input type="email" name="emailCli" maxlength="60">
+            <p style="width:100%">@Html.ValidationMessageFor(model => model.emailCli)</p>
+            <label> Telefone </label>
+            <input type="text" name="telCli" id="telefone" placeholder="(00) 00000-0000">
+            <p style="width:100%">@Html.ValidationMessageFor(model => model.telCli)</p>
+            <label> Data de Nasc. </label>
+            <input type="text" name="datanCli" id="data" placeholder="dd/mm/aaaa"><br />
+            <p style="width:100%">@Html.ValidationMessageFor(model => model.datanCli)</p><br />
+            <div id="btnLogin">
+                <button type="submit">CADASTRAR</button>
+            </div>
+            @{
+                if (!String.IsNullOrWhiteSpace(ViewBag.CadCli))
+                { <p style="color:green; margin-bottom:.5vw">@ViewBag.CadCli</p> }
+            }
+        </form>
+    </div>
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script src="~/Scripts/jquery.mask.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#cpf').mask('000.000.000-00', { reverse: true });
+            $('#rg').mask('00.000.000-0', { reverse: true });
+            $('#telefone').mask('(00) 00000-0000');
+            $('#data').mask('00/00/0000');
+        });
+    </script>
+</body>
+</html>

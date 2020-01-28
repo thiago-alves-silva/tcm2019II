@@ -1,0 +1,194 @@
+* {margin: 0; padding: 0}
+@font-face {
+    font-family: Poppins;
+    src: url('../fonts/Poppins-Regular.ttf');
+}
+body{
+    font-family: 'Poppins';
+    background-color: rgb(233, 234, 229);
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+div#menu {
+    width:100%;
+    height:3vw;
+    background-color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+div#menu ul li {
+    display: inline-block;
+    padding: .5vw .5vw;
+    box-sizing: border-box;
+    color: rgb(100, 174, 236);
+    text-shadow: 0 .1vw .1vw rgba(0,0,0,0.4);
+    cursor: default;
+    font-size:1.2vw;
+}
+.apresentacao img{
+    width: 100%;
+    height: 45%;
+}
+div.divTitulo {
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    margin-top: 3vw;
+    margin-bottom: 3vw;
+}
+h1.titulo {
+    color: rgb(100, 174, 236);
+    text-shadow: 0 .1vw .2vw rgba(0,0,0,.3);
+    font-size: 1.7vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: rgb(233, 234, 229);
+    text-transform:uppercase;
+    padding: 0 2vw;
+}
+h1.titulo::after{
+    content:"";
+    position:absolute;
+    height:.15vw;
+    width:80vw;
+    background-color:rgba(0,0,0,.2);
+    z-index:-1
+}
+.destaque{
+    width: 100%;
+    height: 30%;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    margin-bottom:3vw;
+} 
+.subdestaque {
+    flex-basis:20%;
+    position:relative;
+    margin: 2% 3%;
+    transition: transform .3s, box-shadow .3s;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-content:space-between;
+}
+.subdestaque img {
+    width: 100%;
+    border-radius: .5vw .5vw 0 0;
+}
+.subdestaque:hover{
+    transform:translateY(-.5vw);
+    box-shadow: 0 .5vw 1vw rgba(0,0,0,.2);
+}
+.infoProced {margin: .5vw 0}
+p.titulo {
+    font-size: 1.3vw;
+    color: rgb(51,51,51);
+    text-align: center;
+    cursor: default;
+}
+p.texto {
+    color: rgb(51,51,51);
+    font-size: 1vw;
+    text-align: center;
+    padding: 0 .5vw;
+    cursor: default;
+}
+.saibaMais{
+    display:flex;
+    justify-content:center;
+    margin: 1vw 0;
+}
+.saibaMais a {
+    background-color: rgb(182,213,240);
+    padding: .5vw;
+    font-size: 1vw;
+    text-shadow: 0 .1vw .2vw rgba(0,0,0,0.5);
+    transition: background-color .2s
+}
+.saibaMais a:hover {
+    background-color: rgb(100, 174, 236)
+}
+.formulario {
+    background-color:rgba(0,0,0,0.05);
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5vw;
+}
+input{
+    font-size:1vw;
+    padding: .8vw;
+    width: 100%;
+	border:1px solid rgba(182,213,240,0.6);
+    border-radius:0.4vw;
+    margin-top: .5vw;
+}
+button.botao{
+    padding: .8vw;
+    border-radius:0.4vw;
+    margin-top: 1vw;
+    width: 103%;
+    font-size: 1vw;
+    background-color: rgb(182,213,240);
+    padding: .7vw;
+    font-size: 1vw;
+    color: rgb(55, 55, 55);
+}
+input, button{
+    outline: none;
+}
+.wpp {
+    position: fixed;
+    bottom:0;
+    width:100%;
+}
+footer {
+    background-color: rgb(182,213,240);
+    height: 20vw;
+    color: red;
+}
+.modal{
+    width:100vw;
+    height:100vh;
+    background-color:rgba(0,0,0,.5);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:fixed;
+    top:0;
+}
+.submodal{
+    width:30vw;
+    position:relative
+}
+.submodal img{
+    width:100%;
+}
+.submodal button{
+    padding:.5vw .7vw;
+    border-radius:50%;
+    position:absolute;
+    right:-.8vw;
+    top:-.5vw;
+    background-color:black;
+    border:none;
+    color:white;
+    cursor:pointer;
+}
+[data-animation]{
+    transform:translateY(-5vw);
+    opacity:0;
+    transition:transform .5s, opacity .3s;
+}
+[data-animation].animate{
+    transform:translateY(0);
+    opacity:1;
+}

@@ -1,0 +1,61 @@
+﻿@using System.Data.SqlClient
+@model siteEmpresaASP.Models.AlterarAgendamento
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Alterar Agenda - Beauty Place</title>
+    <link rel="stylesheet" href="~/Content/stylealterar.css" />
+</head>
+<body>
+    <div id="agendamento">
+        <form action="AlterarAgendamento" method="post">
+            <h1>Alterar Agendamento</h1>
+            <label>ID</label>
+            <input disabled value="@ViewBag.id">
+            <label> Data </label>
+            <input type="date" min="@DateTime.Now.Date.ToString("yyyy-MM-dd")" name="data" value="@ViewBag.data">
+            <p style="width:100%">@Html.ValidationMessageFor(model => model.data)</p>
+            <label> Horário </label>
+            <input type="text" name="hora" id="hora" value="@ViewBag.hora">
+            <p style="width:100%">@Html.ValidationMessageFor(model => model.hora)</p>
+            <div id="tiposerviço">
+                <label> Tipo de Procedimentos </label>
+                <select onchange="Procedimento()" id="procedimento">
+                    <option></option>
+                    <option selected value="@ViewBag.tipo">@ViewBag.tipo</option>
+                    @{
+                        Database banco = new Database();
+                        SqlDataReader leitor = banco.RetornaComando("select tipo from tipo_proced where tipo!='" + ViewBag.tipo + "'");
+                        while (leitor.Read())
+                        {
+                            <option value="@leitor["tipo"]"> @leitor["tipo"]</option>
+                        }
+                    }
+                </select>
+                <label>Procedimento</label>
+                <select id="procedimentos" name="procedimento" onfocus="Procedimento()">
+                    <option selected value="@ViewBag.nmproced">@ViewBag.nmproced</option>
+                </select>
+                <p style="width:100%">@Html.ValidationMessageFor(model => model.procedimento)</p>
+            </div>
+            <label> Nome do Cliente </label>
+            <input type="text" name="nomeCli" value="@ViewBag.nmcli" disabled>
+            <label> CPF do Cliente </label>
+            <input type="text" name="cpfCli" id="cpf" value="@ViewBag.cpfcli" disabled>
+            <div id="btnAlterar">
+                <button id="btnconsulta" type="submit">Alterar</button>
+            </div>
+        </form>
+    </div>
+    <script type="text/javascript" src="~/Scripts/scriptAgendamento.js"></script>
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script src="~/Scripts/jquery.mask.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#data').mask('00/00/0000');
+            $('#hora').mask('00:00');
+            $('#cpf').mask('000.000.000-00', { reverse: true });
+        });
+    </script>
+</body>
+</html>

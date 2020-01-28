@@ -1,0 +1,18 @@
+Session.Timeout = 60;
+
+<system.web>
+ <sessionState mode="InProc" cookieless="false" timeout="80" />
+</system.web>
+
+<system.web>
+    <authentication mode="Forms">
+          <forms timeout="50"/>
+    </authentication>
+    <sessionState timeout="60"  />
+</system.web>
+
+<configuration>
+  <system.web>
+     <sessionState timeout="20"></sessionState>
+  </system.web>
+</configuration>

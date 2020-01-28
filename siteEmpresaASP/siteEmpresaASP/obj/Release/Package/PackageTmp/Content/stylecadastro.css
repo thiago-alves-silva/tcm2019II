@@ -1,0 +1,79 @@
+@font-face {
+    font-family: Poppins;
+    src: url('../fonts/Poppins-Regular.ttf');
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+a {text-decoration: none;}
+body {
+    font-family: 'Poppins';
+    background-color: rgb(233, 234, 229);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+#formCadastrinho {
+    margin: 5vw 0;
+    border-radius: 1vw;
+    padding: 2vw;
+    background-color: rgb(182,213,240);
+    width: 55%;
+}
+#formCadastrinho h1 {
+    font-size: 2vw;
+    width: 100%;
+    padding-bottom: 1vw;
+}
+form label, form input, form select {
+    font-size: 1.2vw;
+    margin: 0 .5vw;
+}
+input, select, button {
+    outline: none;
+}
+#formCadastrinho input, #formCadastrinho select{
+    height: 2vw;
+    border-radius: 1vw;
+    border: .1vw solid rgba(0,0,0,.5);
+    padding-left: 1vw;
+}
+#formCadastrinho button{
+    cursor: pointer;
+    padding:.5vw;
+    border: .1vw solid rgba(0,0,0,.5);
+    background-color: transparent;
+    border-radius: 1vw;
+    transition: background-color .2s
+}
+#formCadastrinho button:hover {
+    background-color: rgba(0,0,0,0.05)
+}
+#btnLogin {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+div#btnLogin button {
+    cursor:pointer;
+}
+input, button {
+    outline: none;
+}
+h1, label, a{
+    color:rgb(51,51,51);
+}
+form p {
+    text-align:center;
+    color: red;
+    display:inline-block;
+    margin-bottom:.2vw;
+}
+footer{
+    width:100%
+}

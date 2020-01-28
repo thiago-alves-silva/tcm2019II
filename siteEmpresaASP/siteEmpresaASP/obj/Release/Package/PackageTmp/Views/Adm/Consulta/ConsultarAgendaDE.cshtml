@@ -1,0 +1,60 @@
+﻿
+@{
+    ViewBag.Title = "ConsultarAgendaDE";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using System.Data.SqlClient;
+@model siteEmpresaASP.Models.Agendamento
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Consultar Agenda - Beauty Place</title>
+    <link rel="stylesheet" href="~/Content/styleconsulta.css" />
+</head>
+<body>
+    <div id="consulta">
+        <div id="consultazinha">
+            <h1>Consultas Agendadas</h1>
+            <form action="ConsultarAgendaDE" method="post">
+                <input type="text" name="data">
+                <p>@Html.ValidationMessageFor(model => model.data)</p>
+                <button id="btnconsulta" type="submit">Consultar</button>
+            </form>
+        </div>
+        @{
+            Database banco = new Database();
+            string com = ViewBag.Datinha == "" ? " like convert(varchar,'%%')" : "='" + ViewBag.Datinha + "'";
+            string comando = string.Format("select a.idagend, a.horaagend, convert(date, a.dataagend, 103) as 'data', p.nmproced, c.nomecli, c.cpfcli from Agendamento as a inner join Procedimentos as p on a.idproced = p.idproced inner join Cliente as c on a.idcli = c.idcli where dataagend"+com);
+
+            SqlDataReader leitor = banco.RetornaComando(comando);
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Horário</th>
+                    <th>Data</th>
+                    <th>Procedimento</th>
+                    <th>Valor</th>
+                    <th>Cliente</th>
+                    <th>CPF</th>
+                    <th colspan="2">Ação</th>
+                </tr>
+                @while (leitor.Read())
+                {
+                <tr>
+                    <td>@leitor["idagend"]</td>
+                    <td>@leitor["horaagend"]</td>
+                    <td>@leitor["data"]</td>
+                    <td>@leitor["nmproced"]</td>
+                    <td>R$@leitor["valor"]</td>
+                    <td>@leitor["nomecli"]</td>
+                    <td>@leitor["cpfcli"]</td>
+                    <td><a href="@Url.Action("AlterarAgenda","Adm", new { id=leitor["idagend"], hora=leitor["horaagend"], data=leitor["data"], nmproced=leitor["nmproced"], nmcli=leitor["nomecli"], cpfcli=leitor["cpfcli"]})"><img src="~/Content/img/edit.png" /></a></td>
+                    <td><a href="@Url.Action("ExcluirAgenda","Adm", new { id=leitor["idagend"]})"><img src="~/Content/img/trash.png" /></a></td>
+                </tr>
+                }
+            </table>
+        }
+    </div>
+</body>
+</html>

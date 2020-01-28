@@ -1,0 +1,27 @@
+@model siteEmpresaASP.Models.Produto
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Cadastrar Produto - Beauty Place</title>
+    <link rel="stylesheet" href="~/Content/stylecadastro.css" />
+
+</head>
+<body>
+    <div id="formCadastrinho">
+        <form action="CadProd" method="post">
+            <p>@ViewBag.CadProd</p>
+            <h1>Cadastrar Produto</h1>
+            <label> Nome do Produto </label>
+            <input type="text" name="nomeprod" maxlength="60">
+            <p style="width:100%">@Html.ValidationMessageFor(x => x.nomeprod)</p>
+            <label> Marca do Produto </label>
+            <input type="text" name="marca" maxlength="60">
+            <p style="width:100%">@Html.ValidationMessageFor(x => x.marca)</p>
+            <label> Quantidade </label><br />
+            <input type="number" name="quantidade">
+            <p style="width:100%">@Html.ValidationMessageFor(x => x.quantidade)</p>
+            <button type="submit">CADASTRAR</button>
+        </form>
+    </div>
+</body>
+</html>

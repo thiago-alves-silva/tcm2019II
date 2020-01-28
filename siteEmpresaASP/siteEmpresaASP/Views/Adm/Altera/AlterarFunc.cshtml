@@ -1,0 +1,80 @@
+﻿@using System.Data.SqlClient
+@model siteEmpresaASP.Models.Funcionario
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Alterar Funcionário - Beauty Place</title>
+    <link rel="stylesheet" href="~/Content/stylecadastro.css" />
+</head>
+<body>
+    <div id="formCadastrinho">
+        <h1>Alterar Funcionário</h1>
+        <form action="AlterarFunc" method="post">
+            <label> ID Funcionario </label>
+            <input type="number" value="@ViewBag.f.idfunc" name="idfunc" disabled>
+            <label> Status Funcionario </label>
+            <select value="@ViewBag.f.status" name="status">
+                @{
+                    if (ViewBag.status == "A")
+                    {
+                        <option value="A" selected> Ativado</option>
+                        <option value="D"> Desativado</option>
+                    }
+                    else
+                    {
+                        <option value="A"> Ativado</option>
+                        <option value="D" selected> Desativado</option>
+                    }
+                }
+            </select>
+            <label> Nome Completo </label>
+            <input type="text" value="@ViewBag.f.nomeFun" name="nomeFun" maxlength="60">
+            <p style="width:100%">@Html.ValidationMessageFor(model => model.nomeFun)</p>
+            <label> CPF </label>
+            <input type="text" value="@ViewBag.f.cpfFun" id="cpf" name="cpfFun" required>
+            <label> RG </label>
+            <input type="text" value="@ViewBag.f.rgFun" id="rg" name="rgFun" required>
+            <label> Telefone </label>
+            <input type="tel" value="@ViewBag.f.telFun" name="telFun" id="telefone" required>
+            <p style="width:32%">@Html.ValidationMessageFor(model => model.cpfFun)</p>
+            <p style="width:26.5%">@Html.ValidationMessageFor(model => model.rgFun)</p>
+            <p style="width:40%">@Html.ValidationMessageFor(model => model.telFun)</p>
+            <label> Email </label>
+            <input type="email" value="@ViewBag.f.emailFun" name="emailFun" required>
+            <label> Data de Nasc.</label>
+            <input type="date" value="@ViewBag.data" name="datanFun" required>
+            <p style="width:60%">@Html.ValidationMessageFor(model => model.emailFun)</p>
+            <p style="width:32%">@Html.ValidationMessageFor(model => model.datanFun)</p>
+            <label> Endereço </label>
+            <input type="text" value="@ViewBag.f.enderecoFun" name="enderecoFun" required>
+            <label> Cargo </label>
+            <select name="nmcargo">
+                <option value="@ViewBag.nmcargo" selected> @ViewBag.nmcargo</option>
+                @{
+                    Database banco = new Database();
+                    SqlDataReader leitor = banco.RetornaComando("select nmcargo from Cargo where nmcargo !='" + ViewBag.nmcargo + "'");
+                    while (leitor.Read())
+                    {
+                        <option value="@leitor["nmcargo"]"> @leitor["nmcargo"]</option>
+                    }
+                }
+            </select>
+            <p style="width:67%">@Html.ValidationMessageFor(model => model.enderecoFun)</p>
+            <p style="width:24%">@Html.ValidationMessageFor(model => model.nmcargo)</p>
+            <div id="btnLogin">
+                <button type="submit">Alterar</button>
+            </div>
+        </form>
+    </div>
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script src="~/Scripts/jquery.mask.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#cpf').mask('000.000.000-00', { reverse: true });
+            $('#rg').mask('00.000.000-0', { reverse: true });
+            $('#telefone').mask('(00) 00000-0000');
+            $('#data').mask('00/00/0000');
+        });
+    </script>
+</body>
+</html>

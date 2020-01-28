@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Beauty Place</title>
+    <link rel="stylesheet" href="~/Content/stylehome.css"/>
+</head>
+<body>
+    <div id="menu">
+        <ul>
+            <li>TRATAMENTOS CORPORAIS</li>
+            <li>TRATAMENTOS FACIAIS</li>
+            <li>TRATAMENTOS ESPECIAIS</li>
+            <li>DIVERSOS</li>
+        </ul>
+    </div>
+    <div class='apresentacao'>
+        <img src="~/Content/img/capa.png">
+    </div>
+    <div class="wpp">
+        <a style="padding:1vw 2vw 0 94vw;" href="https://api.whatsapp.com/send?phone=5511970186168&amp;text=Olá!" target="_blank"><img width="4%" src="~/Content/img/blue.jpg"></a>
+    </div>
+    <div class="divTitulo">
+        <h1 class="titulo">PRINCIPAIS SERVIÇOS</h1>
+    </div>
+    <div class="destaque">
+        <div class="subdestaque">
+            <img src="~/Content/img/destaques/endermo.jpg">
+            <div class="infoProced">
+                <p class="titulo">Endermoterapia</p>
+                <p class="texto">A endermologia é um tratamento feito a partir de uma massagem profunda realizada a vácuo.</p>
+            </div>
+            <div class="saibaMais">
+                <a href="@Url.Action("ServEndermo","Home")">SAIBA MAIS</a>
+            </div>
+        </div>
+        <div class="subdestaque">
+            <img src="~/Content/img/destaques/limpeza.jpg">
+            <div class="infoProced">
+                <p class="titulo">Limpeza de pele</p>
+                <p class="texto">Nossa limpeza profunda de pele remove cravos, espinhas, células mortas e todas as impurezas da pele</p>
+            </div>
+            <div class="saibaMais">
+                <a href="@Url.Action("ServLimpeza","Home")">SAIBA MAIS</a>
+            </div>
+        </div>
+        <div class="subdestaque">
+            <img src="~/Content/img/destaques/depilacao.jpg">
+            <div class="infoProced">
+                <p class="titulo">Depilação a Laser</p>
+                <p class="texto">A depilação a laser possui vantagens e benefícios, porém requer cuidados especiais para se ter um bom resultado. </p>
+            </div>
+            <div class="saibaMais">
+                <a href="@Url.Action("ServDepilacao","Home")">SAIBA MAIS</a>
+            </div>
+        </div>
+        <div class="subdestaque">
+            <img src="~/Content/img/destaques/radio.jpg">
+            <div class="infoProced">
+                <p class="titulo">Radiofrequência</p>
+                <p class="texto">Procedimento estético que através do calor ajuda na criação de novas fibras de colágenos.</p>
+            </div>
+            <div class="saibaMais">
+                <a href="@Url.Action("ServRadio","Home")">SAIBA MAIS</a>
+            </div>
+        </div>
+        <div class="subdestaque">
+            <img src="~/Content/img/destaques/orto.jpg">
+            <div class="infoProced">
+                <p class="titulo">Terapia Ortomolecular</p>
+                <p class="texto">Corrige o desequilíbrio do corpo, fortalecendo emocionalmente, fisicamente e metabolicamente.</p>
+            </div>
+            <div class="saibaMais">
+                <a href="@Url.Action("ServOrto","Home")">SAIBA MAIS</a>
+            </div>
+        </div>
+        <div class="subdestaque">
+            <img src="~/Content/img/destaques/criolipolise.jpg">
+            <div class="infoProced">
+                <p class="titulo">Criolipolise</p>
+                <p class="texto">A Criolipólise elimina as células de gordura (adipócitos) através de um processo de congelamento.</p>
+            </div>
+            <div class="saibaMais">
+                <a href="@Url.Action("ServCrio","Home")">SAIBA MAIS</a>
+            </div>
+        </div>
+    </div>
+    <div class="formulario">
+        <form>
+            <div class="divTitulo">
+                <h1 class="titulo" style="background-color: rgb(221, 222, 217)">Cadastre-se e receba dicas e ofertas!</h1>
+            </div>
+            <input class="field" type="text" maxlength="50" placeholder="Nome*" required />
+            <input class="field" type="email" maxlength="50" placeholder="Email*" required />
+            <button type="submit" class="botao" value="Enviar">Cadastrar</button>
+        </form>
+    </div>
+    @*<div class="modal">
+        <div class="submodal" data-animation="top">
+            <button id="btnfechar">X</button>
+            <img src="~/Content/img/obras.png" />
+        </div>
+    </div>*@
+    <script src="~/Scripts/scriptmodal.js"></script>
+</body>
+</html>

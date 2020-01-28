@@ -1,0 +1,43 @@
+@using System.Data.SqlClient;
+@model siteEmpresaASP.Models.Data
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Consultar Pagamentos - Beauty Place</title>
+    <link rel="stylesheet" href="~/Content/styleconsulta.css"/>
+</head>
+<body>
+    <div id="consulta">
+        <div id="consultazinha">
+            <h1>Consultar Pagamentos</h1>
+           
+            <form action="ConsultarAgendaDE" method="post">
+                <input type="text" name="data">
+  
+                <button id="btnconsulta" type="submit">Consultar</button>
+            </form>
+        </div>
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Horário</th>
+                    <th>Data</th>
+                    <th>Procedimento</th>
+                    <th>CPF do Cliente</th>
+                </tr>
+                @while (leitor.Read())
+                {
+                    <tr>
+                        <td>@leitor["idagend"]</td>
+                        <td>@leitor["horaagend"]</td>
+                        <td>@leitor["data"]</td>
+                        <td>@leitor["nmproced"]</td>
+                        <td>@leitor["nomecli"]</td>
+                        <td>@leitor["cpfcli"]</td>
+                    </tr>
+                }
+            </table>
+        }
+    </div>
+</body>
+</html>

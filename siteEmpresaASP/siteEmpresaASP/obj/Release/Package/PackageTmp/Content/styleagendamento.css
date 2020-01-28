@@ -1,0 +1,91 @@
+@font-face {
+    font-family: Poppins;
+    src: url('../fonts/Poppins-Regular.ttf');
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+a {text-decoration: none;}
+body {
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content:space-between;
+    justify-content: center;
+    font-family: 'Poppins';
+    background-color: rgb(233, 234, 229);
+}
+form label, form input, form select {
+    font-size: 1.2vw;
+    margin: 0 .5vw;
+}
+form h1 {
+    font-size: 2vw;
+    width: 100%;
+    padding-bottom: 1vw;
+}
+form p {
+    text-align: center;
+    color: red;
+    display: inline-block;
+    margin-bottom: .2vw;
+}
+#formAgendamentozinho form{
+    display: flex;
+    justify-content: center;
+}
+#formAgendamentozinho form > div {
+    border-radius: 1vw;
+    padding: 2vw;
+    background-color: rgb(182,213,240);
+    margin: 0 1vw;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+#formAgendamentozinho form div:nth-child(1) {
+    flex-basis: 37vw;
+}
+#formAgendamentozinho form div:nth-child(2) {
+    flex-basis: 24vw;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+#formAgendamentozinho input, #formAgendamentozinho select {
+    height: 2vw;
+    border-radius: 1vw;
+    border: .1vw solid rgba(0,0,0,.5);
+    padding-left: 1vw;
+}
+input, select, button{
+    outline: none;
+}
+a, h1{
+    color: rgb(51,51,51);
+    text-align: center;
+}
+::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+}
+input#valor{
+    height: 1.5vw;
+}
+div#pagamento button{
+    background-color:transparent;
+    border-radius: 1vw;
+    border: .1vw solid rgba(0,0,0,.5);
+    width: 80%;
+    padding: .5vw;
+    font-family: 'Poppins';
+    font-size:1vw;
+    transition: background-color .3s;
+    cursor:pointer;
+}
+div#pagamento button:hover {
+    background-color: rgba(0,0,0,.05);
+}

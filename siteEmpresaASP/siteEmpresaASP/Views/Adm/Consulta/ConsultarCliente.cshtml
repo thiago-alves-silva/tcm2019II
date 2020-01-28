@@ -1,0 +1,49 @@
+﻿@using  System.Data.SqlClient
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Consultar Cliente - Beauty Place</title>
+    <link rel="stylesheet" href="~/Content/styleconsulta.css"/>
+</head>
+<body>
+    <div id="consulta">
+        <form action="ConsultarClienteC" method="post">
+            <div id="consultazinha">
+                <h1>Consultar Cliente</h1>
+                <input type="search" name="cpf" placeholder="Insira o CPF do cliente" maxlength="11">
+                <button id="btnconsulta" type="submit">Consultar</button>
+            </div>
+        </form>
+    </div>
+    @{
+        Database banco = new Database();
+        SqlDataReader leitor = banco.RetornaComando(string.Format("select * from Cliente"));
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>CPF</th>
+                <th>RG</th>
+                <th>E-mail</th>
+                <th>Data Nasc.</th>
+                <th>Telefone</th>
+                <th colspan="2">Ação</th>
+            </tr>
+            @while (leitor.Read())
+            {
+            <tr>
+                <td>@leitor["idcli"]</td>
+                <td>@leitor["nomecli"]</td>
+                <td>@leitor["cpfcli"]</td>
+                <td>@leitor["rgcli"]</td>
+                <td>@leitor["emailcli"]</td>
+                <td>@leitor["nasc"]</td>
+                <td>@leitor["tel"]</td>
+                <td><a href="@Url.Action("AlterarCli","Adm", new { id=leitor["idcli"] })"><img src="~/Content/img/edit.png" /></a></td>
+                <td><a href="@Url.Action("ExcluirCli","Adm", new { id=leitor["idcli"]})"><img src="~/Content/img/trash.png" /></a></td>
+            </tr>
+            }
+        </table>
+    }
+</body>
+</html>

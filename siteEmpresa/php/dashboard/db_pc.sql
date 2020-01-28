@@ -9,7 +9,7 @@ use db_pc;
 
 -- criação da tabela cargo
 create table tbl_Cargo(
-	cd_Cargo  int primary key auto_increment,
+    cd_Cargo  int primary key auto_increment,
     nm_Cargo varchar(80) not null
 )default charset utf8;
 

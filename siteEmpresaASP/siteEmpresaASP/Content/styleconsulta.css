@@ -1,0 +1,100 @@
+@font-face {
+    font-family: Poppins;
+    src: url('../fonts/Poppins-Regular.ttf');
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+a {text-decoration: none;}
+body {
+    font-family: 'Poppins';
+    background-color: rgb(233, 234, 229);
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#consulta{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1vw;
+    background-color: rgb(233, 234, 229);
+}
+#consultazinha{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1vw;
+    width: 40vw;
+    padding: 2vw;
+    background-color: rgb(182,213,240);
+}
+#consultazinha form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+#consultazinha h1{
+    font-size:1.5vw;
+    width:100%;
+    text-align:center;
+    padding-bottom:1vw;
+}
+#consultazinha input{
+    height: 2vw;
+    width: 20vw;
+    border-radius: 1vw;
+    border: .1vw solid rgba(0,0,0,.5);
+    padding-left: 1vw;
+    margin-bottom:1vw;
+    font-size:1vw;
+}
+input, button{
+    outline: none;
+}
+button#btnconsulta {
+    font-family: Poppins;
+    font-size:.9vw;
+    border-radius: 1vw;
+    border: .1vw solid rgba(0,0,0,.5);
+    width: 100%;
+    padding: .4vw;
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color .2s
+}
+button#btnconsulta:hover {background-color: rgba(0,0,0,.05);}
+table {
+    min-width:60vw;
+    border-collapse: collapse;
+    font-size: .9vw
+}
+th {
+    text-align: center;
+    padding: .5vw 1vw;
+    background-color: rgb(182,213,240);
+    border:none
+}
+td {
+    padding: .5vw;
+    text-align: center;
+    margin: .5vw 0;
+    border: none;
+}
+tr:nth-child(2n+1) {
+    background-color: rgb(222, 222, 222)
+}
+tr td a img{
+    width:1vw
+}
+::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+footer{
+    width:100%;
+}

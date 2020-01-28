@@ -1,0 +1,41 @@
+@using System.Data.SqlClient
+@model siteEmpresaASP.Models.Procedimento
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Cadastrar Procedimento - Beauty Place</title>
+    <link rel="stylesheet" href="~/Content/stylecadastro.css" />
+</head>
+<body>
+    <div id="formCadastro">
+        <div id="formCadastrinho">
+            <h1>Cadastrar Procedimento</h1>
+            <p>@ViewBag.sucesso</p>
+
+            <form action="CadProced" method="POST">
+                <label> Nome Procedimento </label>
+                <input style="width:7vw;" type="text" name="nomeproced" maxlength="60"><br />
+                <p>@Html.ValidationMessageFor(model => model.nomeproced)</p>
+                <label> Tipo </label>
+                <select name="tipoproced" style="font-size:12px">
+                    @{
+                        Database banco = new Database();
+                        SqlDataReader leitor = banco.RetornaComando("select tipo from tipo_proced");
+                        while (leitor.Read())
+                        {
+                            <option value="@leitor["tipo"]"> @leitor["tipo"]</option>
+                        }
+                    }
+                </select>
+                <p>@Html.ValidationMessageFor(model => model.tipoproced)</p>
+                <label> Valor </label>
+                <input style="width: 3vw;" type="number" name="valorproced">
+                <p>@Html.ValidationMessageFor(model => model.valorproced)</p>
+                <div id="btnLogin">
+                    <button type="submit">Cadastrar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

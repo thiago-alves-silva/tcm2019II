@@ -1,0 +1,45 @@
+@using System.Data.SqlClient
+@model siteEmpresaASP.Models.Procedimento
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Cadastrar Procedimento - Beauty Place</title>
+    <link rel="stylesheet" href="~/Content/stylecadastro.css" />
+</head>
+<body>
+    <div id="formCadastrinho">
+        <h1>Cadastrar Procedimento</h1>
+        <p>@ViewBag.sucesso</p>
+        <form action="CadProced" method="POST">
+            <label> Nome Procedimento </label>
+            <input type="text" name="nomeproced" maxlength="60"><br />
+            <p style="width:100%">@Html.ValidationMessageFor(model => model.nomeproced)</p>
+            <label> Tipo </label>
+            <select name="tipoproced" style="font-size:1.2vw">
+                @{
+                    Database banco = new Database();
+                    SqlDataReader leitor = banco.RetornaComando("select tipo from tipo_proced");
+                    while (leitor.Read())
+                    {
+                        <option value="@leitor["tipo"]"> @leitor["tipo"]</option>
+                    }
+                }
+            </select>
+            <p style="width:100%">@Html.ValidationMessageFor(model => model.tipoproced)</p>
+            <label> Valor </label>
+            <input type="text" name="valorproced" id="valor">
+            <p style="width:100%">@Html.ValidationMessageFor(model => model.valorproced)</p>
+            <div id="btnLogin">
+                <button type="submit">Cadastrar</button>
+            </div>
+        </form>
+    </div>
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script src="~/Scripts/jquery.mask.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#valor').mask("#.##0,00", { reverse: true });
+        });
+    </script>
+</body>
+</html>

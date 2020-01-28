@@ -1,0 +1,46 @@
+﻿
+@model siteEmpresaASP.Models.Cliente
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Alterar Cliente - Beauty Place</title>
+    <link rel="stylesheet" href="~/Content/stylecadastro.css" />
+   
+</head>
+<body>
+    <div id="formCadastro">
+        <div id="formCadastrinho">
+            <h1>Alteração Cliente</h1>
+            
+            <form action="AlterarCli" method="post">
+                
+                <label> ID Cliente </label>
+                <input style="width=3vw" type="number" value="@ViewBag.cli.idcli" name="idcli" readonly><br />
+                <label> Nome Completo </label>
+                <input style="width:75%;" type="text" value="@ViewBag.cli.nomeCli" name="nomeCli" maxlength="60"><br />
+                <p style="width:100%">@Html.ValidationMessageFor(model => model.nomeCli)</p>
+                <label> CPF </label>
+                <input style="width:22%;" type="text" value="@ViewBag.cli.cpfCli" maxlength="11" name="cpfCli">
+                <label> RG </label>
+                <input style="width:22%;" type="text" maxlength="9" value="@ViewBag.cli.rgCli" name="rgCli">
+                <label> Telefone </label>
+                <input style="width:22%;" type="tel" name="telCli" value="@ViewBag.cli.telCli" maxlength="11"><br />
+                <p style="width:32%">@Html.ValidationMessageFor(model => model.cpfCli)</p>
+                <p style="width:26.5%">@Html.ValidationMessageFor(model => model.rgCli)</p>
+                <p style="width:40%">@Html.ValidationMessageFor(model => model.telCli)</p>
+                <label> Email </label>
+                <input style="width:50%;" type="email" name="emailCli" value="@ViewBag.cli.emailCli" maxlength="60">
+                <label> Data de Nasc. </label>
+                <input style="width:16%;" type="date" value="@ViewBag.cli.datanCli" name="datanCli" required><br />
+                <p style="width:60%">@Html.ValidationMessageFor(model => model.emailCli)</p>
+                <p style="width:32%">@Html.ValidationMessageFor(model => model.datanCli)</p>
+                <div id="btnLogin">
+                    <button type="submit">Alterar</button>
+                    <p style="color:lawngreen"> @ViewBag.sucesso</p>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,69 @@
+﻿@using System.Data.SqlClient
+@model siteEmpresaASP.Models.Funcionario
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Cadastrar Funcionário - Beauty Place</title>
+    <link rel="stylesheet" href="~/Content/stylecadastro.css" />
+</head>
+<body>
+
+    <div id="formCadastrinho">
+        <h1>Cadastrar Funcionário</h1>
+        @Html.ValidationSummary(true)
+        <form action="CadFunc" method="POST">
+            <label> Nome Completo </label>
+            <input type="text" name="nomeFun" maxlength="60"><br />
+            <p style="width:100%">@Html.ValidationMessageFor(model => model.nomeFun)</p>
+            <label> CPF </label>
+            <input type="text" name="cpfFun" id="cpf" placeholder="000.000.000-00">
+            <p style="width:100%">@Html.ValidationMessageFor(model => model.cpfFun)</p>
+            <label> RG </label>
+            <input type="text" name="rgFun" id="rg" placeholder="00.000.000-0">
+            <p style="width:100%">@Html.ValidationMessageFor(model => model.rgFun)</p>
+            <label> Telefone </label>
+            <input type="text" name="telFun" id="telefone" placeholder="(00) 00000-0000">
+            <p style="width:100%">@Html.ValidationMessageFor(model => model.telFun)</p>
+            <label> Email </label>
+            <input type="email" name="emailFun">
+            <p style="width:100%">@Html.ValidationMessageFor(model => model.emailFun)</p>
+            <label> Data de Nasc.</label>
+            <input type="text" name="datanFun" id="data" placeholder="dd/mm/aaaa"><br />
+            <p style="width:100%">@Html.ValidationMessageFor(model => model.datanFun)</p>
+            <label> Endereço </label>
+            <input type="text" name="enderecoFun">
+            <p style="width:100%">@Html.ValidationMessageFor(model => model.enderecoFun)</p>
+            <label> Cargo </label>
+            <select name="nmcargo">
+                @{
+                    Database banco = new Database();
+                    SqlDataReader leitor = banco.RetornaComando("select nmcargo from Cargo");
+                    while (leitor.Read())
+                    {
+                        <option value="@leitor["nmcargo"]"> @leitor["nmcargo"]</option>
+                    }
+                }
+            </select>
+            <p style="width:100%">@Html.ValidationMessageFor(model => model.nmcargo)</p>
+
+            <div id="btnLogin">
+                <button type="submit">CADASTRAR</button>
+            </div>
+            @{
+                if (!String.IsNullOrWhiteSpace(ViewBag.CadFunc))
+                { <p style="color:green; margin-bottom:.5vw">@ViewBag.CadFunc</p> }
+            }
+        </form>
+    </div>
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script src="~/Scripts/jquery.mask.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#cpf').mask('000.000.000-00', { reverse: true });
+            $('#rg').mask('00.000.000-0', { reverse: true });
+            $('#telefone').mask('(00) 00000-0000');
+            $('#data').mask('00/00/0000');
+        });
+    </script>
+</body>
+</html>

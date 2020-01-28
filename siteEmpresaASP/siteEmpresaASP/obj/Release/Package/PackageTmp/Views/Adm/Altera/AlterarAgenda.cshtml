@@ -1,0 +1,54 @@
+﻿@using System.Data.SqlClient
+@model siteEmpresaASP.Models.AlterarAgendamento
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Aletrar Agenda - Beauty Place</title>
+    <link rel="stylesheet" href="~/Content/stylealterar.css" />
+</head>
+<body>
+    <div id="consulta">
+        <div id="consultazinha">
+            <form action="AlterarAgendamento" method="post">
+                <div id="agendamento">
+                    <h1>Alterar Agendamento</h1>
+                    <label>ID</label>
+                    <input style="width: 5%;" readonly value="@ViewBag.id">
+                    <label> Data </label>
+                    <input style="width: 22%;" type="date" name="data" value="@ViewBag.data">
+                    <label> Horário </label>
+                    <input style="width: 15%;" type="time" name="hora" value="@ViewBag.hora">
+                    <p style="width:50%">@Html.ValidationMessageFor(model => model.data)</p>
+                    <p style="width:45%">@Html.ValidationMessageFor(model => model.hora)</p>
+                    <div id="tiposerviço">
+                        <label> Tipo de Procedimentos </label>
+                        <select onchange="Procedimento()" style="width: 55%; margin-bottom:1vw" id="procedimento">
+                            <option></option>
+                            <option selected value="@ViewBag.tipo">@ViewBag.tipo</option>
+                            @{
+                                Database banco = new Database();
+                                SqlDataReader leitor = banco.RetornaComando("select tipo from tipo_proced where tipo!='" + ViewBag.tipo + "'");
+                                while (leitor.Read())
+                                {
+                                    <option value="@leitor["tipo"]"> @leitor["tipo"]</option>
+                                }
+                            }
+                        </select>
+                        <label>Procedimento</label>
+                        <select style="width: 65%" id="procedimentos" name="procedimento" onfocus="Procedimento()" >
+                            <option selected value="@ViewBag.nmproced">@ViewBag.nmproced</option>
+                        </select>
+                        <p style="width:100%">@Html.ValidationMessageFor(model => model.procedimento)</p>
+                    </div>
+                    <label> Nome do Cliente </label>
+                    <input style="width: 60%;" type="text" name="nomeCli" value="@ViewBag.nmcli" readonly><br />
+                    <label> CPF do Cliente </label>
+                    <input style="width: 30%;" type="text" name="cpfCli" value="@ViewBag.cpfcli" readonly>
+                </div>
+                <button id="btnconsulta" type="submit">Alterar</button>
+            </form>
+        </div>
+    </div>
+    <script type="text/javascript" src="~/Scripts/scriptAgendamento.js"></script>
+</body>
+</html>

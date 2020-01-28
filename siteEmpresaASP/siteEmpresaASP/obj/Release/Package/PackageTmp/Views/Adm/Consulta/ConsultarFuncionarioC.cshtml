@@ -1,0 +1,67 @@
+﻿
+@{
+    ViewBag.Title = "ConsultarFuncionarioC";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using System.Data.SqlClient
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Consultar Funcionário - Beauty Place</title>
+    <link rel="stylesheet" href="~/Content/styleconsulta.css" />
+</head>
+<body>
+    <div id="consulta">
+        <form action="ConsultarFuncionarioC" method="post">
+            <div id="consultazinha">
+                <h1>Consultar Funcionário</h1>
+                <input type="search" name="cpf" placeholder="Insira o CPF do funcionáio" maxlength="11">
+                <button id="btnconsulta" type="submit">Consultar</button>
+            </div>
+        </form>
+    </div>
+    @{
+        Database banco = new Database();
+        string com = ViewBag.cpf == "" ? " like convert(varchar,'%%')" : "='" + ViewBag.cpf + "'";
+        SqlDataReader leitor = banco.RetornaComando(string.Format("select f.idfunc,f.nmfunc,f.cpffunc,f.rgfunc,f.tel,f.emailfunc,f.endereco,f.nascfunc,c.nmcargo, c.acesso from Funcionario as f inner join Cargo as c on c.idcargo=f.idcargo where cpffunc"+com));
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>CPF</th>
+                <th>RG</th>
+                <th>E-mail</th>
+                <th>Data Nasc.</th>
+                <th>Telefone</th>
+                <th>Endereco</th>
+                <th>Cargo</th>
+                <th>Acesso</th>
+                <th>Status</th>
+                <th>Ação</th>
+
+            </tr>
+            @while (leitor.Read())
+            {
+                string status = leitor["status"].ToString() == "A" ? "Ativado" : "Desativado";
+
+            <tr>
+                <td>@leitor["idfunc"]</td>
+                <td>@leitor["nmfunc"]</td>
+                <td>@leitor["cpffunc"]</td>
+                <td>@leitor["rgfunc"]</td>
+                <td>@leitor["emailfunc"]</td>
+                <td>@leitor["nascfunc"]</td>
+                <td>@leitor["tel"]</td>
+                <td>@leitor["endereco"]</td>
+                <td>@leitor["nmcargo"]</td>
+                <td>@leitor["acesso"]</td>
+                <td>@status</td>
+                <td><a href="@Url.Action("AlterarFunc","Adm", new { id=leitor["idfunc"]})"><img src="~/Content/img/edit.png" /></a></td>
+
+            </tr>
+            }
+        </table>
+    }
+</body>
+</html>
